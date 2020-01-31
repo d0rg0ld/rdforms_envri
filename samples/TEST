@@ -1,0 +1,8 @@
+
+{ "head": { "link": [], "vars": [ "s", "p", "o" ] },
+  "results": { "distinct": false, "ordered": true, "bindings": [
+    { "s": { "type" : "uri", "value" : "http://envri.eu/service/f9d88bae-20a9-426d-813c-2c6f42b0a657" }	, "p": { "type" : "uri", "value" : "http://www.w3.org/2000/01/rdf-schema#label" }	, "o": { "type" : "literal", "value" : "ENVRI Knowledge Base" }},
+    { "s": { "type" : "uri", "value" : "http://envri.eu/service/a44dc3f9-ab08-49c1-826f-59f0c471371a" }	, "p": { "type" : "uri", "value" : "http://www.w3.org/2000/01/rdf-schema#label" }	, "o": { "type" : "literal", "value" : "Dynamic real-time infrastructure planner (DRIP)" }},
+    { "s": { "type" : "uri", "value" : "http://envri.eu/service/17154b9b-1b59-41b5-a694-834c0f95ed6f" }	, "p": { "type" : "uri", "value" : "http://www.w3.org/2000/01/rdf-schema#label" }	, "o": { "type" : "literal", "value" : "gCube / D4Science DataMiner" }},
+    { "s": { "type" : "uri", "value" : "http://envri.eu/service/96fb61a1-96f3-4237-bca9-37e748055c6e" }	, "p": { "type" : "uri", "value" : "http://www.w3.org/2000/01/rdf-schema#label" }	, "o": { "type" : "literal", "value" : "Open Information Linking for Environmental science research infrastructures (OIL-E)" }},
+    { "s": { "type" : "uri", "value" : "http://envri.eu/service/38d1a3ca-9c17-4b94-8115-71842018bd1c" }	, "p": { "type" : "uri", "value" : "http://www.w3.org/2000/01/rdf-schema#label" }	, "o": { "type" : "literal", "value" : "Dynamic ecological Information Management System (DEIMS)" }} ] } }

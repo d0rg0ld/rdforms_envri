@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link type="text/css" href="example.css" rel="stylesheet"/>
+	<link type="text/css" href="example_service_provider.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"  type='text/css'>
+    <script src="../dist/bootstrap.rdforms.js"></script>
+    <script src="../node_modules/rdfjson/dist/rdfjson.js"></script>
+    <script src="http://wzrd.in/standalone/uuid%2Fv4@latest"></script>
+</head>
+<body>
+<h1>ENVRI Service Provider Description</h1>
+<div class="twocol">
+    <div id="node1" class="col1" style="width:640px;"></div>
+    
+    <textarea class="col2" style="width:640px;" id="output" readonly ></textarea>
+</div>
+
+
+
+<style>
+    @import "../node_modules/dijit/themes/claro/claro.css";
+    @import "../src/view/resources/rdforms.css";
+
+    @media (min-width: 500px) {   .container {     max-width: 2000px;   } }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    #_editor * {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+    .main {
+        position: relative;
+        height: 100%;
+    }
+    .main #_editor {
+        position: absolute;
+        top: 6em;
+        bottom: 1em;
+        left: 0px;
+        right: 0px;
+    }
+    .aboutText {
+        margin-top: 5em;
+    }
+    #_editor .rformsLabel {
+        font-weight: normal;
+    }
+
+    .header {
+        margin-top: 27px;
+    }
+    .icon {
+        float: left;
+        margin-top: -20px;
+        margin-right: 15px;
+    }
+</style>
+<script src="example_service_provider.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "root": "ENVRIClassification",
+  "namespaces": {
+    "ex": "http://example.com/",
+    "cc": "http://creativecommons.org/licenses/"
+  },
+  "cachedChoices": {
+	  "http://localhost:8080/eosc_voc.rdf": [
+	   {
+		"constraints": {
+		 "http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/scienceCategories"
+		},
+		"parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		"hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+		"choices": []
+	   }
+	  ]
+	},
+  "templates": [
+    {
+      "id": "ENVRIClassification",
+      "type": "group",
+      "items": [
+		{
+		  "id": "sciDomain",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "schema:category",
+          "placeholder": "a relation",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "OntologyUrl":"http://147.213.76.116:8080/eosc_voc.rdf",
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/scienceCategories"},
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+          "label": {
+            "en": "Scientific Domain"
+          },
+          "description": {
+            "en": "The Scientific Domain"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /rdforms/samples</title>
+ </head>
+ <body>
+<h1>Index of /rdforms/samples</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=D">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/rdforms/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="1">1</a></td><td align="right">2019-10-18 10:56  </td><td align="right"> 14K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="chooser/">chooser/</a></td><td align="right">2019-10-23 18:30  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="dist/">dist/</a></td><td align="right">2019-09-26 17:14  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="dojo.html">dojo.html</a></td><td align="right">2019-09-26 14:22  </td><td align="right">635 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example.css">example.css</a></td><td align="right">2019-11-11 14:42  </td><td align="right">610 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example1.html">example1.html</a></td><td align="right">2019-09-26 16:39  </td><td align="right">498 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example1.js">example1.js</a></td><td align="right">2019-09-26 16:33  </td><td align="right">950 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example2-bmd.html">example2-bmd.html</a></td><td align="right">2019-09-26 14:22  </td><td align="right">769 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example2.html">example2.html</a></td><td align="right">2019-09-26 16:50  </td><td align="right">453 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example2.js">example2.js</a></td><td align="right">2019-09-26 14:22  </td><td align="right">432 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example3.html">example3.html</a></td><td align="right">2019-09-26 16:50  </td><td align="right">668 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example3.js">example3.js</a></td><td align="right">2019-09-26 14:22  </td><td align="right">346 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example4.html">example4.html</a></td><td align="right">2019-09-26 16:50  </td><td align="right">679 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example4.js">example4.js</a></td><td align="right">2019-09-26 14:22  </td><td align="right">357 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example5.html">example5.html</a></td><td align="right">2019-10-18 14:42  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example5.js">example5.js</a></td><td align="right">2019-09-26 14:22  </td><td align="right">716 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example6.html">example6.html</a></td><td align="right">2019-09-26 16:50  </td><td align="right">888 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example6.js">example6.js</a></td><td align="right">2019-09-26 14:22  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example7.html">example7.html</a></td><td align="right">2019-09-26 16:41  </td><td align="right">1.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example7.js">example7.js</a></td><td align="right">2019-09-26 14:22  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_onto.css">example_onto.css</a></td><td align="right">2019-10-15 15:09  </td><td align="right">677 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_onto.html">example_onto.html</a></td><td align="right">2019-10-15 15:09  </td><td align="right">2.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example_onto.js">example_onto.js</a></td><td align="right">2019-10-15 15:42  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service.css">example_service.css</a></td><td align="right">2019-10-22 09:54  </td><td align="right">679 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service.html">example_service.html</a></td><td align="right">2019-11-11 14:36  </td><td align="right">3.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example_service.js">example_service.js</a></td><td align="right">2019-10-23 14:56  </td><td align="right">2.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example_service.js.backup">example_service.js.backup</a></td><td align="right">2019-10-17 18:21  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service_provider.css">example_service_provider.css</a></td><td align="right">2019-10-22 09:54  </td><td align="right">679 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service_provider.css.sep">example_service_provider.css.sep</a></td><td align="right">2019-10-22 13:39  </td><td align="right">679 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service_provider.html">example_service_provider.html</a></td><td align="right">2019-10-22 17:44  </td><td align="right">2.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example_service_provider.js">example_service_provider.js</a></td><td align="right">2019-10-23 14:56  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service_publication.css">example_service_publication.css</a></td><td align="right">2019-10-22 09:54  </td><td align="right">679 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service_publication.css.sep">example_service_publication.css.sep</a></td><td align="right">2019-10-22 15:42  </td><td align="right">679 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service_publication.html">example_service_publication.html</a></td><td align="right">2019-10-24 14:18  </td><td align="right">2.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example_service_publication.js">example_service_publication.js</a></td><td align="right">2019-10-23 14:56  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service_usecase.css">example_service_usecase.css</a></td><td align="right">2019-10-22 09:54  </td><td align="right">679 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service_usecase.css.sep">example_service_usecase.css.sep</a></td><td align="right">2019-10-22 14:26  </td><td align="right">679 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="example_service_usecase.html">example_service_usecase.html</a></td><td align="right">2019-10-22 17:44  </td><td align="right">2.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="example_service_usecase.js">example_service_usecase.js</a></td><td align="right">2019-10-23 14:57  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="rdf.js">rdf.js</a></td><td align="right">2019-09-26 14:22  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="service_rdf.js">service_rdf.js</a></td><td align="right">2019-10-22 15:24  </td><td align="right">183 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="serviceprovider_rdf.js">serviceprovider_rdf.js</a></td><td align="right">2019-10-22 15:28  </td><td align="right">200 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="servicepublication_rdf.js">servicepublication_rdf.js</a></td><td align="right">2019-10-22 15:32  </td><td align="right">206 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="serviceusecase_rdf.js">serviceusecase_rdf.js</a></td><td align="right">2019-10-22 15:29  </td><td align="right">198 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="templateBundle.json">templateBundle.json</a></td><td align="right">2019-09-26 14:22  </td><td align="right">5.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="templateBundle3.backup.json">templateBundle3.backup.json</a></td><td align="right">2019-10-18 15:53  </td><td align="right"> 18K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="templateBundle3.json">templateBundle3.json</a></td><td align="right">2019-10-24 11:03  </td><td align="right"> 44K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="templateBundle3.json.back">templateBundle3.json.back</a></td><td align="right">2019-10-21 17:42  </td><td align="right"> 35K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="templateBundle4.json">templateBundle4.json</a></td><td align="right">2019-10-15 15:47  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="templates/">templates/</a></td><td align="right">2019-09-26 17:21  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.18 (Ubuntu) Server at 147.213.76.116 Port 80</address>
+</body></html>

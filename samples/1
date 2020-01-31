@@ -1,0 +1,500 @@
+{
+  "root": "ENVRIClassification",
+  "namespaces": {
+    "ex": "http://example.com/",
+    "cc": "http://creativecommons.org/licenses/"
+  },
+  "templates": [
+    {
+      "id": "ENVRIBasics",
+      "type": "group",
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "property": "schema:identifier",
+          "cardinality": {
+            "min": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Identifier"
+          },
+          "styles": [
+            "autoUUID",
+            "nonEditable"
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "schema:name",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "Title"
+          },
+          "description": {
+            "en": "A short title of the service"
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "URI",
+          "property": "schema:url",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "URL"
+          },
+          "description": {
+            "en": "Website of the resource."
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "schema:description",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "Description"
+          },
+          "description": {
+            "en": "A description for this resource."
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+		{
+          "type": "text",
+          "nodetype": "URI",
+          "property": "schema:logo",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "Link to Logo"
+          },
+          "description": {
+            "en": "Link to a logo for the resource."
+          },
+		  "styles": [
+		  ]
+        },
+		{
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "schema:slogan",
+          "cardinality": {
+            "max": 1
+          },
+          "label": {
+            "en": "Tagline"
+          },
+          "description": {
+            "en": "A Tagline for this resource."
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+		{
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "eosc:userValue",
+          "cardinality": {
+            "max": 1
+          },
+          "label": {
+            "en": "User Value"
+          },
+          "description": {
+            "en": "Advantages for the users."
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+		{
+          "type": "text",
+          "nodetype": "URI",
+          "property": "eosc:userBase",
+          "cardinality": {
+          },
+          "label": {
+            "en": "User Base -> Links to Use Case Record"
+          },
+          "description": {
+            "en": "link to use case record."
+          }
+        },
+		{
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "eosc:useCase",
+          "cardinality": {
+          },
+          "label": {
+            "en": "Use Case (Keywords)"
+          },
+          "description": {
+            "en": "link to use case keyword."
+          }
+        },
+		{
+          "type": "text",
+          "nodetype": "URI",
+          "property": "eosc:mmURL",
+          "cardinality": {
+          },
+          "label": {
+            "en": "Multimedia Resource Link"
+          },
+          "description": {
+            "en": "Link to Multimedia Resource about Service."
+          }
+        },
+		{
+          "type": "text",
+          "nodetype": "URI",
+          "property": "schema:hasOfferCatalog",
+          "cardinality": {
+          },
+          "label": {
+            "en": "Options"
+          },
+          "description": {
+            "en": "Links to options records."
+          }
+        },
+				{
+          "type": "text",
+          "nodetype": "RESOURCE",
+          "property": "dcterms:requires",
+          "cardinality": {
+          },
+          "label": {
+            "en": "Required Services"
+          },
+          "description": {
+            "en": "Links to required services."
+          }
+        },
+		{
+          "type": "text",
+          "nodetype": "RESOURCE",
+          "property": "schema:isRelatedTo",
+          "cardinality": {
+          },
+          "label": {
+            "en": "Related Services"
+          },
+          "description": {
+            "en": "Links to related services."
+          }
+        }
+	  ]
+	},
+	{
+      "id": "ENVRIClassification",
+      "type": "group",
+      "items": [
+        {
+          "id": "provider",
+          "type": "text",
+          "nodetype": "RESOURCE",
+          "property": "schema:provider",
+          "cardinality": {
+            "min": 1,
+            "pref": "1"
+          },
+          "label": {
+            "en": "provider"
+          },
+          "description": {
+            "en": "Links to providers of the service"
+          }
+        },
+		{
+		  "id": "sciDomain",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "eosc:scienceDomain",
+          "placeholder": "Domain",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/scienceCategories"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Scientific Domain"
+          },
+          "description": {
+            "en": "The Scientific Domain"
+          }
+        },
+	{
+	  "id": "sciSubDomain",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "eosc:scienceSubDomain",
+          "placeholder": "Subdomain",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/scienceSubCategories"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Scientific Subdomain"
+          },
+          "description": {
+            "en": "The Scientific Subdomain"
+          }
+        },	
+	{
+	  "id": "supercategory",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "eosc:superCategory",
+          "placeholder": "Supercategory",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "child":"category",
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/serviceSuperCategories"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Service Supercategory"
+          },
+          "description": {
+            "en": "The Super-category of this service"
+          }
+        },	
+	{
+	  "id": "category",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "schema:category",
+          "placeholder": "Category",
+	  "styles": ["nonEditable1"],
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "child":"subcategory",
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/serviceCategories"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Service Category"
+          },
+          "description": {
+            "en": "The category of this service"
+          }
+        },	
+	{
+	  "id": "subcategory",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "eosc:subCategory",
+          "placeholder": "Subcategory",
+	  "styles": ["nonEditable1"],
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },	
+		  "dependency": "category",
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/serviceSubCategories"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Service Subcategory"
+          },
+          "description": {
+            "en": "The Sub-category of this service"
+          }
+        },	
+	{
+	  "id": "targetusers",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "schema:audience",
+          "placeholder": "Target Users",
+          "cardinality": {
+            "min": 1,
+            "pref": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/targetUsers"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+          "label": {
+            "en": "Service Target Users/Customers"
+          },
+          "description": {
+            "en": "The target users/customers of this service"
+          }
+        },	
+	{
+	  "id": "envriusers",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "envri:targetusers",
+          "placeholder": "ENVRI user groups",
+          "cardinality": {
+            "min": 1,
+            "pref": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/targetusers"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+          "label": {
+            "en": "ENVRI Specific Service Target Users"
+          },
+          "description": {
+            "en": "The ENVRI specific target users of this service"
+          }
+        },	
+	{
+	  "id": "languages",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "schema:availableLanguage",
+          "placeholder": "Language",
+          "cardinality": {
+            "min": 1,
+            "pref": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/languages"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+          "label": {
+            "en": "Service Language"
+          },
+          "description": {
+            "en": "Supported language(s)"
+          }
+        },	
+	{
+	  "id": "places",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "schema:areaServed",
+          "placeholder": "Place",
+          "cardinality": {
+            "min": 1,
+            "pref": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/places"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+          "label": {
+            "en": "Service Language"
+          },
+          "description": {
+            "en": "Supported language(s)"
+          }
+        },	
+        {
+          "type": "choice",
+          "nodetype": "URI",
+          "property": "http://purl.org/dc/terms/relation",
+          "placeholder": "a relation",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Relation",
+            "sv": "Relation"
+          },
+          "description": {
+            "en": "A relation to another resource.",
+            "sv": "En relation till en annan resurs."
+          }
+        },
+        {
+          "type": "group",
+          "nodetype": "RESOURCE",
+          "label": {
+            "en": "Creator"
+          },
+          "property": "http://purl.org/dc/terms/creator",
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 5
+          },
+          "constraints": {
+            "rdf:type": "foaf:Person"
+          },
+          "cls": [
+            "cardgroup"
+          ],
+          "deps": [
+            "dcterms:subject",
+            "http://example.com/physics"
+          ],
+          "content": [
+            {
+              "type": "text",
+              "nodetype": "ONLY_LITERAL",
+              "property": "http://xmlns.com/foaf/0.1/firstName",
+              "cardinality": {
+                "min": 1,
+                "max": 1
+              },
+              "label": {
+                "en": "First name"
+              }
+            },
+            {
+              "type": "text",
+              "nodetype": "ONLY_LITERAL",
+              "property": "http://xmlns.com/foaf/0.1/surname",
+              "cardinality": {
+                "min": 1
+              },
+              "label": {
+                "en": "Surname"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
