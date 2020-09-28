@@ -1,0 +1,42 @@
+$main-colour:/* #3f51b5 */#165b98;
+$main-colour-logo: #154862;
+$main-colour-hover:#1c7cd1;
+$main-colour-active-border:#1c7cd1;
+$accent-colour: #FF8D41;
+$green:#00aa9a;
+$gray: #6c757d;
+$text-colour:#333;
+$light-background:#1c4cd117;
+$list-row-background-color:#F5F5F5;
+$list-row-box-shadow: 0px 2px 8px -2px rgba(0,0,0,0.3);
+$secondary-font: 'Montserrat';
+$main-font:'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$text-size: 14px;
+$title-size:20px;
+
+@mixin title--underlined {
+    font-size: $title-size;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: $main-colour;
+    border-bottom: 1.5px solid $accent-colour;
+    padding-bottom: 10px;
+    word-break: break-word;
+}
+
+
+@mixin row--shadow{
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+    padding: 10px;
+    min-height: 50px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: $list-row-box-shadow;
+}
+
+

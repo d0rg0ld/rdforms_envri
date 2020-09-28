@@ -7,6 +7,7 @@
   import './src/view/bootstrap/style.css';
 /// #else
   import 'core-js/stable';
+  import 'jquery.fancytree';
   import 'regenerator-runtime/runtime';
   import './src/view/bmd/all'; // hard coded bmd
   import './src/view/bmd/style.css';

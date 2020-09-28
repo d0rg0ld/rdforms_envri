@@ -1,0 +1,1513 @@
+{
+  "root": "ENVRIClassification",
+  "namespaces": {
+    "ex": "http://example.com/",
+    "cc": "http://creativecommons.org/licenses/"
+  },
+  "templates": [
+    {
+      "id": "ENVRIBasics",
+      "type": "group",
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "http://schema.org/name",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "Title"
+          },
+          "description": {
+            "en": "A short title of the service"
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://schema.org/url",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "URL"
+          },
+          "description": {
+            "en": "Website of the resource."
+          }
+        },
+		{
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "http://schema.org/slogan",
+          "cardinality": {
+            "max": 1
+          },
+          "label": {
+            "en": "Tagline"
+          },
+          "description": {
+            "en": "A Tagline for this resource."
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "http://schema.org/description",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "Description"
+          },
+          "description": {
+            "en": "A description for this resource."
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "http://envri.eu/hasfeature",
+          "cardinality": {
+            "min": 1,
+            "pref": "1"
+          },
+          "label": {
+            "en": "Features (One per field)"
+          },
+          "description": {
+            "en": "Features of the service"
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+	{
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://schema.org/logo",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "Link to Logo"
+          },
+          "description": {
+            "en": "Link to a logo for the resource."
+          },
+		  "styles": [
+		  ]
+        },
+		{
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "http://eosc.eu/userValue",
+          "cardinality": {
+            "max": 1
+          },
+          "label": {
+            "en": "User Value"
+          },
+          "description": {
+            "en": "Advantages for the users."
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+        {
+          "id": "publication",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://envri.eu/publishedin",
+          "cardinality": {
+            "min": 1,
+            "pref": "1"
+          },
+		  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/ServicePublication"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "publication"
+          },
+          "description": {
+            "en": "Links to publications about this service"
+          }
+        },
+		{
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://eosc.eu/mmurl",
+          "cardinality": {
+          },
+          "label": {
+            "en": "Multimedia Resource Link"
+          },
+          "description": {
+            "en": "Link to Multimedia Resource about Service."
+          }
+        },
+		{
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://schema.org/hasOfferCatalog",
+          "cardinality": {
+          },
+          "label": {
+            "en": "Options"
+          },
+          "description": {
+            "en": "Links to options records."
+          }
+        },
+				{
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "dcterms:requires",
+          "cardinality": {
+          },
+		  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/Service"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Required Services"
+          },
+          "description": {
+            "en": "Links to required services."
+          }
+        },
+		{
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://schema.org/isRelatedTo",
+          "cardinality": {
+          },
+		  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/Service"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Related Services"
+          },
+          "description": {
+            "en": "Links to related services."
+          }
+        }
+	  ]
+	},
+	{
+      "id": "ENVRIClassification",
+      "type": "group",
+      "items": [
+        {
+          "id": "provider",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://schema.org/provider",
+          "cardinality": {
+            "min": 1,
+            "pref": "1"
+          },
+		  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/ServiceProvider"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "provider"
+          },
+          "description": {
+            "en": "Links to providers of the service"
+          }
+        },
+		{
+		  "id": "FAIRTarget",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://envri.eu/fairtarget",
+          "placeholder": "FAIR Principles addressed",
+          "cardinality": {
+          	"min": 1,
+          	"pref": 1
+          },
+		  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"https://w3id.org/fair/principles/terms/FAIR-SubPrinciple"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "FAIR principle"
+          },
+          "description": {
+            "en": "The FAIR principle(s) addressed by this service"
+          }
+        },
+		{
+		  "id": "sciDomain",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://eosc.eu/sciencedomain",
+          "placeholder": "Domain",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#broader":"http://eosc.eu/sciences"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Scientific Domain"
+          },
+          "description": {
+            "en": "The Scientific Domain"
+          },
+	  "styles": [ "tree", "pathExpr"]
+        },
+	{
+	  "id": "category",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://eosc.eu/category",
+          "placeholder": "category",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "child":"category",
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#broader":"http://eosc.eu/applicationdomain"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Service category"
+          },
+          "description": {
+            "en": "The category of this service"
+          },
+	  "styles": ["tree", "pathExpr"]
+        },	
+	{
+	  "id": "targetusers",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://schema.org/audience",
+          "placeholder": "Target Users",
+          "cardinality": {
+            "min": 1,
+            "pref": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/targetusers"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+          "label": {
+            "en": "Service Target Users/Customers"
+          },
+          "description": {
+            "en": "The target users/customers of this service"
+          }
+        },	
+	{
+	  "id": "envriusers",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://envri.eu/targetusers",
+          "placeholder": "ENVRI user groups",
+          "cardinality": {
+            "min": 1,
+            "pref": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/targetusers"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+          "label": {
+            "en": "ENVRI Specific Service Target Users"
+          },
+          "description": {
+            "en": "The ENVRI specific target users of this service"
+          }
+        },	
+	{
+	  "id": "accesstype",
+	  "type": "choice",
+	  "nodetype": "RESOURCE",
+	  "property": "http://eosc.eu/accesstype",
+	  "placeholder": "Access Type",
+	  "cardinality": {
+	    "min": 1,
+	    "pref": 1
+	  },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/accesstypes"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+	  "label": {
+	    "en": "Access Type"
+	  },
+	  "description": {
+	    "en": "How can the service be accessed"
+	  }
+	},	
+	{
+	  "id": "accessmode",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://eosc.eu/accessmode",
+          "placeholder": "Access Mode",
+          "cardinality": {
+            "min": 1,
+            "pref": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/accessmodes"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+          "label": {
+            "en": "Access Mode"
+          },
+          "description": {
+            "en": "Who can access the service"
+          }
+        },	
+	{
+	  "id": "languages",
+	  "type": "choice",
+	  "nodetype": "RESOURCE",
+	  "property": "http://schema.org/availableLanguage",
+	  "placeholder": "Language",
+	  "cardinality": {
+	    "min": 1,
+	    "pref": 1
+	  },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/languages"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+	  "label": {
+	    "en": "Service Language"
+	  },
+	  "description": {
+	    "en": "Supported language(s)"
+	  }
+	},	
+	{
+	  "id": "places",
+	  "type": "choice",
+	  "nodetype": "RESOURCE",
+	  "property": "http://schema.org/areaServed",
+	  "placeholder": "Place",
+	  "cardinality": {
+	    "min": 1,
+	    "pref": 1
+	  },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/places"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+	  "label": {
+	    "en": "Service area"
+	  },
+	  "description": {
+	    "en": "Places where service is available"
+	  }
+	},	
+	{
+	  "id": "funding",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://schema.org/funder",
+          "placeholder": "Funder",
+          "cardinality": {
+            "min": 1,
+            "pref": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/fundingmodes"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+          "label": {
+            "en": "Funding Mode"
+          },
+          "description": {
+            "en": "Who funds the service"
+          }
+        },	
+	{
+	  "id": "revenuestream",
+          "type": "text",
+          "nodetype": "TEXT",
+          "property": "http://envri.eu/revenuestream",
+          "placeholder": "Revenue Stream",
+          "cardinality": {
+            "min": 1,
+            "pref": 1
+          },
+          "label": {
+            "en": "Revenue Stream"
+          },
+          "description": {
+            "en": "More detailed sources of income"
+          }
+        },	
+	{
+	  "id": "subject",
+          "type": "text",
+          "nodetype": "TEXT",
+          "property": "http://purl.org/dc/elements/1.1/subject",
+          "placeholder": "Subject",
+          "cardinality": {
+            "min": 1,
+            "pref": 1
+          },
+          "label": {
+            "en": "Keyword"
+          },
+          "description": {
+            "en": "Keywords"
+          }
+	}
+      ]
+    },
+    {
+      "id": "ENVRIstatus",
+      "type": "group",
+      "items": [
+		{
+		  "id": "certifications",
+		  "type": "text",
+		  "nodetype": "TEXT",
+		  "property": "http://eosc.eu/certifications",
+		  "placeholder": "Certifications",
+		  "cardinality": {
+		    "min": 1,
+		    "pref": 1
+		  },
+		  "label": {
+		    "en": "Certifications"
+		  },
+		  "description": {
+		    "en": "List of certifications obtained for the service from independent third parties."
+		  }
+		},
+		{
+		  "id": "requiredplatform",
+		  "type": "text",
+		  "nodetype": "TEXT",
+		  "property": "http://schema.org/softwarerequirements",
+		  "placeholder": "Required Platform",
+		  "cardinality": {
+		    "min": 1,
+		    "pref": 1,
+		    "max": 1
+		  },
+		  "label": {
+		    "en": "Required Platform"
+		  },
+		  "description": {
+		    "en": "Platforms required to run service software"
+		  }
+		},
+		{
+		"type":"group",
+		"nodetype":"RESOURCE",
+		"label": { "en":"Component" },
+		"property": "http://envri.eu/component",
+		"cardinality": {
+			"min":1,
+			"pref":1
+		},
+		"cls": [ "componentgroup" ],
+		"content": [
+			{
+			  "id": "type",
+			  "type": "choice",
+			  "nodetype": "RESOURCE",
+			  "property": "http://envri.eu/componenttype",
+			  "placeholder": "Type",
+			  "cardinality": {
+			    "min": 1,
+			    "pref": 1,
+			    "max": 1
+			  },
+				  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/servicecomponenttypes"},
+				  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+				  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+				  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+			  "label": {
+			    "en": "Type"
+			  },
+			  "description": {
+			    "en": "Type of the component."
+			  }
+			},
+			{
+			  "id": "Name",
+			  "type": "text",
+			  "nodetype": "TEXT",
+			  "property": "http://envri.eu/componentname",
+			  "placeholder": "Name",
+			  "cardinality": {
+			    "min": 1,
+			    "pref": 1,
+			    "max": 1
+			  },
+			  "label": {
+			    "en": "Name"
+			  },
+			  "description": {
+			    "en": "Name of the service component"  
+			  }
+			},
+			{
+			  "id": "Description",
+			  "type": "text",
+			  "nodetype": "TEXT",
+			  "property": "http://envri.eu/componentdescription",
+			  "placeholder": "Description",
+			  "cardinality": {
+			    "min": 1,
+			    "pref": 1,
+			    "max": 1
+			  },
+			  "label": {
+			    "en": "Description"
+			  },
+			  "description": {
+			    "en": "Description of the service component"  
+			  },
+			  "styles": [ "multiline" ]
+			},
+			{
+			  "id": "lifecyclestatus",
+			  "type": "choice",
+			  "nodetype": "RESOURCE",
+			  "property": "http://schema.org/creativeWorkStatus",
+			  "placeholder": "Life Cycle Status",
+			  "cardinality": {
+			    "min": 1,
+			    "pref": 1,
+			    "max": 1
+			  },
+				  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/phases"},
+				  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+				  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+				  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+			  "label": {
+			    "en": "Life Cycle Status"
+			  },
+			  "description": {
+			    "en": "Phase of the service/resource lifecycle."
+			  }
+			},
+			{
+			  "id": "trl",
+			  "type": "choice",
+			  "nodetype": "RESOURCE",
+			  "property": "http://eosc.eu/trl",
+			  "placeholder": "TRL",
+			  "cardinality": {
+			    "min": 1,
+			    "pref": 1,
+			    "max": 1
+			  },
+				  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/trls"},
+				  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+				  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+				  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+			  "label": {
+			    "en": "TRL"
+			  },
+			  "description": {
+			    "en": "The Technology Readiness Level of the Tag of the service/resource."
+			  }
+			},
+			{
+			  "id": "version",
+			  "type": "text",
+			  "nodetype": "TEXT",
+			  "property": "http://schema.org/version",
+			  "placeholder": "Version String",
+			  "cardinality": {
+			    "min": 1,
+			    "pref": 1,
+			    "max": 1
+			  },
+			  "label": {
+			    "en": "Version String"
+			  },
+			  "description": {
+			    "en": "Version of the service/resource that is in force."
+			  }
+			},
+			{
+			  "id": "lastupdate",
+			  "type": "text",
+			  "nodetype": "DATATYPE_LITERAL",
+			  "datatype":"xsd:date",
+			  "property": "http://eosc.eu/lastupdate",
+			  "placeholder": "Last Update",
+			  "cardinality": {
+			    "pref": 1,
+			    "max": 1
+			  },
+			  "label": {
+			    "en": "Last Update"
+			  },
+			  "description": {
+			    "en": "Date of the latest update of the service/resource."  
+			  },
+			  "styles": [
+			  ]
+			},
+			{
+			  "id": "changelog",
+			  "type": "text",
+			  "nodetype": "TEXT",
+			  "property": "http://schema.org/releaseNotes",
+			  "placeholder": "Change Log",
+			  "cardinality": {
+			    "min": 1,
+			    "pref": 1,
+			    "max": 1
+			  },
+			  "label": {
+			    "en": "Change Log"
+			  },
+			  "description": {
+			    "en": "Summary of the service/resource features updated from the previous version."
+			  },
+			  "styles": [ "multiline" ]
+			},
+			{
+			  "id": "standards",
+			  "type": "choice",
+			  "nodetype": "RESOURCE",
+			  "property": "http://eosc.eu/standards",
+			  "placeholder": "Standard",
+			  "cardinality": {
+			    "min": 1,
+			    "pref": 1
+			  },
+				  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/standards"},
+				  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+				  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+				  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+			  "label": {
+			    "en": "Standards"
+			  },
+			  "description": {
+			    "en": "List of standards supported by the service."
+			  }
+			},
+			{
+			  "id": "knownbugs",
+			  "type": "text",
+			  "nodetype": "TEXT",
+			  "property": "http://envri.eu/knownbugs",
+			  "placeholder": "Certifications",
+			  "cardinality": {
+			    "min": 1,
+			    "pref": 1,
+			    "max": 1
+			  },
+			  "label": {
+			    "en": "Known Bugs"
+			  },
+			  "description": {
+			    "en": "Description of known bugs/problems"
+			  },
+			  "styles": [ "multiline" ]
+			}
+		]
+	}
+      ]
+    },
+    {
+      "id": "ENVRIorder",
+      "type": "group",
+      "items": [
+	{
+	  "id": "ordertype",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://eosc.eu/ordertype",
+          "placeholder": "Order Type",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/ordertypes"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Order Type"
+          },
+          "description": {
+            "en": "Described id the service/resource can be accessed with an ordering process."
+          }
+	},
+		{
+		  "id": "orderdescription",
+		  "type": "text",
+		  "nodetype": "TEXT",
+		  "property": "http://envri.eu/orderdescription",
+		  "placeholder": "Description",
+		  "cardinality": {
+		    "min": 1,
+		    "pref": 1,
+		    "max": 1
+		  },
+		  "label": {
+		    "en": "Description"
+		  },
+		  "description": {
+		    "en": "Description of the Service Channel"  
+		  },
+		  "styles": [ "multiline" ]
+		},
+		{
+		  "id": "orderdescription",
+		  "type": "text",
+		  "nodetype": "URI",
+		  "property": "http://envri.eu/orderuri",
+		  "placeholder": "Website for access",
+		  "cardinality": {
+		    "min": 1,
+		    "pref": 1,
+		    "max": 1
+		  },
+		  "label": {
+		    "en": "Website"
+		  },
+		  "description": {
+		    "en": "Website for accessing the Service Channel"  
+		  }
+		},	
+	{
+	  "id": "accesspolicy",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://purl.org/dc/terms/accessRights",
+          "placeholder": "Access Policy",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Access Policy"
+          },
+          "description": {
+            "en": "Webpage to the information about the access policies that apply."
+          }
+	},
+	{
+	  "id": "privacypolicy",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://eosc.eu/privacypolicy",
+          "placeholder": "Privacy Policy",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Privacy Policy"
+          },
+          "description": {
+            "en": "Link to the privacy policy applicable to the service."
+          }
+	},
+	{
+	  "id": "paymentmodel",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://eosc.eu/paymentmodel",
+          "placeholder": "Payment Model",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/paymentmodels"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Payment Model"
+          },
+          "description": {
+            "en": "Webpage with the supported payment models and restrictions that apply to each of them"
+          }
+	},
+	{
+	  "id": "price",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://schema.org/price",
+          "placeholder": "Price",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Price"
+          },
+          "description": {
+            "en": "Webpage with the information on the price scheme for this service in case the customer is charged for. "
+          }
+	},
+	{
+	  "id": "sla",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://eosc.eu/sla",
+          "placeholder": "SLA",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Service Level Agreement"
+          },
+          "description": {
+            "en": "Service Level Agreement"
+          }
+	},
+	{
+	  "id": "termsofuse",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://schema.org/termsOfService",
+          "placeholder": "Terms of Service",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Terms of Service"
+          },
+          "description": {
+            "en": "Terms of Service"
+          }
+	},
+	{
+	  "id": "sourcelicense",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://envri.eu/sourcecodelicense",
+          "placeholder": "License for source code",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/sourcelicenses"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "License for source code"
+          },
+          "description": {
+            "en": "License for source code"
+          }
+	},
+	{
+	  "id": "contentlicense",
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://envri.eu/contentlicense",
+          "placeholder": "License for content",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/contentlicenses"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "License for content"
+          },
+          "description": {
+            "en": "License for content"
+          }
+	}
+      ]
+    },
+    {
+      "id": "ENVRIsupport",
+      "type": "group",
+      "items": [
+	{
+	  "id": "helpdesk",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://eosc.eu/helpdesk",
+          "placeholder": "Helpdesk URL",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Helpdesk URL"
+          },
+          "description": {
+            "en": "The URL to a webpage with the contact person or helpdesk to ask more information from the service/resource provider about this service.  "
+          }
+	},
+	{
+	  "id": "usermanual",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://schema.org/documentation",
+          "placeholder": "Usermanual URL",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "User Manual"
+          },
+          "description": {
+            "en": "Link to the service/resource user manual and documentation."
+          }
+	},
+	{
+	  "id": "traininginformation",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://eosc.eu/traininginformation",
+          "placeholder": "Training Information",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Training Information"
+          },
+          "description": {
+            "en": "Webpage to training information on the service."
+          }
+	},
+	{
+	  "id": "feedback",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://eosc.eu/feedback",
+          "placeholder": "Feedback",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Feedback Site"
+          },
+          "description": {
+            "en": "Dedicated Site to provide Feedback"
+          }
+	},
+	{
+	  "id": "monitoring",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://eosc.eu/monitoring",
+          "placeholder": "Monitoring Site",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Monitoring Site"
+          },
+          "description": {
+            "en": "Webpage with monitoring information about this service"
+          }
+	},
+	{
+	  "id": "maintenance",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://eosc.eu/maintenance",
+          "placeholder": "Maintenance Site",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Maintenance Site"
+          },
+          "description": {
+            "en": "Webpage with information about planned maintenance windows for this service"
+          }
+	}
+      ]
+    },
+    {
+      "id": "ENVRIcontact",
+      "type": "group",
+      "items": [
+	{
+	  "id": "ownername",
+          "type": "text",
+          "nodetype": "TEXT",
+          "property": "http://eosc.eu/ownername",
+          "placeholder": "Owner Name",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Owner Name"
+          },
+          "description": {
+            "en": "Name of the person who has accountability for the whole service/resource from a management point of view "
+          }
+	},
+	{
+	  "id": "ownermail",
+          "type": "text",
+          "nodetype": "TEXT",
+          "property": "http://eosc.eu/owneremail",
+          "placeholder": "Owner Email",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Owner Email"
+          },
+          "description": {
+            "en": "E-mail contact of the service/resource owner"
+          }
+	},
+	{
+	  "id": "supportname",
+          "type": "text",
+          "nodetype": "TEXT",
+          "property": "http://eosc.eu/supportname",
+          "placeholder": "Support Name",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Support Name"
+          },
+          "description": {
+            "en": "Name of the person to request technical/ operational support"
+          }
+	},
+	{
+	  "id": "supportmail",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://eosc.eu/supportemail",
+          "placeholder": "Support Email",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Support Email"
+          },
+          "description": {
+            "en": "E-mail contact of the person to request technical/ operational support"
+          }
+	},
+	{
+	  "id": "securityname",
+          "type": "text",
+          "nodetype": "TEXT",
+          "property": "http://eosc.eu/securityname",
+          "placeholder": "Security Name",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Security Name"
+          },
+          "description": {
+            "en": "Name of the person responsible for the security aspects of the service/resource"
+          }
+	},
+	{
+	  "id": "supportmail",
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://eosc.eu/securityemail",
+          "placeholder": "Security Email",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Security Email"
+          },
+          "description": {
+            "en": "Contact of the person responsible for the security aspects of the service/resource"
+          }
+	}
+      ]
+    },
+    {
+      "id": "ENVRIUseCase",
+      "type": "group",
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "property": "http://schema.org/name",
+          "cardinality": {
+            "min": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Use Case Name"
+          },
+          "styles": [
+          ]
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://envri.eu/relatedservice",
+          "cardinality": {
+            "min": 1
+          },
+		  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/Service"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Related Service"
+          },
+          "styles": [
+          ]
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://envri.eu/researchinfrastructure",
+          "cardinality": {
+            "min": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/researchinfrastructures"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Research Infrastructure"
+          },
+          "styles": [
+          ]
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://envri.eu/publishedin",
+          "cardinality": {
+            "min": 1
+          },
+		  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/ServicePublication"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Publication"
+          },
+          "styles": [
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "property": "http://envri.eu/keycontribution",
+          "cardinality": {
+            "min": 1
+          },
+          "label": {
+            "en": "Key Contribution"
+          },
+          "styles": [
+		"multiline"
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "property": "http://envri.eu/results",
+          "cardinality": {
+            "min": 1,
+	    "max": 1
+          },
+          "label": {
+            "en": "Results"
+          },
+          "styles": [
+		"multiline"
+          ]
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://envri.eu/deploymentenvironment",
+          "cardinality": {
+            "min": 1
+          },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/deploymentenvironments"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Deployment Environment"
+          }
+	},
+        {
+          "type": "text",
+          "nodetype": "URL",
+          "property": "http://eosc.eu/mmurl",
+          "cardinality": {
+            "min": 1,
+	    "max": 1
+          },
+          "label": {
+            "en": "Multimedia URL"
+          }
+	}
+      ]
+   },
+    {
+      "id": "ENVRIProvider",
+      "type": "group",
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "property": "http://schema.org/name",
+          "cardinality": {
+            "min": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Provider Name"
+          },
+          "styles": [
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "property": "http://schema.org/url",
+          "cardinality": {
+            "min": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Provider Website"
+          },
+          "styles": [
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "property": "http://schema.org/description",
+          "cardinality": {
+            "min": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Provider Description"
+          },
+          "styles": [
+		"multiline"
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "property": "http://schema.org/logo",
+          "cardinality": {
+            "min": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Provider Logo"
+          },
+          "styles": [
+          ]
+        },
+        {
+          "type": "group",
+          "property": "http://schema.org/contactPoint",
+          "cardinality": {
+            "min": 1
+          },
+          "label": {
+            "en": "Contact"
+          },
+	  "content":[
+		{
+		  "type": "text",
+		  "nodetype": "LITERAL",
+		  "property": "http://schema.org/name",
+		  "cardinality": {
+		    "min": 1,
+		    "max": 1
+		  },
+		  "label": {
+		    "en": "Contact Name"
+		  },
+		  "styles": [
+		  ]
+		},
+		{
+		  "type": "text",
+		  "nodetype": "LITERAL",
+		  "property": "http://schema.org/email",
+		  "cardinality": {
+		    "min": 1,
+		    "max": 1
+		  },
+		  "label": {
+		    "en": "Contact Email"
+		  },
+		  "styles": [
+		  ]
+		},
+		{
+		  "type": "text",
+		  "nodetype": "LITERAL",
+		  "property": "http://schema.org/telephone",
+		  "cardinality": {
+		    "min": 1,
+		    "max": 1
+		  },
+		  "label": {
+		    "en": "Contact Phone"
+		  },
+		  "styles": [
+		  ]
+		}
+	  ]
+        }
+      ]
+   },
+    {
+      "id": "ENVRIPublication",
+      "type": "group",
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "property": "http://schema.org/name",
+          "cardinality": {
+            "min": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Publication Title"
+          },
+          "styles": [
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "property": "http://schema.org/author",
+          "cardinality": {
+            "min": 1
+          },
+          "label": {
+            "en": "Author String"
+          },
+          "styles": [
+          ]
+        },
+	{
+	  "id": "publicationdate",
+	  "type": "text",
+	  "nodetype": "DATATYPE_LITERAL",
+	  "datatype":"xsd:date",
+	  "property": "http://schema.org/dateCreated",
+	  "placeholder": "Date Published",
+	  "cardinality": {
+	    "pref": 1,
+	    "max": 1
+	  },
+	  "label": {
+	    "en": "Publication date"
+	  },
+	  "description": {
+	    "en": "Date of publication"  
+	  }
+	},
+        {
+          "type": "text",
+          "nodetype": "RESOURCE",
+          "property": "http://envri.eu/publishedin",
+          "cardinality": {
+            "min": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Published in"
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "URL",
+          "property": "http://schema.org/url",
+          "cardinality": {
+            "min": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Resource URL"
+          }
+        }
+      ]
+   }
+  ]
+}

@@ -33,3 +33,9 @@
   border: 1px solid #ccc;
   border-top: none;
 }
+
+ul.fancytree-container {
+    height:300px;
+    overflow: auto;
+}
+

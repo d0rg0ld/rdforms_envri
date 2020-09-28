@@ -1,0 +1,424 @@
+{
+  "root": "SWOSoftwareEnvri",
+  "namespaces": {
+    "ex": "http://example.com/",
+    "cc": "http://creativecommons.org/licenses/"
+  },
+  "templates": [
+    {
+      "id": "SWOSoftwareBasics",
+      "type": "group",
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "http://schema.org/name",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "Title"
+          },
+          "description": {
+            "en": "A short title of the software"
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "http://schema.org/description",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "Description"
+          },
+          "description": {
+            "en": "A description for this resource."
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+       {
+          "id": "releasedate",
+          "type": "text",
+          "nodetype": "DATATYPE_LITERAL",
+          "datatype":"xsd:date",
+          "property":  "http://www.ebi.ac.uk/swo/maturity/SWO_9000068",
+          "placeholder": "Release Date",
+          "cardinality": {
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Release date"
+          },
+          "description": {
+            "en": "Release Date"
+          }
+        },
+	{
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property":  "http://www.ebi.ac.uk/swo/SWO_0004000",
+          "cardinality": {
+            "max": 1
+          },
+          "label": {
+            "en": "Version"
+          },
+          "description": {
+            "en": "Version of the Software"
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://schema.org/url",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "URL"
+          },
+          "description": {
+            "en": "Website of the software."
+          }
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://www.ebi.ac.uk/swo/has_license",
+          "cardinality": {
+            "min": 1,
+	    "max": 1,
+            "pref": "1"
+          },
+	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/SWO_0000002"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Has License"
+          },
+          "description": {
+            "en": "License for the software"
+          },
+		  "styles": [
+            "multiline"
+          ]
+        }
+	]
+	},
+	{
+      "id": "SWOSoftwareDevelPublish",
+      "type": "group",
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "RESOURCE",
+          "property": "http://www.ebi.ac.uk/efo/swo/SWO_0000394",
+          "cardinality": {
+            "min": 1,
+            "pref": "1"
+          },
+	  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://purl.obolibrary.org/obo/OBI_0000245"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Developed By"
+          },
+          "description": {
+            "en": "Software has been developed by organization"
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "RESOURCE",
+          "property": "http://www.ebi.ac.uk/swo/SWO_0004004",
+          "cardinality": {
+            "min": 1,
+            "pref": "1"
+          },
+	  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://purl.obolibrary.org/obo/OBI_0000245"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Published By"
+          },
+          "description": {
+            "en": "Software has been published by organization"
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+	{
+          "type": "text",
+          "nodetype": "URI",
+          "property":  "http://www.ebi.ac.uk/swo/maturity/SWO_9000070",
+          "cardinality": {
+          },
+          "label": {
+            "en": "Support URL"
+          },
+          "description": {
+            "en": "Link to Support."
+          }
+        },
+	{
+          "type": "text",
+          "nodetype": "URI",
+          "property":   "http://www.ebi.ac.uk/swo/SWO_0000043",
+          "cardinality": {
+          },
+          "label": {
+            "en": "Documentation URL"
+          },
+          "description": {
+            "en": "Link to Documentation."
+          }
+        },
+	{
+          "type": "text",
+          "nodetype": "URI",
+          "property":   "http://www.ebi.ac.uk/swo/SWO_0000046",
+          "cardinality": {
+          },
+          "label": {
+            "en": "Download URL"
+          },
+          "description": {
+            "en": "Link to Download."
+          }
+        }
+	]
+	},
+	{
+      "id": "SWOSoftwareTechFeatures",
+      "type": "group",
+      "items": [
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://www.ebi.ac.uk/efo/swo/SWO_0000741",
+          "cardinality": {
+            "min": 1,
+            "pref": "1"
+          },
+	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://purl.obolibrary.org/obo/IAO_0000025"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Is encoded in"
+          },
+          "description": {
+            "en": "Programming language(s) the software is encoded in"
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://www.ebi.ac.uk/swo/maturity/SWO_9000067",
+          "cardinality": {
+            "min": 1,
+	    "max": 1,
+            "pref": "1"
+          },
+	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/maturity/SWO_9000061"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "has declared status"
+          },
+          "description": {
+            "en": "Status of the software"
+          },
+		  "styles": [
+            "multiline"
+          ]
+	},
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://www.ebi.ac.uk/swo/SWO_0000082",
+          "cardinality": {
+            "pref": "1"
+          },
+	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/SWO_0000001"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "uses Software"
+          },
+          "description": {
+            "en": "Software used by this software"
+          },
+		  "styles": [
+            "multiline"
+          ]
+	},
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://www.ebi.ac.uk/swo/SWO_0000086",
+          "cardinality": {
+            "max": "1",
+            "min": "1",
+            "pref": "1"
+          },
+	  "constraints": { "http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://edamontology.org/format_1915"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Data input specification"
+          },
+          "description": {
+            "en": "What specification must be followed by input data for the software"
+          },
+		  "styles": [
+            "multiline", "pathExpr", "tree"
+          ]
+	  
+	},
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://www.ebi.ac.uk/swo/SWO_0000087",
+          "cardinality": {
+            "max": "1",
+            "min": "1",
+            "pref": "1"
+          },
+	  "constraints": { "http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://edamontology.org/format_1915"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Data output specification"
+          },
+          "description": {
+            "en": "What specification does the software's ouput data follow"
+          },
+		  "styles": [
+            "multiline", "pathExpr", "tree"
+          ]
+	},
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://www.ebi.ac.uk/swo/SWO_0000150",
+          "cardinality": {
+            "pref": "1"
+          },
+	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/SWO_0000021"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Supported platform"
+          },
+          "description": {
+            "en": "What platform (Operating System) does the software run on"
+          },
+		  "styles": [
+            "multiline"
+          ]
+	},
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://www.ebi.ac.uk/swo/SWO_0004001",
+          "cardinality": {
+            "pref": "1"
+          },
+	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf": "http://www.ebi.ac.uk/swo/SWO_9000050"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Provided UI"
+          },
+          "description": {
+            "en": "What user interface does the software have"
+          },
+		  "styles": [
+            "multiline"
+          ]
+	}
+	]
+	},
+	{
+      "id": "SWOSoftwareFeatures",
+      "type": "group",
+      "items": [
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://www.ebi.ac.uk/efo/swo/SWO_0000740",
+          "cardinality": {
+            "min": 1,
+            "pref": "1"
+          },
+	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://purl.obolibrary.org/obo/IAO_0000064"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Implemented Algorithm"
+          },
+          "description": {
+            "en": "Algorithm implemented by the software"
+          },
+		  "styles": [
+            "multiline"
+          ]
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://www.ebi.ac.uk/swo/SWO_0004005",
+          "cardinality": {
+            "pref": "1"
+          },
+	  "constraints.other": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":  "http://purl.obolibrary.org/obo/OBI_0200000"},
+	  "constraints": {	"http://www.w3.org/2000/01/rdf-schema#subClassOf":  ["http://purl.obolibrary.org/obo/OBI_0200000","http://www.oil-e.net/ontology/oil-base.owl#IV_Action"]},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "Application Scenario"
+          },
+          "description": {
+            "en": "What process does this software support?"
+          },
+		  "styles": [
+            "multiline", "pathExpr", "tree", "union"
+          ]
+	}
+  ]
+}
+]
+}

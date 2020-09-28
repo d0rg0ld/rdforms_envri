@@ -1,6 +1,9 @@
 import registerOntoChooser from './chooser/ontoChooser.js';
 import rdfGraph from './service_rdf.js'; // import a rdfjson graph
 const itemStore = new rdforms.ItemStore();
+import './common_comps.js';
+import { parseQuery } from './common_comps.js';
+
 //const graph = new rdfjson.Graph(rdfGraph);
 
 
@@ -8,6 +11,7 @@ var parastring = document.URL.replace(/^[^\?]+\??/,'');
 
 var params = parseQuery( parastring );
 
+/*
 function parseQuery ( query ) {
    var Params = new Object ();
    if ( ! query ) return Params; // return empty object
@@ -22,7 +26,8 @@ function parseQuery ( query ) {
    }
    return Params;
 }
-
+*/
+/*
 function Get(yourUrl){
 	var Httpreq = new XMLHttpRequest(); // a new request
 	Httpreq.open("GET",yourUrl,false);
@@ -43,27 +48,29 @@ function initGraph(rdfGraph) {
 
 	return graph
 }
+*/
 
-var graph = null;
+window.graph = null;
 if ("uri" in params) {
 	//var query = "http://90.147.102.53/sparql?default-graph-uri=&query=select+%28%3C" + params["uri"] + "%3E+as+%3Fs%29+%3Fp+%3Fo+isiri%28%3Fo%29+where+%7B+%3C" + params["uri"] + "%3E+%3Fp+%3Fo+%7D&format=text%2Ftab-separated-values&timeout=0&debug=on&run=+Run+Query+"
 	//var query = "http://90.147.102.53/sparql?default-graph-uri=&query=select+%28%3C" + params["uri"] + "%3E+as+%3Fs%29+%3Fp+%3Fo+isiri%28%3Fo%29+where+%7B+%3C" + params["uri"] + "%3E+%3Fp+%3Fo+%20+%2E+%20+%20+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"
-	var query = "http://90.147.102.53/sparql?default-graph-uri=&query=select+%3Fs+%3Fp+%3Fo+where+%7B+%7B+%3C" + params["uri"] + "%3E+%3Fp+%3Fo+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28%3Fs+%3D+%3C" + params["uri"] + "%3E+%29%7D+%0D%0AUNION+%7B+<http%3A%2F%2Fenvri.eu%2Fservice%2Fa44dc3f9-ab08-49c1-826f-59f0c471371a>+%3Fp1+%3Fs+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28isBlank%28%3Fs%29%29+%7D+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"
+	//var query = "http://90.147.102.53/sparql?default-graph-uri=&query=select+%3Fs+%3Fp+%3Fo+where+%7B+%7B+%3C" + params["uri"] + "%3E+%3Fp+%3Fo+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28%3Fs+%3D+%3C" + params["uri"] + "%3E+%29%7D+%0D%0AUNION+%7B+<http%3A%2F%2Fenvri.eu%2Fservice%2Fa44dc3f9-ab08-49c1-826f-59f0c471371a>+%3Fp1+%3Fs+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28isBlank%28%3Fs%29%29+%7D+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"
+	var query = "http://90.147.102.53/sparql?default-graph-uri=&query=select+%3Fs+%3Fp+%3Fo+where+%7B+%7B+%3C" + params["uri"] + "%3E+%3Fp+%3Fo+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28%3Fs+%3D+%3C" + params["uri"] + "%3E+%29%7D+%0D%0AUNION+%7B+%3C" + params["uri"] + "%3E+%3Fp1+%3Fs+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28isBlank%28%3Fs%29%29+%7D+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"
 	var rdfdata_raw=JSON.parse(Get(query));
 	var res=rdfdata_raw["results"]["bindings"];
 	if (res.length > 0) {
-		graph=new rdfjson.Graph({});
+		window.graph=new rdfjson.Graph({});
 		for (var i = 1; i < res.length; i++) {
 			//var elements_raw=rdfdata_raw[i];
 			//var elements=elements_raw.split("\t");
 			//try {
 			
 				if (res[i]["o"]["type"]=="uri" || res[i]["o"]["type"]=="bnode")
-					graph.add(res[i]["s"]["value"], 
+					window.graph.add(res[i]["s"]["value"], 
 						  res[i]["p"]["value"],
 						  res[i]["o"]["value"]);
 				else
-					graph.addL(res[i]["s"]["value"], 
+					window.graph.addL(res[i]["s"]["value"], 
 						   res[i]["p"]["value"],
 						   res[i]["o"]["value"]);
 			//}
@@ -71,21 +78,21 @@ if ("uri" in params) {
 			//	console.log("FAILED STATEMENT FOR " + elements);
 			//}
 		} 
-	}  else graph=initGraph(rdfGraph);
-}  else graph=initGraph(rdfGraph);
+	}  else window.graph=initGraph(rdfGraph);
+}  else window.graph=initGraph(rdfGraph);
 
 
-console.log(graph);
+console.log(window.graph);
 
 const bundles = [
-  ['templates/dcterms.json'],
+/*  ['templates/dcterms.json'],
   ['templates/foaf.json'],
   ['templates/skos.json'],
   ['templates/adms.json'],
   ['templates/vcard.json'],
   ['templates/dcat_props.json'],
-  ['templates/dcat.json'],
-  ['templateBundle3.json'],
+  ['templates/dcat.json'],*/
+  ['serviceDescriptionBundles.json'],
 ];
 
 
@@ -93,7 +100,7 @@ const bundles = [
 
 registerOntoChooser();
 
-let newk=Object.keys(graph._graph)[0];
+let newk=Object.keys(window.graph._graph)[0];
 
 rdforms.bundleLoader(itemStore, bundles, function(bundles) {
   new rdforms.Editor({
@@ -141,11 +148,11 @@ rdforms.bundleLoader(itemStore, bundles, function(bundles) {
   var ta = document.getElementById('output');
   var updateOutput = function() {
     // Export RDF/XML
-    ta.value = rdfjson.converters.rdfjson2rdfxml(graph);
+    ta.value = rdfjson.converters.rdfjson2rdfxml(window.graph);
 
     // Export RDF/JSON
     // ta.value = JSON.stringify(graph.exportRDFJSON(), null, "  ");
   };
   updateOutput();
-  graph.onChange = updateOutput;
+  window.graph.onChange = updateOutput;
 });

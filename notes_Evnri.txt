@@ -1,0 +1,11 @@
+# we need an interface to create new entries for annotation, i.e. additional data formats, algorithms, etc
+
+# we reuse existing ontologies, such as EDAM or SWO, for that purpose. 
+It is important to stick to the conventions of these ontologies, otherwise its a mess
+ regarding swo for example, an analysis showed certain commonalities across subclasses of one specific type -> try to automate the creation of the required relationships when entering a new term. Keep it simple!
+
+For example regarding data format, EDAM http://edamontology.org/format_2350 [ Format (By type of data) us used ]
+
+We need the following features:
+	Select Top Level class (eg data format, algorithm, etc) 
+		edit and add terms
