@@ -298,6 +298,58 @@ const chooserConfiguration = {
 
    getChoice(item, value) {
 	// Check existing
+        console.log(item);
+        console.log(value);
+        for (let i in item._bundle._items) {
+                if (item._bundle._items[i]._source.id==item._source.child) {
+                        console.log("HIT");
+                        console.log(item._bundle._items[i]._getLocalizedValue());
+                }
+
+        }
+        var querystring="select distinct ?l where { ";
+        for ( var k in item._source.constraints) {
+                //console.log(k);
+                //console.log(item._source.constraints[k]);
+                querystring=querystring + "<" + value + "> ?p ?l . " +
+                "FILTER ( ?p = <http://schema.org/name> || " +
+                        " ?p = <http://www.w3.org/2004/02/skos/core#label> || " +
+                        " ?p = <http://www.w3.org/2000/01/rdf-schema#label>)"
+        }
+        querystring+="} order by ?l";
+        console.log(querystring);
+        var xhrArgs={   "data" : "query="+encodeURIComponent(querystring).replace("%20", "+"),
+                        "format": "xml",
+                        "method":"POST",
+                        "sync":"false",
+                        "handleAs":"json",
+                        //"headers":{ 'Content-Type': 'application/sparql-query;charset=UTF-8',
+                        "headers":{ 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+                                   'Accept':'application/sparql-results+json' }};
+        var requestUrl="http://90.147.102.53/sparql";
+        var transform=null;
+
+        xhr(requestUrl, xhrArgs).then(function(data) {
+                //console.log(data);
+                for (var i in data["results"]["bindings"]) {
+                        var res=data["results"]["bindings"][i]["l"]["value"]
+                        console.log(res);
+                        var out = { "value" : String(value), "label" : String(res) }
+                        transform=out;
+                        console.log("pushed");
+                }
+                //console.log(transform);
+        });
+     return transform;
+     //return new Promise(resolve => resolve(transform));
+        /*
+     return {
+       value,
+       load(onSuccess)
+     };
+        */
+
+	// Check existing
 	/*
      return {
        value,
