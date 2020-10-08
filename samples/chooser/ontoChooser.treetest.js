@@ -1,6 +1,7 @@
 const jQuery = require('jquery');
 const fancytree = require('jquery.fancytree');
 require('jquery.fancytree/dist/modules/jquery.fancytree.filter');
+require('jquery.fancytree/dist/modules/jquery.fancytree.edit');
 const xhr = require('dojo/request/xhr');
 import data from './data.js';
 //import { i18n, NLSMixin } from 'esi18n';
@@ -13,9 +14,14 @@ var divWidth = 512;
 
 var active=false;
 var treediv=null;
+var btnDiv=null;
 
 var curKey=null;
 var curTitle=null;
+
+var newNodes=[];
+
+var curItem=null;
 
 function floatingDiv(parent, id) {
 	if(!parent) 
@@ -83,6 +89,10 @@ function buildTree(list, root) {
 			var entry={};
 			entry["title"]= list[i]["label"]["en"];
                         entry["key"]=list[i]["value"];
+			entry["data"]={};
+			entry["data"]["new"]=list[i]["new"];
+			if (list[i]["new"])
+				entry["extraclasses"]="fancytree-newnode";	
 			if ("children" in  list[i]) {
                         	entry["folder"]=true;
                         	entry["icon"]=true;
@@ -97,13 +107,52 @@ function buildTree(list, root) {
 
 function onCancelSubmit(action, onselect=null) {
 	if (action=="submit") {
+		if (newNodes.length>0) {
+			// Assume the followinga
+
+			// newly added "top level" node -> shouldnt be possible, but
+			// currently is.  in this case would have to get parent from somewhere
+
+			// if only one constraint its simple. problematic if multiple.
+
+
+			// child of top level -> top level ones should (if not newly created) always have URI. 
+			// Use this URI as parent . how to use name of relationship? get from constraints
+			// child of child of toplevel:-> get up to child of toplevel, create uri, trickle down
+
+			// MUCH BETTER IDEA: CREATE RIGHT KEY AT EDIT TIME!!!
+
+			for (var n in newNodes) {
+				console.log(newNodes[n]); 
+				console.log("<"+newNodes[n].key + ">	rdfs:subClassOf	<" + newNodes[n].parent.key+">" )
+				window.termgraph.add(newNodes[n].key, 'http://www.w3.org/2000/01/rdf-schema#subClassOf', newNodes[n].parent.key);
+				window.termgraph.add(newNodes[n].key, 'http://www.w3.org/2000/01/rdf-schema#label', newNodes[n].title);
+				//we must add the stuff to the choiceStore as well
+				for (var e in  window.choiceStore[curItem]) 
+					if (window.choiceStore[curItem][e].value==newNodes[n].parent.key) {
+						if (!("children" in window.choiceStore[curItem][e]))
+							window.choiceStore[curItem][e]["children"]=[];
+						window.choiceStore[curItem][e].children.push({ _reference: newNodes[n].key});
+						break;
+					}
+				window.choiceStore[curItem].push({ value: newNodes[n].key, label: { en: newNodes[n].title}, new: true });
+			}
+
+		}
+		console.log(curKey);
 		onselect({ "value": curKey, "label": { "en" : curTitle}});
 	}
 	if (action=="add") {
-		var tree = jQuery.ui.fancytree.getTree("#tree"),
-        	node = tree.getActiveNode(),
-        	newData = {title: "New Node"},
-        	newSibling = node.appendSibling(newData);
+		var tree = jQuery.ui.fancytree.getTree("#tree");
+        	var node = tree.getActiveNode();
+        	var newData = {title: "New Node"};
+		var newNode=null;
+		if (node) {
+			if (!(node.folder))
+				node.folder=true;
+			newNode=node.editCreateNode("child", newData);
+		} else
+			newNode=tree.rootNode.editCreateNode("child",  newData);
 		return;
 		//onselect({ "value": curKey, "label": { "en" : curTitle}});
 	}
@@ -112,6 +161,8 @@ function onCancelSubmit(action, onselect=null) {
 	active=false;
 	curKey=null;
 	curTitle=null;
+	curItem=null;
+	newNodes=[];
 	window.blockDiv.hide(100);
 }
 
@@ -130,10 +181,12 @@ function setSelect(k, v, firstConstraint, pathExpr, union, querystring) {
 			querystring=querystring + "?s " + filler + " <" + v + "> .";
 			querystring=querystring + " ?s ?p ?l . FILTER ( ?p = <http://schema.org/name> || " +
 				" ?p = <http://www.w3.org/2004/02/skos/core#label> || " +
-				" ?p = <http://www.w3.org/2000/01/rdf-schema#label>) . OPTIONAL { ?par " + filler + " <" + v + ">. ?s <" + k + "> ?par . ?par ?pl ?parL . "  +	
+				" ?p = <http://www.w3.org/2000/01/rdf-schema#label>) . " + 
+				"OPTIONAL { ?par " + filler + " <" + v + ">. ?s <" + k + "> ?par . " + 
+				"OPTIONAL { ?par ?pl ?parL . "  +	
 			"FILTER ( ?pl = <http://schema.org/name> || " +
 				" ?pl = <http://www.w3.org/2004/02/skos/core#label> || " +
-				" ?pl = <http://www.w3.org/2000/01/rdf-schema#label>)} ." 	
+				" ?pl = <http://www.w3.org/2000/01/rdf-schema#label>)}} ." 	
 			if (union)
 				querystring=querystring + "}";
 			return querystring;
@@ -167,7 +220,7 @@ function loadChoices(item) {
 		}
 
 		//console.log(item._source.constraints);
-		var querystring="select distinct ?s ?l ?par ?parL where { ";
+		var querystring="select distinct ?s (sample(?l) as ?l) ?par (sample(?parL) as ?parL) where { ";
 		console.log(item._source.styles);
 
 		var pathExpr=false;
@@ -194,7 +247,7 @@ function loadChoices(item) {
 				firstConstraint=false;
 			}
 		}
-		querystring+="} order by ?par";
+		querystring+="} group by ?s ?par order by ?par";
 		console.log(querystring);
 		var xhrArgs={	"data" : "query="+encodeURIComponent(querystring).replace("%20", "+"), 
 				"format": "xml", 
@@ -220,7 +273,7 @@ function loadChoices(item) {
 				//console.log(i);
 				if (curPar != "" && curPar != data["results"]["bindings"][i]["par"]["value"]) {
 					//console.log( data["results"]["bindings"][i]["par"]["value"]);
-					var pardata={"value": curPar, "label": { "en" : curParL }, "selectable":false, "top":true,"children":[]}
+					var pardata={"value": curPar, "label": { "en" : curParL }, new: false, "selectable":false, "top":true,"children":[]}
 					//console.log(pardata);
 					for (var j in childList) {
 						pardata.children.push({"_reference":childList[j].value});
@@ -233,14 +286,29 @@ function loadChoices(item) {
 				};
 				if ("par" in data["results"]["bindings"][i]) {
 					curPar= data["results"]["bindings"][i]["par"]["value"];
-					curParL= data["results"]["bindings"][i]["parL"]["value"];
+					if ("parL" in data["results"]["bindings"][i])
+						curParL= data["results"]["bindings"][i]["parL"]["value"];
+					else
+						curParL=curPar;
 					childList.push({ "value": data["results"]["bindings"][i]["s"]["value"], 
-							"label": { "en" : data["results"]["bindings"][i]["l"]["value"]}});
+							"label": { "en" : data["results"]["bindings"][i]["l"]["value"]}, new: false});
 				} else {
 					leafs.push({ "value": data["results"]["bindings"][i]["s"]["value"],
-							"label": { "en" : data["results"]["bindings"][i]["l"]["value"]}});
+							"label": { "en" : data["results"]["bindings"][i]["l"]["value"]}, new: false});
 				}
 				//console.log(curPar);
+			}
+			pardata={"value": curPar, "label": { "en" : curParL }, new: false, "selectable":false, "top":true,"children":[]}
+                                        //console.log(pardata);
+                                        for (var j in childList) {
+                                                pardata.children.push({"_reference":childList[j].value});
+                                                leafs.push(childList[j]);
+                                        }
+                                        //console.log(pardata);
+			if (childList.length>0) {
+                                        transform.push(pardata);
+                                        transId.push(curPar);
+                                        childList=[];
 			}
 			//console.log(transform);
 		}); 
@@ -372,6 +440,8 @@ const chooserConfiguration = {
 		if (!(binding._item._internalId in window.choiceStore)) 
 			window.choiceStore[binding._item._internalId]=loadChoices(binding._item);
 
+		curItem=binding._item._internalId;
+
 		active=true;
 		console.log(binding);
 
@@ -439,7 +509,7 @@ const chooserConfiguration = {
 		console.log(treeStruct);
 
 		var myt=fancytree.createTree(treediv,{
-			extensions: ["filter"],
+			extensions: ["filter", "edit"],
 			quicksearch: true,
 			icon: true,
 			source: treeStruct,
@@ -456,6 +526,9 @@ const chooserConfiguration = {
 				nodata: true,      // Display a 'no data' status node if result is empty
 				mode: "dimm"       // Grayout unmatched nodes (pass "hide" to remove unmatched node instead)
 			},
+			expand: function(data) {
+				jQuery(".fancytree-newnode").children(".fancytree-title").css({ 'background': 'pink' });
+			},
 			activate: function(event, data) {
 				console.log("ACTIVATE");
 				console.log(data);
@@ -465,10 +538,51 @@ const chooserConfiguration = {
 			select: function(event, data) {
 				console.log("SELECT");
 				console.log(data);
+				curKey=data.node.key;
+				curTitle=data.node.title;
+			},
+			edit: {
+				triggerStart: ["dblclick"],
+				beforeEdit: function(event, data){ 
+					if (!(data.node.title == "New Node" || newNodes.includes(data.node)))
+					//if (!(data.node.title == "New Node") )
+						return false;
+					console.log(data.node.parent.key);
+					
+					//treediv.filterNodes.call(treediv, data.node.title, {});
+
+					//retrieve new IDENTIFIER
+					data.node.key=Get("http://90.147.102.53/uuid_create/create?prefix="+ "http://envri.eu/ontology/terminology%23");
+					console.log(data.node.key);
+
+					jQuery('#btnDiv').find('*').attr('disabled', true);
+					data.node.setActive();
+					console.log("before edit"); 
+					
+				},
+				/*
+				edit: function(event, data) {
+					//var flt=data.tree.filterNodes.call(data.tree, data.node.title, {});
+					console.log(data.input);
+				},*/
+				close: function(event, data){
+					jQuery('#btnDiv').find('*').attr('disabled', false);
+					if (data.node==null)
+						return;	
+					if (data.node.title == "New Node" || (data.node.title == data.orgTitle && data.dirty)) {
+						if (data.node.parent.children.length==1)
+							data.node.parent.folder=false;
+						data.node.remove();
+					} else {
+						jQuery("#"+data.node.li.id).css({"background-color":"pink"});
+						newNodes.push(data.node);
+					}
+					curKey=data.node.key;
+					curTitle=data.node.title;
+				}
 			}
 		});
-
-
+			
 		    jQuery("input[name=search]").on("keyup", function(e){
 		      var n,
 			tree = jQuery.ui.fancytree.getTree(),
@@ -504,23 +618,25 @@ const chooserConfiguration = {
       			myt.clearFilter();
     		}).attr("disabled", true);
 	
-		var btnDiv = document.createElement("div");
+		btnDiv = document.createElement("div");
 		btnDiv.setAttribute('id', 'btnDiv');
 		btnDiv.setAttribute('style', 'height:30px;');
 		var cancelBtn = document.createElement("button");
 		cancelBtn.setAttribute('style', 'height:30px;width:70px;');
 		cancelBtn.textContent="Cancel";
 		cancelBtn.onclick= function(e) {onCancelSubmit("cancel");};
-		var addBtn = document.createElement("button");
-		addBtn.setAttribute('style', 'height:30px;width:70px;');
-		addBtn.textContent="Add";
-		addBtn.onclick= function(e) {onCancelSubmit("add", onSelect);};
+		btnDiv.appendChild(cancelBtn);
+		if (!(binding._item._source.styles.includes("immutable"))) {
+			var addBtn = document.createElement("button");
+			addBtn.setAttribute('style', 'height:30px;width:70px;');
+			addBtn.textContent="Add";
+			addBtn.onclick= function(e) {onCancelSubmit("add", onSelect);};
+			btnDiv.appendChild(addBtn);
+		}
 		var submitBtn = document.createElement("button");
 		submitBtn.setAttribute('style', 'height:30px;width:70px;');
 		submitBtn.textContent="Accept";
 		submitBtn.onclick= function(e) {onCancelSubmit("submit", onSelect);};
-		btnDiv.appendChild(cancelBtn);
-		btnDiv.appendChild(addBtn);
 		btnDiv.appendChild(submitBtn);
 		treediv1.appendChild(btnDiv);
 	}

@@ -268,7 +268,7 @@
             "pref": 1,
             "max": 1
           },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#broader":"http://eosc.eu/sciences"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#science"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
@@ -292,7 +292,7 @@
             "max": 1
           },
 		  "child":"category",
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#broader":"http://eosc.eu/applicationdomain"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#Service"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
@@ -314,7 +314,7 @@
             "min": 1,
             "pref": 1
           },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/targetusers"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#targetuser"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
@@ -323,28 +323,8 @@
           },
           "description": {
             "en": "The target users/customers of this service"
-          }
-        },	
-	{
-	  "id": "envriusers",
-          "type": "choice",
-          "nodetype": "RESOURCE",
-          "property": "http://envri.eu/targetusers",
-          "placeholder": "ENVRI user groups",
-          "cardinality": {
-            "min": 1,
-            "pref": 1
           },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/targetusers"},
-		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
-          "label": {
-            "en": "ENVRI Specific Service Target Users"
-          },
-          "description": {
-            "en": "The ENVRI specific target users of this service"
-          }
+	  "styles": [ "pathExpr" ]
         },	
 	{
 	  "id": "accesstype",
@@ -356,7 +336,7 @@
 	    "min": 1,
 	    "pref": 1
 	  },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/accesstypes"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#accesstype"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
@@ -365,7 +345,8 @@
 	  },
 	  "description": {
 	    "en": "How can the service be accessed"
-	  }
+	  },
+	  "styles": [ "pathExpr" ]
 	},	
 	{
 	  "id": "accessmode",
@@ -377,7 +358,7 @@
             "min": 1,
             "pref": 1
           },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/accessmodes"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#accessmode"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
@@ -386,7 +367,8 @@
           },
           "description": {
             "en": "Who can access the service"
-          }
+          },
+	   "styles": [ "pathExpr" ]
         },	
 	{
 	  "id": "languages",
@@ -398,7 +380,7 @@
 	    "min": 1,
 	    "pref": 1
 	  },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/languages"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#language"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
@@ -407,7 +389,8 @@
 	  },
 	  "description": {
 	    "en": "Supported language(s)"
-	  }
+	  },
+	  "styles": [ "pathExpr" ]
 	},	
 	{
 	  "id": "places",
@@ -419,7 +402,7 @@
 	    "min": 1,
 	    "pref": 1
 	  },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/places"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#place"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
@@ -428,7 +411,8 @@
 	  },
 	  "description": {
 	    "en": "Places where service is available"
-	  }
+	  },
+	  "styles": [ "pathExpr" ]
 	},	
 	{
 	  "id": "funding",
@@ -440,7 +424,7 @@
             "min": 1,
             "pref": 1
           },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/fundingmodes"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#fundingmode"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
@@ -449,7 +433,8 @@
           },
           "description": {
             "en": "Who funds the service"
-          }
+          },
+	  "styles": [ "pathExpr" ]
         },	
 	{
 	  "id": "revenuestream",
@@ -527,219 +512,48 @@
 		  }
 		},
 		{
-		"type":"group",
-		"nodetype":"RESOURCE",
-		"label": { "en":"Component" },
-		"property": "http://envri.eu/component",
-		"cardinality": {
-			"min":1,
-			"pref":1
-		},
-		"cls": [ "componentgroup" ],
-		"content": [
-			{
-			  "id": "type",
-			  "type": "choice",
-			  "nodetype": "RESOURCE",
-			  "property": "http://envri.eu/componenttype",
-			  "placeholder": "Type",
-			  "cardinality": {
-			    "min": 1,
-			    "pref": 1,
-			    "max": 1
-			  },
-				  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/servicecomponenttypes"},
-				  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-				  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-				  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
-			  "label": {
-			    "en": "Type"
-			  },
-			  "description": {
-			    "en": "Type of the component."
-			  }
-			},
-			{
-			  "id": "Name",
-			  "type": "text",
-			  "nodetype": "TEXT",
-			  "property": "http://envri.eu/componentname",
-			  "placeholder": "Name",
-			  "cardinality": {
-			    "min": 1,
-			    "pref": 1,
-			    "max": 1
-			  },
-			  "label": {
-			    "en": "Name"
-			  },
-			  "description": {
-			    "en": "Name of the service component"  
-			  }
-			},
-			{
-			  "id": "Description",
-			  "type": "text",
-			  "nodetype": "TEXT",
-			  "property": "http://envri.eu/componentdescription",
-			  "placeholder": "Description",
-			  "cardinality": {
-			    "min": 1,
-			    "pref": 1,
-			    "max": 1
-			  },
-			  "label": {
-			    "en": "Description"
-			  },
-			  "description": {
-			    "en": "Description of the service component"  
-			  },
-			  "styles": [ "multiline" ]
-			},
-			{
-			  "id": "lifecyclestatus",
-			  "type": "choice",
-			  "nodetype": "RESOURCE",
-			  "property": "http://schema.org/creativeWorkStatus",
-			  "placeholder": "Life Cycle Status",
-			  "cardinality": {
-			    "min": 1,
-			    "pref": 1,
-			    "max": 1
-			  },
-				  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/phases"},
-				  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-				  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-				  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
-			  "label": {
-			    "en": "Life Cycle Status"
-			  },
-			  "description": {
-			    "en": "Phase of the service/resource lifecycle."
-			  }
-			},
-			{
-			  "id": "trl",
-			  "type": "choice",
-			  "nodetype": "RESOURCE",
-			  "property": "http://eosc.eu/trl",
-			  "placeholder": "TRL",
-			  "cardinality": {
-			    "min": 1,
-			    "pref": 1,
-			    "max": 1
-			  },
-				  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/trls"},
-				  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-				  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-				  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
-			  "label": {
-			    "en": "TRL"
-			  },
-			  "description": {
-			    "en": "The Technology Readiness Level of the Tag of the service/resource."
-			  }
-			},
-			{
-			  "id": "version",
-			  "type": "text",
-			  "nodetype": "TEXT",
-			  "property": "http://schema.org/version",
-			  "placeholder": "Version String",
-			  "cardinality": {
-			    "min": 1,
-			    "pref": 1,
-			    "max": 1
-			  },
-			  "label": {
-			    "en": "Version String"
-			  },
-			  "description": {
-			    "en": "Version of the service/resource that is in force."
-			  }
-			},
-			{
-			  "id": "lastupdate",
-			  "type": "text",
-			  "nodetype": "DATATYPE_LITERAL",
-			  "datatype":"xsd:date",
-			  "property": "http://eosc.eu/lastupdate",
-			  "placeholder": "Last Update",
-			  "cardinality": {
-			    "pref": 1,
-			    "max": 1
-			  },
-			  "label": {
-			    "en": "Last Update"
-			  },
-			  "description": {
-			    "en": "Date of the latest update of the service/resource."  
-			  },
-			  "styles": [
-			  ]
-			},
-			{
-			  "id": "changelog",
-			  "type": "text",
-			  "nodetype": "TEXT",
-			  "property": "http://schema.org/releaseNotes",
-			  "placeholder": "Change Log",
-			  "cardinality": {
-			    "min": 1,
-			    "pref": 1,
-			    "max": 1
-			  },
-			  "label": {
-			    "en": "Change Log"
-			  },
-			  "description": {
-			    "en": "Summary of the service/resource features updated from the previous version."
-			  },
-			  "styles": [ "multiline" ]
-			},
-			{
-			  "id": "standards",
-			  "type": "choice",
-			  "nodetype": "RESOURCE",
-			  "property": "http://eosc.eu/standards",
-			  "placeholder": "Standard",
-			  "cardinality": {
-			    "min": 1,
-			    "pref": 1
-			  },
-				  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/standards"},
-				  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-				  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-				  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
-			  "label": {
-			    "en": "Standards"
-			  },
-			  "description": {
-			    "en": "List of standards supported by the service."
-			  }
-			},
-			{
-			  "id": "knownbugs",
-			  "type": "text",
-			  "nodetype": "TEXT",
-			  "property": "http://envri.eu/knownbugs",
-			  "placeholder": "Certifications",
-			  "cardinality": {
-			    "min": 1,
-			    "pref": 1,
-			    "max": 1
-			  },
-			  "label": {
-			    "en": "Known Bugs"
-			  },
-			  "description": {
-			    "en": "Description of known bugs/problems"
-			  },
-			  "styles": [ "multiline" ]
-			}
-		]
-	}
-      ]
+		  "id": "softwarecomponent",
+		  "type": "choice",
+		  "nodetype": "RESOURCE",
+		  "property": "http://envri.eu/ontology/service#softwarecomponent",
+		  "placeholder": "software component",
+		  "cardinality": {
+		    "min": 1,
+		    "pref": 1
+		  },
+			  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/Software"},
+			  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+			  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+			  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+		  "label": {
+		    "en": "Software component"
+		  },
+		  "description": {
+		    "en": "Software serving as component for the service"
+		  }
+		},	
+		{
+		  "id": "documentcomponent",
+		  "type": "choice",
+		  "nodetype": "RESOURCE",
+		  "property": "http://envri.eu/ontology/service#documentcomponent",
+		  "placeholder": "document component",
+		  "cardinality": {
+		    "min": 1,
+		    "pref": 1
+		  },
+			  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/ontology/document"},
+			  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+			  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+			  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#label",
+		  "label": {
+		    "en": "Document component"
+		  },
+		  "description": {
+		    "en": "Document serving as component for the service"
+		  }
+		}	
+	  ]
     },
     {
       "id": "ENVRIorder",
@@ -756,7 +570,7 @@
             "pref": 1,
             "max": 1
           },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/ordertypes"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#ordertype"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
@@ -765,7 +579,8 @@
           },
           "description": {
             "en": "Described id the service/resource can be accessed with an ordering process."
-          }
+          },
+	  "styles": [ "pathExpr" ]
 	},
 		{
 		  "id": "orderdescription",
@@ -851,7 +666,7 @@
             "pref": 1,
             "max": 1
           },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/paymentmodels"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#paymentmodel"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
@@ -860,7 +675,8 @@
           },
           "description": {
             "en": "Webpage with the supported payment models and restrictions that apply to each of them"
-          }
+          },
+	  "styles": [ "pathExpr" ]
 	},
 	{
 	  "id": "price",
@@ -917,39 +733,17 @@
           }
 	},
 	{
-	  "id": "sourcelicense",
+	  "id": "license",
           "type": "choice",
           "nodetype": "RESOURCE",
-          "property": "http://envri.eu/sourcecodelicense",
-          "placeholder": "License for source code",
-          "cardinality": {
-            "min": 1,
-            "pref": 1,
-            "max": 1
-          },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/sourcelicenses"},
-		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
-          "label": {
-            "en": "License for source code"
-          },
-          "description": {
-            "en": "License for source code"
-          }
-	},
-	{
-	  "id": "contentlicense",
-          "type": "choice",
-          "nodetype": "RESOURCE",
-          "property": "http://envri.eu/contentlicense",
+          "property": "http://envri.eu/license",
           "placeholder": "License for content",
           "cardinality": {
             "min": 1,
             "pref": 1,
             "max": 1
           },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/contentlicenses"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/SWO_0000002"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
@@ -958,7 +752,10 @@
           },
           "description": {
             "en": "License for content"
-          }
+          },
+	  "styles": [
+		"pathExpr"	
+	  ]
 	}
       ]
     },
@@ -1295,13 +1092,16 @@
           "cardinality": {
             "min": 1
           },
-		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/deploymentenvironments"},
+		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#deploymentenvironment"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
           "label": {
             "en": "Deployment Environment"
-          }
+          },
+          "styles": [
+		"pathExpr"
+          ]
 	},
         {
           "type": "text",

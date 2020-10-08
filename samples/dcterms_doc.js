@@ -1,7 +1,8 @@
 import registerOntoChooser from './chooser/ontoChooser.js';
-import rdfGraph from './service_rdf.js'; // import a rdfjson graph
+import rdfGraph from './document_rdf.js'; // import a rdfjson graph
 const itemStore = new rdforms.ItemStore();
 import './common_comps.js';
+import { parseQuery, initGraph } from './common_comps.js';
 //const graph = new rdfjson.Graph(rdfGraph);
 
 
@@ -9,41 +10,7 @@ var parastring = document.URL.replace(/^[^\?]+\??/,'');
 
 var params = parseQuery( parastring );
 
-function parseQuery ( query ) {
-   var Params = new Object ();
-   if ( ! query ) return Params; // return empty object
-   var Pairs = query.split(/[;&]/);
-   for ( var i = 0; i < Pairs.length; i++ ) {
-      var KeyVal = Pairs[i].split('=');
-      if ( ! KeyVal || KeyVal.length != 2 ) continue;
-      var key = unescape( KeyVal[0] );
-      var val = unescape( KeyVal[1] );
-      val = val.replace(/\+/g, ' ');
-      Params[key] = val;
-   }
-   return Params;
-}
 
-function Get(yourUrl){
-	var Httpreq = new XMLHttpRequest(); // a new request
-	Httpreq.open("GET",yourUrl,false);
-	Httpreq.send(null);
-	return Httpreq.responseText;
-}
-
-function initGraph(rdfGraph) {
-	var graph=new rdfjson.Graph(rdfGraph);
-	//get current key name
-	let keyname=Object.keys(graph._graph)[0];
-
-	let newk=keyname + uuidv4();
-
-	graph._graph[newk] = graph._graph[keyname];
-
-	delete(graph._graph[keyname]);
-
-	return graph
-}
 
 window.graph = null;
 if ("uri" in params) {

@@ -79,6 +79,28 @@
             "multiline"
           ]
         },
+	{
+	  "id": "trl",
+	  "type": "choice",
+	  "nodetype": "RESOURCE",
+	  "property": "http://eosc.eu/trl",
+	  "placeholder": "TRL",
+	  "cardinality": {
+	    "min": 1,
+	    "pref": 1,
+	    "max": 1
+	  },
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://eosc.eu/trls"},
+		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "label": {
+	    "en": "TRL"
+	  },
+	  "description": {
+	    "en": "The Technology Readiness Level of the Tag of the service/resource."
+	  }
+	},
         {
           "type": "choice",
           "nodetype": "RESOURCE",
@@ -99,12 +121,12 @@
             "en": "License for the software"
           },
 		  "styles": [
-            "multiline", "pathExpr"
+            "multiline"
           ]
         },
         {
           "type": "text",
-          "nodetype": "ONLY_LITERAL",
+          "nodetype": "URI",
           "property": "http://schema.org/url",
           "cardinality": {
             "min": 1,
@@ -126,7 +148,7 @@
       "items": [
         {
           "type": "text",
-          "nodetype": "ONLY_LITERAL",
+          "nodetype": "URI",
           "property": "http://www.ebi.ac.uk/efo/swo/SWO_0000394",
           "cardinality": {
             "min": 1,
@@ -148,7 +170,7 @@
         },
         {
           "type": "text",
-          "nodetype": "ONLY_LITERAL",
+          "nodetype": "URI",
           "property": "http://www.ebi.ac.uk/swo/SWO_0004004",
           "cardinality": {
             "min": 1,
@@ -170,7 +192,7 @@
         },
 	{
           "type": "text",
-          "nodetype": "ONLY_LITERAL",
+          "nodetype": "URI",
           "property":  "http://www.ebi.ac.uk/swo/maturity/SWO_9000070",
           "cardinality": {
           },
@@ -183,7 +205,7 @@
         },
 	{
           "type": "text",
-          "nodetype": "ONLY_LITERAL",
+          "nodetype": "URI",
           "property":   "http://www.ebi.ac.uk/swo/SWO_0000043",
           "cardinality": {
           },
@@ -196,7 +218,7 @@
         },
 	{
           "type": "text",
-          "nodetype": "ONLY_LITERAL",
+          "nodetype": "URI",
           "property":   "http://www.ebi.ac.uk/swo/SWO_0000046",
           "cardinality": {
           },
@@ -232,9 +254,32 @@
             "en": "Programming language(s) the software is encoded in"
           },
 		  "styles": [
-            "multiline", "pathExpr"
+            "multiline"
           ]
         },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://www.ebi.ac.uk/swo/maturity/SWO_9000067",
+          "cardinality": {
+            "min": 1,
+	    "max": 1,
+            "pref": "1"
+          },
+	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/maturity/SWO_9000061"},
+	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
+	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
+	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+          "label": {
+            "en": "has declared status"
+          },
+          "description": {
+            "en": "Status of the software"
+          },
+		  "styles": [
+            "multiline"
+          ]
+	},
         {
           "type": "choice",
           "nodetype": "RESOURCE",
@@ -253,7 +298,7 @@
             "en": "Software used by this software"
           },
 		  "styles": [
-            "multiline", "pathExpr"
+            "multiline"
           ]
 	},
         {
@@ -261,6 +306,7 @@
           "nodetype": "RESOURCE",
           "property":  "http://www.ebi.ac.uk/swo/SWO_0000086",
           "cardinality": {
+            "max": "1",
             "min": "1",
             "pref": "1"
           },
@@ -284,6 +330,7 @@
           "nodetype": "RESOURCE",
           "property":  "http://www.ebi.ac.uk/swo/SWO_0000087",
           "cardinality": {
+            "max": "1",
             "min": "1",
             "pref": "1"
           },
@@ -319,7 +366,7 @@
             "en": "What platform (Operating System) does the software run on"
           },
 		  "styles": [
-            "multiline", "pathExpr"
+            "multiline"
           ]
 	},
         {
@@ -340,75 +387,8 @@
             "en": "What user interface does the software have"
           },
 		  "styles": [
-            "multiline", "pathExpr"
+            "multiline"
           ]
-	},
-        {
-          "type": "choice",
-          "nodetype": "RESOURCE",
-          "property":  "http://www.ebi.ac.uk/swo/maturity/SWO_9000067",
-          "cardinality": {
-            "min": 1,
-	    "max": 1,
-            "pref": "1"
-          },
-	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/maturity/SWO_9000061"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
-          "label": {
-            "en": "has declared status"
-          },
-          "description": {
-            "en": "Status of the software"
-          },
-		  "styles": [
-            "multiline", "pathExpr"
-          ]
-	},
-	{
-	  "id": "trl",
-	  "type": "choice",
-	  "nodetype": "RESOURCE",
-	  "property": "http://eosc.eu/trl",
-	  "placeholder": "TRL",
-	  "cardinality": {
-	    "min": 1,
-	    "pref": 1,
-	    "max": 1
-	  },
-		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#TRL"},
-		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
-	  "label": {
-	    "en": "TRL"
-	  },
-	  "description": {
-	    "en": "The Technology Readiness Level of the Tag of the service/resource."
-	  },
-	  "styles": [
-            "multiline", "immutable", "pathExpr"
-          ]
-	},
-	{
-	  "id": "knownbugs",
-	  "type": "text",
-	  "nodetype": "TEXT",
-	  "property": "http://envri.eu/knownbugs",
-	  "placeholder": "Certifications",
-	  "cardinality": {
-	    "min": 1,
-	    "pref": 1,
-	    "max": 1
-	  },
-	  "label": {
-	    "en": "Known Bugs"
-	  },
-	  "description": {
-	    "en": "Description of known bugs/problems"
-	  },
-	  "styles": [ "multiline" ]
 	}
 	]
 	},
@@ -435,13 +415,13 @@
             "en": "Algorithm implemented by the software"
           },
 		  "styles": [
-            "multiline", "pathExpr"
+            "multiline"
           ]
         },
         {
           "type": "choice",
           "nodetype": "RESOURCE",
-          "propersty":  "http://www.ebi.ac.uk/swo/SWO_0004005",
+          "property":  "http://www.ebi.ac.uk/swo/SWO_0004005",
           "cardinality": {
             "pref": "1"
           },
@@ -470,7 +450,7 @@
 	    "min": 1,
 	    "pref": 1
 	  },
-		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#standard"},
+		  "constraints": {"http://www.w3.org/2004/02/skos/core#member":"http://envri.eu/ontology/terminology#standards"},
 		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
 		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
 		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
@@ -479,10 +459,7 @@
 	  },
 	  "description": {
 	    "en": "List of standards supported by the service."
-	  },
-	  "styles": [
-            "multiline", "pathExpr", "tree"
-          ]
+	  }
 	}
   ]
 }

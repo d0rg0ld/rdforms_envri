@@ -38,3 +38,7 @@ ul.fancytree-container {
     height:300px;
     overflow: auto;	
 }
+
+span.fancytree-newnode > span.fancytree-title {
+    background-color:pink;
+}

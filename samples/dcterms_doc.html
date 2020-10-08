@@ -66,28 +66,15 @@
 		}
 	</script>
 	<form onClick="return loadOptions()">
-		<button type="button" >Load existing services</button>
+		<button type="button" >Load existing documents</button>
 	</form>
 	<form onSubmit="window.resuri=document.uri;">
 		<select id="uri" name="uri"></select>
 		<input type="submit"></input>
 	</form>
-	<div class="tab">
-	  <button class="tablinks" onclick="openGroup(event, 'node1')">Basics</button>
-	  <button class="tablinks" onclick="openGroup(event, 'node2')">Classification</button>
-	  <button class="tablinks" onclick="openGroup(event, 'node3')">Status</button>
-	  <button class="tablinks" onclick="openGroup(event, 'node4')">Order</button>
-	  <button class="tablinks" onclick="openGroup(event, 'node5')">Support</button>
-	  <button class="tablinks" onclick="openGroup(event, 'node6')">Contact</button>
-	</div>
 <div class="twocol">
 	<div class="col1" style="width:1000px;">
-		<div id="node1" class="tabcontent" style="width:640px;"></div>
-		<div id="node2" class="tabcontent" style="width:640px;"></div>
-		<div id="node3" class="tabcontent" style="width:640px;"></div>
-		<div id="node4" class="tabcontent" style="width:640px;"></div>
-		<div id="node5" class="tabcontent" style="width:640px;"></div>
-		<div id="node6" class="tabcontent" style="width:640px;"></div>
+		<div id="node1" style="width:640px;"></div>
 	</div>
     
     <textarea class="col2" style="width:640px;" id="output" readonly ></textarea>

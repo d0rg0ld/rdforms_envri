@@ -27,6 +27,7 @@ export function parseQuery ( query ) {
 }
 
 
+
 export function initGraph(rdfGraph) {
         var graph=new rdfjson.Graph(rdfGraph);
         //get current key name

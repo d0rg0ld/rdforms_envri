@@ -93,7 +93,14 @@
 		</div>
     
 <div>
-<textarea class="col2" style="width:640px;" id="output" readonly ></textarea>
+	<div class="grid-container" style="display:grid;grid-template-columns:auto auto;">
+		<div class="grid-item" style="width:550px;grid-column:1;">
+			<textarea class="col2" style="width:500px;" id="output" readonly ></textarea>
+		</div>
+		<div class="grid-item" style="width:550px;grid-column:2;">	
+			<textarea class="col2" style="width:500px;" id="termoutput" readonly ></textarea>
+		</div>
+	</div>
 </div>
 <script>
 function submitRdf() {
@@ -102,10 +109,10 @@ function submitRdf() {
 	/* add rdfs:label */
 	const title=outGraph.find(undefined, 'http://schema.org/name');
 	outGraph.addL(title[0].getSubject(), 'http://www.w3.org/2000/01/rdf-schema#label', title[0].getValue());
-	const t1=outGraph.find(undefined, 'http://www.ebi.ac.uk/swo/SWO_0000086_temp');
-	const t2=outGraph.find(undefined, 'http://www.ebi.ac.uk/swo/SWO_0000087_temp');
-	outGraph.remove(t1[0]);
-	outGraph.remove(t2[0]);
+	//const t1=outGraph.find(undefined, 'http://www.ebi.ac.uk/swo/SWO_0000086_temp');
+	//const t2=outGraph.find(undefined, 'http://www.ebi.ac.uk/swo/SWO_0000087_temp');
+	//outGraph.remove(t1[0]);
+	//outGraph.remove(t2[0]);
 	var out=JSON.stringify(outGraph.exportRDFJSON());
 	var Httpreq = new XMLHttpRequest(); // a new request
 	var formdata = new FormData();
@@ -116,6 +123,20 @@ function submitRdf() {
     	Httpreq.open("POST","http://90.147.102.53/OntoWiki/index.php/service/update/",false);
 	/**Httpreq.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );**/
 	Httpreq.send(formdata);
+
+
+	//NOW SUBMIT THE TERMS
+	var Httpreq2 = new XMLHttpRequest(); // a new request
+	var formdata2 = new FormData();
+	var term_out=JSON.stringify(window.termgraph.exportRDFJSON());
+	
+	formdata2.append("named-graph-uri", "http://90.147.102.53/OntoWiki/index.php/EnvriUserTerminology/");
+	formdata2.append("insert", term_out);
+
+    	Httpreq2.open("POST","http://90.147.102.53/OntoWiki/index.php/service/update/",false);
+	/**Httpreq.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );**/
+	Httpreq2.send(formdata2);
+
 }
 </script>
 	<form onClick="return submitRdf()">

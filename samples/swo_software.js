@@ -50,8 +50,9 @@ function initGraph(rdfGraph) {
 }*/
 
 window.graph = null;
+window.termgraph = new rdfjson.Graph({});
 if ("uri" in params) {
-	//var query = "http://90.147.102.53/sparql?default-graph-uri=&query=select+%28%3C" + params["uri"] + "%3E+as+%3Fs%29+%3Fp+%3Fo+isiri%28%3Fo%29+where+%7B+%3C" + params["uri"] + "%3E+%3Fp+%3Fo+%7D&format=text%2Ftab-separated-values&timeout=0&debug=on&run=+Run+Query+"
+	//var query = "http://90.147.102.53/sparql?default-graph-dri=&query=select+%28%3C" + params["uri"] + "%3E+as+%3Fs%29+%3Fp+%3Fo+isiri%28%3Fo%29+where+%7B+%3C" + params["uri"] + "%3E+%3Fp+%3Fo+%7D&format=text%2Ftab-separated-values&timeout=0&debug=on&run=+Run+Query+"
 	//var query = "http://90.147.102.53/sparql?default-graph-uri=&query=select+%28%3C" + params["uri"] + "%3E+as+%3Fs%29+%3Fp+%3Fo+isiri%28%3Fo%29+where+%7B+%3C" + params["uri"] + "%3E+%3Fp+%3Fo+%20+%2E+%20+%20+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"
 	//var query = "http://90.147.102.53/sparql?default-graph-uri=&query=select+%3Fs+%3Fp+%3Fo+where+%7B+%7B+%3C" + params["uri"] + "%3E+%3Fp+%3Fo+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28%3Fs+%3D+%3C" + params["uri"] + "%3E+%29%7D+%0D%0AUNION+%7B+<http%3A%2F%2Fenvri.eu%2Fservice%2Fa44dc3f9-ab08-49c1-826f-59f0c471371a>+%3Fp1+%3Fs+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28isBlank%28%3Fs%29%29+%7D+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"
 	var query = "http://90.147.102.53/sparql?default-graph-uri=&query=select+%3Fs+%3Fp+%3Fo+where+%7B+%7B+%3C" + params["uri"] + "%3E+%3Fp+%3Fo+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28%3Fs+%3D+%3C" + params["uri"] + "%3E+%29%7D+%0D%0AUNION+%7B+%3C" + params["uri"] + "%3E+%3Fp1+%3Fs+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28isBlank%28%3Fs%29%29+%7D+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"
@@ -152,6 +153,16 @@ rdforms.bundleLoader(itemStore, bundles, function(bundles) {
     // Export RDF/JSON
     // ta.value = JSON.stringify(graph.exportRDFJSON(), null, "  ");
   };
+  var term_ta = document.getElementById('termoutput');
+  var updateTermOutput = function() {
+    // Export RDF/XML
+    term_ta.value = rdfjson.converters.rdfjson2rdfxml(window.termgraph);
+
+    // Export RDF/JSON
+    // ta.value = JSON.stringify(graph.exportRDFJSON(), null, "  ");
+  };
   updateOutput();
   window.graph.onChange = updateOutput;
+  updateTermOutput();
+  window.termgraph.onChange = updateTermOutput;
 });
