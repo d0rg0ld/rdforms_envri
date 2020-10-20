@@ -10,6 +10,7 @@ const itemStore = new rdforms.ItemStore();
 var parastring = document.URL.replace(/^[^\?]+\??/,'');
 
 var params = parseQuery( parastring );
+window.uri=null;
 /*
 function parseQuery ( query ) {
    var Params = new Object ();
@@ -59,6 +60,7 @@ if ("uri" in params) {
 	var rdfdata_raw=JSON.parse(Get(query));
 	var res=rdfdata_raw["results"]["bindings"];
 	if (res.length > 0) {
+		window.uri=params["uri"];
 		window.graph=new rdfjson.Graph({});
 		for (var i = 1; i < res.length; i++) {
 			//var elements_raw=rdfdata_raw[i];

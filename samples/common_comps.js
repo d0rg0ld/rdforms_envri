@@ -1,15 +1,23 @@
+import registerOntoChooser from './chooser/ontoChooser.js';
 var jQuery = require('jquery');
 
-
-
-
-
-function Get(yourUrl){
+export function Get(yourUrl){
                         var Httpreq = new XMLHttpRequest(); // a new request
                         Httpreq.open("GET",yourUrl,false);
                         Httpreq.send(null);
                         return Httpreq.responseText;
                 }
+
+function loadOptions(graph, type) {
+	var options=JSON.parse(Get("http://90.147.102.53/sparql?default-graph-uri=" + graph + "&query=construct+%7B+%3Fs+rdfs%3Alabel+++%3Fl+%7D+where+%7B+%3Fs+rdf%3Atype+%3C" + type + "%3E+.+%3Fs+rdfs%3Alabel+%3Fl+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"));
+	var keys=options["results"]["bindings"];
+	var selEle=document.getElementById('uri');
+	selEle.size=1;
+	//selEle.size=keys.length;
+	for (var i=0; i < keys.length; i++) {
+		selEle.options[i]=new Option(keys[i]["o"]["value"], keys[i]["s"]["value"]);
+	}
+}
 
 export function parseQuery ( query ) {
    var Params = new Object ();
@@ -43,6 +51,49 @@ export function initGraph(rdfGraph) {
 }
 
 
+var loaderResetter=jQuery('#loader_resetter').load('common/common_html_loadReset.html');
+jQuery(function() {
+	jQuery("#loadExistingInstForm").click(function(){
+        	               return loadOptions(window.contentGraphname, window.contentType);
+	});
+});
+
+var parastring = document.URL.replace(/^[^\?]+\??/,'');
+
+window.params = parseQuery( parastring );
+window.uri=null;
+
+window.graph = null;
+window.termgraph =  new rdfjson.Graph({}) ;
+
+// Load the default 
+var jstext=Get(window.rdfSkele);
+window.rdfGraph=JSON.parse(jstext);
+
+if ("uri" in window.params) {
+        var query = "http://90.147.102.53/sparql?default-graph-uri=&query=select+%3Fs+%3Fp+%3Fo+where+%7B+%7B+%3C" + window.params["uri"] + "%3E+%3Fp+%3Fo+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28%3Fs+%3D+%3C" + window.params["uri"] + "%3E+%29%7D+%0D%0AUNION+%7B+%3C" + window.params["uri"] + "%3E+%3Fp1+%3Fs+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28isBlank%28%3Fs%29%29+%7D+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"
+        var rdfdata_raw=JSON.parse(Get(query));
+        var res=rdfdata_raw["results"]["bindings"];
+        if (res.length > 0) {
+                window.uri=window.params["uri"];
+                window.graph=new rdfjson.Graph({});
+                for (var i = 1; i < res.length; i++) {
+                                if (res[i]["o"]["type"]=="uri" || res[i]["o"]["type"]=="bnode")
+                                        window.graph.add(res[i]["s"]["value"],
+                                                  res[i]["p"]["value"],
+                                                  res[i]["o"]["value"]);
+                                else
+                                        window.graph.addL(res[i]["s"]["value"],
+                                                   res[i]["p"]["value"],
+                                                   res[i]["o"]["value"]);
+                }
+        }  else window.graph=initGraph(window.rdfGraph);
+}  else window.graph=initGraph(window.rdfGraph);
+
+
+console.log(window.graph);
+
+// do some additional init stuff
 
 
 window.choiceStore = {};
@@ -55,4 +106,38 @@ jQuery(window).on('load resize', function(){
     jQuery('#dummyDiv').width(jQuery(this).width());
     jQuery('#dummyDiv').height(jQuery(this).height());
 });
+
+registerOntoChooser();
+jQuery(function(){
+	var submitRdfSection=jQuery('#submitRdfSection').load('common/common_html_submitRdf.html');
+
+ 	//var ta = document.getElementById('output');
+  	var updateOutput = function() {
+    		// Export RDF/XML
+	
+		try {	
+			if(window.graph!=null)
+    				jQuery('#output').val(rdfjson.converters.rdfjson2rdfxml(window.graph));
+		} catch (e) {
+			console.log("updateOutput error: " + e);
+		}
+  	};
+  	//var term_ta = document.getElementById('termoutput');
+  	var updateTermOutput = function() {
+    	// Export RDF/XML
+		try {
+			if(window.termgraph!=null)
+    				jQuery('#termoutput').val(rdfjson.converters.rdfjson2rdfxml(window.termgraph));
+		} catch (e) {
+			console.log("updateTermOutput error: " + e);
+		}
+    		// Export RDF/JSON
+    		// ta.value = JSON.stringify(graph.exportRDFJSON(), null, "  ");
+  	};
+  	window.graph.onChange = updateOutput;
+  	window.termgraph.onChange = updateTermOutput;
+  	updateOutput();
+  	updateTermOutput();
+});
+
 

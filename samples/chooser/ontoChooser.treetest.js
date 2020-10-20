@@ -7,7 +7,7 @@ import data from './data.js';
 //import { i18n, NLSMixin } from 'esi18n';
 //import { escape } from 'lodash-es';
 const template = '<div>OVERLAY</div>';
- 
+import { Get } from '../common_comps.js'; 
 //https://www.neowin.net/forum/topic/1171139-make-a-floating-div-tag-in-javascript/
 var divHeight = 400;
 var divWidth = 512;
@@ -22,6 +22,8 @@ var curTitle=null;
 var newNodes=[];
 
 var curItem=null;
+
+var myt=null;
 
 function floatingDiv(parent, id) {
 	if(!parent) 
@@ -105,6 +107,22 @@ function buildTree(list, root) {
         }
 }
 
+function createTreeSource(item) {
+		// transform the selections
+		var choices = window.choiceStore[item._internalId]; 
+		console.log(choices);
+
+		var treeStruct = [];
+		var roots =choiceRoots(choices);
+
+		console.log(roots);
+
+		for (let root in roots) {
+			treeStruct.push(buildTree(choices, roots[root]));
+		}
+		return treeStruct;
+};
+
 function onCancelSubmit(action, onselect=null) {
 	if (action=="submit") {
 		if (newNodes.length>0) {
@@ -126,16 +144,16 @@ function onCancelSubmit(action, onselect=null) {
 				console.log(newNodes[n]); 
 				console.log("<"+newNodes[n].key + ">	rdfs:subClassOf	<" + newNodes[n].parent.key+">" )
 				window.termgraph.add(newNodes[n].key, 'http://www.w3.org/2000/01/rdf-schema#subClassOf', newNodes[n].parent.key);
-				window.termgraph.add(newNodes[n].key, 'http://www.w3.org/2000/01/rdf-schema#label', newNodes[n].title);
+				window.termgraph.addL(newNodes[n].key, 'http://www.w3.org/2000/01/rdf-schema#label', newNodes[n].title);
 				//we must add the stuff to the choiceStore as well
-				for (var e in  window.choiceStore[curItem]) 
-					if (window.choiceStore[curItem][e].value==newNodes[n].parent.key) {
-						if (!("children" in window.choiceStore[curItem][e]))
-							window.choiceStore[curItem][e]["children"]=[];
-						window.choiceStore[curItem][e].children.push({ _reference: newNodes[n].key});
+				for (var e in  window.choiceStore[curItem._internalId]) 
+					if (window.choiceStore[curItem._internalId][e].value==newNodes[n].parent.key) {
+						if (!("children" in window.choiceStore[curItem._internalId][e]))
+							window.choiceStore[curItem._internalId][e]["children"]=[];
+						window.choiceStore[curItem._internalId][e].children.push({ _reference: newNodes[n].key});
 						break;
 					}
-				window.choiceStore[curItem].push({ value: newNodes[n].key, label: { en: newNodes[n].title}, new: true });
+				window.choiceStore[curItem._internalId].push({ value: newNodes[n].key, label: { en: newNodes[n].title}, new: true });
 			}
 
 		}
@@ -440,7 +458,7 @@ const chooserConfiguration = {
 		if (!(binding._item._internalId in window.choiceStore)) 
 			window.choiceStore[binding._item._internalId]=loadChoices(binding._item);
 
-		curItem=binding._item._internalId;
+		curItem=binding._item;
 
 		active=true;
 		console.log(binding);
@@ -471,18 +489,48 @@ const chooserConfiguration = {
 
 		var searchDiv = document.createElement("div");
 		searchDiv.setAttribute("style", "background:white;width:" + divWidth + "px;");
+		var reloadBtn =  document.createElement("button");
+		reloadBtn.setAttribute("id", "reloadBtn");
+		reloadBtn.setAttribute("style", "height:30px;width:60px;");
+		reloadBtn.textContent="Reload";
+		reloadBtn.onclick= function(e) {
+			window.choiceStore[curItem._internalId]=loadChoices(curItem);
+			myt.reload(createTreeSource(curItem));	
+		};
 		var searchDivInp =  document.createElement("input"); 
 		searchDivInp.setAttribute("name", "search");
 		searchDivInp.setAttribute("style", "height:30px;");
+		var searchDivResLab =  document.createElement("label");
+		searchDivResLab.setAttribute("for",  "btnResetSearch");
+		searchDivResLab.innerHTML="Reset";
 		var searchDivRes =  document.createElement("button"); 
 		searchDivRes.setAttribute("id", "btnResetSearch");
-		searchDivRes.setAttribute("style", "height:30px;width:30px;");
+		searchDivRes.setAttribute("style", "height:20px;width:20px;");
 		var searchDivMat =  document.createElement("span"); 
 		searchDivMat.setAttribute("id", "matches");
+		var hideCheckLab =  document.createElement("label");
+		hideCheckLab.setAttribute("for",  "hideMode");
+		hideCheckLab.innerHTML="Hide";
+		var hideCheck = document.createElement("input");
+		hideCheck.setAttribute("id", "hideMode");
+		hideCheck.setAttribute("type", "checkbox");
+		hideCheck.setAttribute("style", "height:20px;width:20px;");
 
+		searchDiv.appendChild(reloadBtn);
 		searchDiv.appendChild(searchDivInp);
+		searchDiv.appendChild(searchDivResLab);
 		searchDiv.appendChild(searchDivRes);
+		searchDiv.appendChild(hideCheckLab);
+		searchDiv.appendChild(hideCheck);
 		searchDiv.appendChild(searchDivMat);
+
+		if (("styles" in binding._item._source) && !(binding._item._source.styles.includes("immutable"))) {
+			var addBtn = document.createElement("button");
+			addBtn.setAttribute('style', 'height:30px;width:40px;right:10px;position:absolute;');
+			addBtn.textContent="Add";
+			addBtn.onclick= function(e) {onCancelSubmit("add", onSelect);};
+			searchDiv.appendChild(addBtn);
+		}
 
 		treediv1.appendChild(searchDiv);
 
@@ -493,6 +541,7 @@ const chooserConfiguration = {
 		treediv1.appendChild(treediv);
 
 
+		/*
 		// transform the selections
 		var choices = window.choiceStore[binding._item._internalId]; 
 		console.log(choices);
@@ -505,10 +554,12 @@ const chooserConfiguration = {
 		for (let root in roots) {
 			treeStruct.push(buildTree(choices, roots[root]));
 		}
+		*/
+		var treeStruct=createTreeSource(curItem); 
 
 		console.log(treeStruct);
 
-		var myt=fancytree.createTree(treediv,{
+		myt=fancytree.createTree(treediv,{
 			extensions: ["filter", "edit"],
 			quicksearch: true,
 			icon: true,
@@ -611,6 +662,12 @@ const chooserConfiguration = {
 		      jQuery("button#btnResetSearch").attr("disabled", false);
 		      jQuery("span#matches").text("(" + n + " matches)");
 		    }).focus();
+	
+		jQuery("#hideMode").click(function(e){
+			console.log("hideMode Click");
+			myt.clearFilter();
+			jQuery("input[name=search]").keyup();
+                });
 
 		jQuery("button#btnResetSearch").click(function(e){
       			jQuery("input[name=search]").val("");
@@ -626,13 +683,6 @@ const chooserConfiguration = {
 		cancelBtn.textContent="Cancel";
 		cancelBtn.onclick= function(e) {onCancelSubmit("cancel");};
 		btnDiv.appendChild(cancelBtn);
-		if (!(binding._item._source.styles.includes("immutable"))) {
-			var addBtn = document.createElement("button");
-			addBtn.setAttribute('style', 'height:30px;width:70px;');
-			addBtn.textContent="Add";
-			addBtn.onclick= function(e) {onCancelSubmit("add", onSelect);};
-			btnDiv.appendChild(addBtn);
-		}
 		var submitBtn = document.createElement("button");
 		submitBtn.setAttribute('style', 'height:30px;width:70px;');
 		submitBtn.textContent="Accept";

@@ -1,6 +1,7 @@
 import 'core-js/stable';
 import 'jquery.fancytree';
 import 'jquery.fancytree/dist/modules/jquery.fancytree.filter';
+import 'jquery.fancytree/dist/modules/jquery.fancytree.edit';
 import 'regenerator-runtime/runtime';
 import './src/view/bootstrap/all';
 import ItemStore from './src/template/ItemStore';

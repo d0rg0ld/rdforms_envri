@@ -15,7 +15,7 @@
     <!--script src="../dist/node.rdforms.js"></script-->
     <!--script src="../node_modules/jquery.fancytree/dist/modules/jquery.fancytree.filter.js"></script-->
     <script src="../node_modules/rdfjson/dist/rdfjson.js"></script>
-    <script src="http://wzrd.in/standalone/uuid%2Fv4@latest"></script>
+    <!-- script src="http://wzrd.in/standalone/uuid%2Fv4@latest"></script -->
 	<script>
 
 			document.currentScript = document.currentScript || (function() {
@@ -60,19 +60,36 @@
 			var keys=options["results"]["bindings"]; 
 
 			var selEle=document.getElementById('uri');
-			selEle.size=keys.length;
+			selEle.size=1;
+			//selEle.size=keys.length;
 			for (var i=0; i < keys.length; i++) {
 				selEle.options[i]=new Option(keys[i]["o"]["value"], keys[i]["s"]["value"]);
 			}
 		}
+
+		function setPara() {
+			//window.resuri=document.uri;
+		}
 	</script>
-	<form onClick="return loadOptions()">
-		<button type="button" >Load existing software</button>
-	</form>
-	<form onSubmit="window.resuri=document.uri;">
-		<select id="uri" name="uri"></select>
-		<input type="submit"></input>
-	</form>
+	<div class="grid-container" style="display:grid;grid-template-columns:auto auto;">
+                <div class="grid-item" style="grid-column:1;">
+                        <form onClick="return loadOptions()">
+                                <button type="button" >Load existing software</button>
+                        </form>
+                </div>
+                <div class="grid-item" style="grid-column:2;">
+                        <form onSubmit="">
+                                <select id="uri" name="uri" size="1"></select>
+                                <input type="submit">Load selected software</input>
+                        </form>
+                </div>
+                <div class="grid-item" style="grid-column:3;">
+                        <!--form onClick="window.location = window.location.pathname;window.location.reload();"-->
+                        <form onClick="window.location = window.location.pathname;">
+                                <button type="button">Reset</input>
+                        </form>
+                </div>
+        </div>
 		<div class="grid-container" style="display:grid;grid-template-columns:auto auto;">
 			<div class="grid-item" style="width:640px;grid-column:1;">
 				<h4>Basic Information</h4>
@@ -108,6 +125,11 @@ function submitRdf() {
 	var outGraph = window.graph.clone();	
 	/* add rdfs:label */
 	const title=outGraph.find(undefined, 'http://schema.org/name');
+        var submit = true;
+        if (window.uri==title[0].getSubject()) {
+                submit=confirm("You are about to overwrite an existing resource!");
+        }
+        if (!submit) return;
 	outGraph.addL(title[0].getSubject(), 'http://www.w3.org/2000/01/rdf-schema#label', title[0].getValue());
 	//const t1=outGraph.find(undefined, 'http://www.ebi.ac.uk/swo/SWO_0000086_temp');
 	//const t2=outGraph.find(undefined, 'http://www.ebi.ac.uk/swo/SWO_0000087_temp');

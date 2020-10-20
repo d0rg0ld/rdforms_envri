@@ -1,0 +1,139 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link type="text/css" href="example.css" rel="stylesheet"/>
+	<link type="text/css" href="example_service.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+        <link type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+        <link type="text/css" href="../node_modules/jquery.fancytree/dist/skin-lion/ui.fancytree.css" rel="stylesheet"/>
+
+	<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"  type='text/css'>
+    <script src="../dist/bootstrap.rdforms.js"></script>
+    <!--script src="../dist/node.rdforms.js"></script-->
+    <script src="../node_modules/rdfjson/dist/rdfjson.js"></script>
+    <!-- script src="http://wzrd.in/standalone/uuid%2Fv4@latest"></script -->
+
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+
+	// DO some initializations
+	window.userTermGraphName='http://90.147.102.53/OntoWiki/index.php/EnvriUserTerminology/';
+	window.contentGraphname='http%3A%2F%2F90.147.102.53%2FOntoWiki%2Findex.php%2FEnvriServicePortfoliowithexternalTerminology%2F';
+	window.contentType='http%3A%2F%2Fenvri.eu%2FService';
+	window.rdfSkele='http://90.147.102.53/rdforms/samples/service_rdf.json';
+    </script>	
+
+	<script>
+
+			document.currentScript = document.currentScript || (function() {
+			  var scripts = document.getElementsByTagName('script');
+			  return scripts[scripts.length - 1];
+			})();
+
+			function openGroup(evt, groupName) {
+			  // Declare all variables
+			  var i, tabcontent, tablinks;
+
+			  // Get all elements with class="tabcontent" and hide them
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			  }
+
+			  // Get all elements with class="tablinks" and remove the class "active"
+			  tablinks = document.getElementsByClassName("tablinks");
+			  for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			  }
+
+			  // Show the current tab, and add an "active" class to the button that opened the tab
+			  document.getElementById(groupName).style.display = "block";
+			  evt.currentTarget.className += " active";
+			}	
+	</script>
+</head>
+<body>
+<h1>ENVRI Service Description</h1>
+	<div id="loader_resetter">
+		
+	</div>
+	<div class="tab">
+	  <button class="tablinks" onclick="openGroup(event, 'node1')">Basics</button>
+	  <button class="tablinks" onclick="openGroup(event, 'node2')">Classification</button>
+	  <button class="tablinks" onclick="openGroup(event, 'node3')">Status</button>
+	  <button class="tablinks" onclick="openGroup(event, 'node4')">Order</button>
+	  <button class="tablinks" onclick="openGroup(event, 'node5')">Support</button>
+	  <button class="tablinks" onclick="openGroup(event, 'node6')">Contact</button>
+	</div>
+<div class="twocol">
+	<div class="col1" style="width:1000px;">
+		<div id="node1" class="tabcontent" style="width:640px;"></div>
+		<div id="node2" class="tabcontent" style="width:640px;"></div>
+		<div id="node3" class="tabcontent" style="width:640px;"></div>
+		<div id="node4" class="tabcontent" style="width:640px;"></div>
+		<div id="node5" class="tabcontent" style="width:640px;"></div>
+		<div id="node6" class="tabcontent" style="width:640px;"></div>
+	</div>
+    
+<!--    <textarea class="col2" style="width:640px;" id="output" readonly ></textarea> -->
+
+<script src="example_service.js" type="module"></script>
+</div>
+<div id="submitRdfSection">
+</div>
+
+<style>
+    @import "../node_modules/dijit/themes/claro/claro.css";
+    @import "../src/view/resources/rdforms.css";
+
+    @media (min-width: 500px) {   .container {     max-width: 2000px;   } }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        --padding: 0px;
+        margin: 0px;
+    }
+    #_editor * {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+    .main {
+        position: relative;
+        height: 100%;
+    }
+    .main #_editor {
+        position: absolute;
+        top: 6em;
+        bottom: 1em;
+        left: 0px;
+        right: 0px;
+    }
+    .aboutText {
+        margin-top: 5em;
+    }
+    #_editor .rformsLabel {
+        font-weight: normal;
+    }
+
+    .header {
+        margin-top: 27px;
+    }
+    .icon {
+        float: left;
+        margin-top: -20px;
+        margin-right: 15px;
+    }
+</style>
+<!--script>
+    	$(function(){
+		$('#loader_resetter').load('common_html_eles.html');
+	});
+</script-->
+</body>
+</html>
