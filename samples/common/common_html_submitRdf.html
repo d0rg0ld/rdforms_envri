@@ -1,4 +1,4 @@
-<div>
+<!--div>
         <div class="grid-container" style="display:grid;grid-template-columns:auto auto;">
                 <div class="grid-item" style="width:550px;grid-column:1;">
                         <textarea class="col2" style="width:500px;" id="output" readonly ></textarea>
@@ -7,19 +7,26 @@
                         <textarea class="col2" style="width:500px;" id="termoutput" readonly ></textarea>
                 </div>
         </div>
-</div>
+</div-->
 <script>
 function submitRdf() {
         var dummy="LETSSEE";
         var outGraph = window.graph.clone();
         /* add rdfs:label */
-        const title=outGraph.find(undefined, 'http://schema.org/name');
+        const sid=outGraph.find(undefined, 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type');
+        //const title=outGraph.find(undefined, 'http://schema.org/name');
         var submit = true;
-        if (window.uri==title[0].getSubject()) {
+        if (window.uri==sid[0].getSubject()) {
                 submit=confirm("You are about to overwrite an existing resource!");
         }
         if (!submit) return;
-        outGraph.addL(title[0].getSubject(), 'http://www.w3.org/2000/01/rdf-schema#label', title[0].getValue());
+
+	// Try to find a usable title
+	var title=outGraph.find(undefined, 'http://schema.org/name');
+	if (title.length==0)
+		title=outGraph.find(undefined, 'http://purl.org/dc/terms/title');	
+
+        outGraph.addL(sid[0].getSubject(), 'http://www.w3.org/2000/01/rdf-schema#label', title[0].getValue());
         //const t1=outGraph.find(undefined, 'http://www.ebi.ac.uk/swo/SWO_0000086_temp');
         //const t2=outGraph.find(undefined, 'http://www.ebi.ac.uk/swo/SWO_0000087_temp');
         //outGraph.remove(t1[0]);
@@ -48,9 +55,10 @@ function submitRdf() {
         Httpreq2.open("POST","http://90.147.102.53/OntoWiki/index.php/service/update/",false);
         /**Httpreq.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );**/
         Httpreq2.send(formdata2);
-
+	alert("Successfully submitted resource " + title[0].getSubject());
 }
 </script>
+        <!--form id="submitRdfForm""-->
         <form onClick="return submitRdf()">
-                <button type="button" >Submit service description</button>
+                <button type="button" >Submit resource description</button>
         </form>

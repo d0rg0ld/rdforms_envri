@@ -57,6 +57,14 @@ jQuery(function() {
         	               return loadOptions(window.contentGraphname, window.contentType);
 	});
 });
+var submitRdfSection=jQuery('#submitRdfSection').load('common/common_html_submitRdf.html');
+/*
+jQuery(function() {
+	jQuery("#submitRdfForm").click(function(){
+        	               return submitRdf();
+	});
+});
+*/
 
 var parastring = document.URL.replace(/^[^\?]+\??/,'');
 
@@ -109,7 +117,6 @@ jQuery(window).on('load resize', function(){
 
 registerOntoChooser();
 jQuery(function(){
-	var submitRdfSection=jQuery('#submitRdfSection').load('common/common_html_submitRdf.html');
 
  	//var ta = document.getElementById('output');
   	var updateOutput = function() {
@@ -139,5 +146,11 @@ jQuery(function(){
   	updateOutput();
   	updateTermOutput();
 });
-
+/*
+jQuery(function(){
+	jQuery("#submitRdfForm").click(function(){
+        	               return submitRdf();
+	});
+});
+*/
 

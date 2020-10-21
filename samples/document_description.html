@@ -1,0 +1,122 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link type="text/css" href="example.css" rel="stylesheet"/>
+	<link type="text/css" href="document_description.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+        <link type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+        <link type="text/css" href="../node_modules/jquery.fancytree/dist/skin-lion/ui.fancytree.css" rel="stylesheet"/>
+
+	<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"  type='text/css'>
+    <script src="../dist/bootstrap.rdforms.js"></script>
+    <!--script src="../dist/node.rdforms.js"></script-->
+    <script src="../node_modules/rdfjson/dist/rdfjson.js"></script>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script>
+		        window.userTermGraphName='http://90.147.102.53/OntoWiki/index.php/EnvriUserTerminology/';
+        //window.contentGraphname='http%3A%2F%2F90.147.102.53%2FOntoWiki%2Findex.php%2FEnvriServicePortfoliowithexternalTerminology%2F';
+        window.contentGraphname='http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/';
+        window.contentType='http%3A%2F%2Fenvri.eu%2FDocument';
+        window.contentTypeName='Document';
+        window.rdfSkele='http://90.147.102.53/rdforms/samples/document_description_rdf.json';
+
+			document.currentScript = document.currentScript || (function() {
+			  var scripts = document.getElementsByTagName('script');
+			  return scripts[scripts.length - 1];
+			})();
+
+			function openGroup(evt, groupName) {
+			  // Declare all variables
+			  var i, tabcontent, tablinks;
+
+			  // Get all elements with class="tabcontent" and hide them
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			  }
+
+			  // Get all elements with class="tablinks" and remove the class "active"
+			  tablinks = document.getElementsByClassName("tablinks");
+			  for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			  }
+
+			  // Show the current tab, and add an "active" class to the button that opened the tab
+			  document.getElementById(groupName).style.display = "block";
+			  evt.currentTarget.className += " active";
+			}	
+	</script>
+</head>
+<body>
+<h1>ENVRI Document Description</h1>
+<div id="loader_resetter"></div>
+<!--div class="twocol"-->
+	<div style="width:1000px;">
+		<div id="node1" style="width:640px;"></div>
+	</div>
+    
+<!--/div-->
+        <div class="grid-container" style="display:grid;grid-template-columns:auto auto;">
+                <div class="grid-item" style="width:550px;grid-column:1;">
+                        <textarea class="col1" style="width:500px;" id="output" readonly ></textarea>
+                </div>
+                <div class="grid-item" style="width:550px;grid-column:2;">
+                        <textarea class="col2" style="width:500px;" id="termoutput" readonly ></textarea>
+                </div>
+        </div>
+
+
+<script src="document_description.js" type="module"></script>
+
+<div id="submitRdfSection">
+</div>
+
+<style>
+    @import "../node_modules/dijit/themes/claro/claro.css";
+    @import "../src/view/resources/rdforms.css";
+
+    @media (min-width: 500px) {   .container {     max-width: 2000px;   } }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    #_editor * {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+    .main {
+        position: relative;
+        height: 100%;
+    }
+    .main #_editor {
+        position: absolute;
+        top: 6em;
+        bottom: 1em;
+        left: 0px;
+        right: 0px;
+    }
+    .aboutText {
+        margin-top: 5em;
+    }
+    #_editor .rformsLabel {
+        font-weight: normal;
+    }
+
+    .header {
+        margin-top: 27px;
+    }
+    .icon {
+        float: left;
+        margin-top: -20px;
+        margin-right: 15px;
+    }
+</style>
+</body>
+</html>
