@@ -60,6 +60,42 @@
       }
     },
     {
+      "id": "envri:relatedSoftware",
+      "property": "http://envri.eu/relatedSoftware",
+      "label": {
+        "en": "Related Envri software"
+      },
+      "description": {
+        "en": "Envri software this document is about"
+      },
+      "type": "choice",
+      "nodetype": "RESOURCE",
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      },
+       "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/Software"},
+	"OntologyUrl": "http://localhost:8080/eosc_voc.rdf"
+    },
+    {
+      "id": "envri:relatedService",
+      "property": "http://envri.eu/relatedService",
+      "label": {
+        "en": "Related Envri service"
+      },
+      "description": {
+        "en": "Envri service this document is about"
+      },
+      "type": "choice",
+      "nodetype": "RESOURCE",
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      },
+       "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/Service"},
+	"OntologyUrl": "http://localhost:8080/eosc_voc.rdf"
+    },
+    {
       "id": "dcterms:description",
       "property": "http://purl.org/dc/terms/description",
       "label": {
@@ -2126,6 +2162,12 @@
         },
         {
           "id": "dcterms:subject"
+        },
+        {
+          "id": "envri:relatedSoftware"
+        },
+        {
+          "id": "envri:relatedService"
         },
         {
           "id": "dcterms:bibliographicCitation"
