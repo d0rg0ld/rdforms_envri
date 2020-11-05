@@ -53,4 +53,6 @@ rdforms.bundleLoader(itemStore, bundles, function(bundles) {
     compact: true,
     includeLevel: 'optional'
   }, 'node6');
+
+//openGroup(null, 'node1');
 });

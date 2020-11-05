@@ -89,9 +89,7 @@
             "pref": "1"
           },
 	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/SWO_0000002"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "Has License"
           },
@@ -133,9 +131,7 @@
             "pref": "1"
           },
 	  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://purl.obolibrary.org/obo/OBI_0000245"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "Developed By"
           },
@@ -155,9 +151,7 @@
             "pref": "1"
           },
 	  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://purl.obolibrary.org/obo/OBI_0000245"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "Published By"
           },
@@ -222,9 +216,7 @@
             "pref": "1"
           },
 	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://purl.obolibrary.org/obo/IAO_0000025"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "Is encoded in"
           },
@@ -242,10 +234,9 @@
           "cardinality": {
             "pref": "1"
           },
-	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/SWO_0000001"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "constraints": {  "http://www.w3.org/2000/01/rdf-schema#subClassOf": "http://www.ebi.ac.uk/swo/SWO_0000001", 
+			    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : "http://envri.eu/Software" },
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "uses Software"
           },
@@ -253,7 +244,7 @@
             "en": "Software used by this software"
           },
 		  "styles": [
-            "multiline", "pathExpr"
+            "multiline", "pathExpr", "union"
           ]
 	},
         {
@@ -265,9 +256,7 @@
             "pref": "1"
           },
 	  "constraints": { "http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://edamontology.org/format_1915"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "Data input specification"
           },
@@ -288,9 +277,7 @@
             "pref": "1"
           },
 	  "constraints": { "http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://edamontology.org/format_1915"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "Data output specification"
           },
@@ -309,9 +296,7 @@
             "pref": "1"
           },
 	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/SWO_0000021"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "Supported platform"
           },
@@ -330,9 +315,7 @@
             "pref": "1"
           },
 	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf": "http://www.ebi.ac.uk/swo/SWO_9000050"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "Provided UI"
           },
@@ -353,9 +336,7 @@
             "pref": "1"
           },
 	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://www.ebi.ac.uk/swo/maturity/SWO_9000061"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "has declared status"
           },
@@ -378,9 +359,7 @@
 	    "max": 1
 	  },
 		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#TRL"},
-		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+		  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
 	  "label": {
 	    "en": "TRL"
 	  },
@@ -425,9 +404,7 @@
             "pref": "1"
           },
 	  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://purl.obolibrary.org/obo/IAO_0000064"},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "Implemented Algorithm"
           },
@@ -441,15 +418,13 @@
         {
           "type": "choice",
           "nodetype": "RESOURCE",
-          "propersty":  "http://www.ebi.ac.uk/swo/SWO_0004005",
+          "property":  "http://www.ebi.ac.uk/swo/SWO_0004005",
           "cardinality": {
             "pref": "1"
           },
 	  "constraints.other": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":  "http://purl.obolibrary.org/obo/OBI_0200000"},
 	  "constraints": {	"http://www.w3.org/2000/01/rdf-schema#subClassOf":  ["http://purl.obolibrary.org/obo/OBI_0200000","http://www.oil-e.net/ontology/oil-base.owl#IV_Action"]},
-	  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-	  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-	  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+	  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
           "label": {
             "en": "Application Scenario"
           },
@@ -471,9 +446,7 @@
 	    "pref": 1
 	  },
 		  "constraints": {"http://www.w3.org/2000/01/rdf-schema#subClassOf":"http://envri.eu/ontology/terminology#standard"},
-		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
+		  "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
 	  "label": {
 	    "en": "Standards"
 	  },
