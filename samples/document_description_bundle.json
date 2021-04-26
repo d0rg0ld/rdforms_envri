@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "dcterms:creator",
+      "id": "dcterms:creator_choice",
       "property": "http://purl.org/dc/terms/creator",
       "label": {
         "en": "Creator",
@@ -42,12 +42,41 @@
       }
     },
     {
+      "id": "dcterms:creator",
+      "property": "http://purl.org/dc/terms/creator",
+      "label": {
+        "en": "Creator",
+        "sv": "Skapare",
+        "de": "Urheber"
+      },
+      "description": {
+        "en": "An entity primarily responsible for making the resource."
+      },
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/Agent"
+      },
+      "type": "text",
+      "nodetype": "LITERAL",
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      }
+    },
+    {
       "id": "dcterms:subject",
       "property": "http://purl.org/dc/terms/subject",
       "label": {
         "en": "Subject",
         "sv": "Ämne",
         "de": "Thema"
+      },
+      "constraints": {
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [ "http://envri.eu/ontology/terminology#Service",
+							"http://envri.eu/ontology/terminology#science",
+							"http://envri.eu/ontology/terminology#researchinfrastructure",
+							"http://envri.eu/ontology/terminology#targetuser",
+							"http://envri.eu/ontology/terminology#customer",
+							"http://envri.eu/ontology/terminology#topic" ]
       },
       "description": {
         "en": "The topic of the resource."
@@ -57,7 +86,8 @@
       "cardinality": {
         "min": 0,
         "pref": 1
-      }
+      },
+      "styles": [ "pathExpr", "union"]
     },
     {
       "id": "envri:relatedSoftware",
@@ -96,6 +126,24 @@
 	"OntologyUrl": "http://localhost:8080/eosc_voc.rdf"
     },
     {
+      "id": "envri:relatedUsecase",
+      "property": "http://envri.eu/relatedUsecase",
+      "label": {
+        "en": "Related Envri use case"
+      },
+      "description": {
+        "en": "Envri use case this document is about"
+      },
+      "type": "choice",
+      "nodetype": "RESOURCE",
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      },
+       "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/UseCase"},
+	"OntologyUrl": "http://localhost:8080/eosc_voc.rdf"
+    },
+    {
       "id": "dcterms:description",
       "property": "http://purl.org/dc/terms/description",
       "label": {
@@ -128,6 +176,48 @@
       "constraints": {
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/Agent"
       },
+      "type": "text",
+      "nodetype": "LITERAL",
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      }
+    },
+    {
+      "id": "dcterms:publisher_choice",
+      "property": "http://purl.org/dc/terms/publisher",
+      "label": {
+        "en": "Publisher",
+        "sv": "Utgivare",
+        "de": "Herausgeber"
+      },
+      "description": {
+        "en": "An entity responsible for making the resource available."
+      },
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/Agent"
+      },
+      "type": "choice",
+      "nodetype": "RESOURCE",
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      }
+    },
+    {
+      "id": "dcterms:contributor_choice",
+      "property": "http://purl.org/dc/terms/contributor",
+      "label": {
+        "en": "Contributor",
+        "sv": "Bidragsgivare",
+        "de": "Mitwirkender"
+      },
+      "description": {
+        "en": "An entity responsible for making contributions to the resource."
+      },
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/Agent"
+      },
       "type": "choice",
       "nodetype": "RESOURCE",
       "cardinality": {
@@ -149,8 +239,8 @@
       "constraints": {
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/Agent"
       },
-      "type": "choice",
-      "nodetype": "RESOURCE",
+      "type": "text",
+      "nodetype": "LITERAL",
       "cardinality": {
         "min": 0,
         "pref": 1
@@ -2168,6 +2258,9 @@
         },
         {
           "id": "envri:relatedService"
+        },
+        {
+          "id": "envri:relatedUsecase"
         },
         {
           "id": "dcterms:bibliographicCitation"

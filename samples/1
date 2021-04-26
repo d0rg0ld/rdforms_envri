@@ -1,0 +1,119 @@
+{
+  "root": "UseCaseEnvri",
+  "namespaces": {
+    "ex": "http://example.com/",
+    "cc": "http://creativecommons.org/licenses/"
+  },
+  "templates": [
+    {
+      "id": "UseCaseBasics",
+      "type": "group",
+      "items": [
+	{
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "http://schema.org/name",
+          "cardinality": {
+            "min": 1,
+            "pref": "1",
+            "max": 1
+          },
+          "label": {
+            "en": "Title"
+          },
+          "description": {
+            "en": "A short title of the use case"
+          }
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://envri.eu/researchinfrastructure",
+          "cardinality": {
+            "pref": "1"
+          },
+          "constraints": {  "http://www.w3.org/2000/01/rdf-schema#subClassOf": "http://envri.eu/ontology/terminology#researchinfrastructure" },
+          "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
+          "label": {
+            "en": "Related RI"
+          },
+          "description": {
+            "en": "RI behind use case"
+          },
+                  "styles": [
+            "multiline", "pathExpr"
+          ]
+        },
+	{
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "http://envri.eu/keycontribution",
+          "cardinality": {
+            "min": 1,
+            "pref": "1"
+          },
+          "label": {
+            "en": "Key contribution"
+          },
+          "description": {
+            "en": "Key contribution(s) of the use case"
+          }
+        },
+	{
+          "type": "text",
+          "nodetype": "ONLY_LITERAL",
+          "property": "http://envri.eu/results",
+          "cardinality": {
+            "min": 1,
+            "pref": "1"
+          },
+          "label": {
+            "en": "Use case result"
+          },
+          "description": {
+            "en": "Result(s) of the use case"
+          }
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://envri.eu/deploymentenvironment",
+          "cardinality": {
+            "pref": "1"
+          },
+          "constraints": {  "http://www.w3.org/2000/01/rdf-schema#subClassOf": "http://envri.eu/ontology/terminology#deploymentenvironment" },
+          "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
+          "label": {
+            "en": "Deployment envrironment"
+          },
+          "description": {
+            "en": "Deployment Environment"
+          },
+                  "styles": [
+            "multiline", "pathExpr"
+          ]
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property":  "http://envri.eu/relatedSoftware",
+          "cardinality": {
+            "pref": "1"
+          },
+          "constraints": {  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://envri.eu/Software" },
+          "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
+          "label": {
+            "en": "Related Software"
+          },
+          "description": {
+            "en": "Related Software"
+          },
+                  "styles": [
+            "multiline"
+          ]
+        }
+	]
+	}
+  ]
+}
+

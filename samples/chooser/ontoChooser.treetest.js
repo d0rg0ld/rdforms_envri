@@ -275,7 +275,7 @@ function loadChoices(item) {
 				//"headers":{ 'Content-Type': 'application/sparql-query;charset=UTF-8',
 				"headers":{ 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
 					   'Accept':'application/sparql-results+json' }};
-		var requestUrl="http://90.147.102.53/sparql"; 
+		var requestUrl="https://envri-fair.lab.uvalight.net/sparql"; 
 		var transform=[];
 		var leafs=[];
 		var transId=[];
@@ -412,7 +412,7 @@ const chooserConfiguration = {
                         //"headers":{ 'Content-Type': 'application/sparql-query;charset=UTF-8',
                         "headers":{ 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
                                    'Accept':'application/sparql-results+json' }};
-        var requestUrl="http://90.147.102.53/sparql";
+        var requestUrl="https://envri-fair.lab.uvalight.net//sparql";
         var transform=null;
 
         xhr(requestUrl, xhrArgs).then(function(data) {
@@ -603,7 +603,7 @@ const chooserConfiguration = {
 					//treediv.filterNodes.call(treediv, data.node.title, {});
 
 					//retrieve new IDENTIFIER
-					data.node.key=Get("http://90.147.102.53/uuid_create/create?prefix="+ "http://envri.eu/ontology/terminology%23");
+					data.node.key=Get("https://envri-fair.lab.uvalight.net/uuid_create/create?prefix="+ "http://envri.eu/ontology/terminology%23");
 					console.log(data.node.key);
 
 					jQuery('#btnDiv').find('*').attr('disabled', true);

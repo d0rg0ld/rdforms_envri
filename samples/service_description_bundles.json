@@ -130,26 +130,6 @@
             "multiline"
           ]
         },
-        {
-          "id": "publication",
-          "type": "choice",
-          "nodetype": "RESOURCE",
-          "property": "http://envri.eu/publishedin",
-          "cardinality": {
-            "min": 1,
-            "pref": "1"
-          },
-		  "constraints": {"http://www.w3.org/1999/02/22-rdf-syntax-ns#type":"http://envri.eu/ServicePublication"},
-		  "OntologyUrl": "http://localhost:8080/eosc_voc.rdf",
-		  "parentProperty": "http://www.w3.org/2004/02/skos/core#narrower",
-		  "hierarchyProperty": "http://www.w3.org/2004/02/skos/core#broader",
-          "label": {
-            "en": "publication"
-          },
-          "description": {
-            "en": "Links to publications about this service"
-          }
-        },
 		{
           "type": "text",
           "nodetype": "URI",
@@ -439,7 +419,7 @@
 	{
 	  "id": "revenuestream",
           "type": "text",
-          "nodetype": "TEXT",
+          "nodetype": "ONLY_LITERAL",
           "property": "http://envri.eu/revenuestream",
           "placeholder": "Revenue Stream",
           "cardinality": {
@@ -456,7 +436,7 @@
 	{
 	  "id": "subject",
           "type": "text",
-          "nodetype": "TEXT",
+          "nodetype": "ONLY_LITERAL",
           "property": "http://purl.org/dc/elements/1.1/subject",
           "placeholder": "Subject",
           "cardinality": {
@@ -479,7 +459,7 @@
 		{
 		  "id": "certifications",
 		  "type": "text",
-		  "nodetype": "TEXT",
+		  "nodetype": "ONLY_LITERAL",
 		  "property": "http://eosc.eu/certifications",
 		  "placeholder": "Certifications",
 		  "cardinality": {
@@ -496,7 +476,7 @@
 		{
 		  "id": "requiredplatform",
 		  "type": "text",
-		  "nodetype": "TEXT",
+		  "nodetype": "ONLY_LITERAL",
 		  "property": "http://schema.org/softwarerequirements",
 		  "placeholder": "Required Platform",
 		  "cardinality": {
@@ -634,7 +614,7 @@
 		{
 		  "id": "orderdescription",
 		  "type": "text",
-		  "nodetype": "TEXT",
+		  "nodetype": "ONLY_LITERAL",
 		  "property": "http://envri.eu/orderdescription",
 		  "placeholder": "Description",
 		  "cardinality": {
@@ -929,7 +909,7 @@
 	{
 	  "id": "ownername",
           "type": "text",
-          "nodetype": "TEXT",
+          "nodetype": "ONLY_LITERAL",
           "property": "http://eosc.eu/ownername",
           "placeholder": "Owner Name",
           "cardinality": {
@@ -947,7 +927,7 @@
 	{
 	  "id": "ownermail",
           "type": "text",
-          "nodetype": "TEXT",
+          "nodetype": "ONLY_LITERAL",
           "property": "http://eosc.eu/owneremail",
           "placeholder": "Owner Email",
           "cardinality": {
@@ -965,7 +945,7 @@
 	{
 	  "id": "supportname",
           "type": "text",
-          "nodetype": "TEXT",
+          "nodetype": "ONLY_LITERAL",
           "property": "http://eosc.eu/supportname",
           "placeholder": "Support Name",
           "cardinality": {
@@ -983,7 +963,7 @@
 	{
 	  "id": "supportmail",
           "type": "text",
-          "nodetype": "URI",
+          "nodetype": "ONLY_LITERAL",
           "property": "http://eosc.eu/supportemail",
           "placeholder": "Support Email",
           "cardinality": {
@@ -1001,7 +981,7 @@
 	{
 	  "id": "securityname",
           "type": "text",
-          "nodetype": "TEXT",
+          "nodetype": "ONLY_LITERAL",
           "property": "http://eosc.eu/securityname",
           "placeholder": "Security Name",
           "cardinality": {
@@ -1019,7 +999,7 @@
 	{
 	  "id": "supportmail",
           "type": "text",
-          "nodetype": "URI",
+          "nodetype": "ONLY_LITERAL",
           "property": "http://eosc.eu/securityemail",
           "placeholder": "Security Email",
           "cardinality": {
