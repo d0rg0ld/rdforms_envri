@@ -1,3 +1,98 @@
+## RDForms data entry service
+
+https://envri-fair.lab.uvalight.net/rdforms/samples/software_description.html
+
+https://envri-fair.lab.uvalight.net/rdforms/samples/service_description.html
+
+https://envri-fair.lab.uvalight.net/rdforms/samples/document_description.html
+
+https://envri-fair.lab.uvalight.net/rdforms/samples/usecase_description.html
+
+
+## Tech info
+
+### Repository
+The repo for the Envri forms is https://github.com/d0rg0ld/rdforms_envri
+
+### Approach
+The client side is based on the RDForms js Lib - https://rdforms.org/#!index.md
+
+The server side is based on an Ontowiki installation configured on top of a Triplestore (OpenLink Virtuoso). Writing to the Triplestore is routed via Ontowiki, which provides a basic authentication mechanism. Reading takes place directly via the SPARQL endpoint of the underlying Triplestore.
+
+New entities require a unique ID. A separate service "identifierservice", whose code resides in the same named folder, provides a simple, uuid.uui4() based hash appended to an arbitrarily passed URI prefix. It is called on each reload of a form and used to initialize the RDF subject for the to-be-created set of triples.
+
+### Structure of the code
+
+The structure of the code is currently directly based on the checked out rdforms library folder (https://bitbucket.org/metasolutions/rdforms/src), the files for specifying the forms are currently stored in the "samples" folder there.
+
+Important components for all forms are:
+
+- The chooser for selecting terms from a controlled vocabulary as specified in the individual form's bundle file. It is implemented in samples/chooser/ontoChooser.treetest.js and symlinked as ontoChooser.js.
+- Common js and html snippets are located in samples/common
+
+Each form "app" is composed of five individual files
+
+- The **[software|service|document|usecase]_description.html** file contains the basic layout of the form, imports the used libs and css files and initializes a number of important browser variables, such as the Graph Names for the content and the terminology triples loaded/updated from/to the Triplestore.
+
+- The **[software|service|document|usecase]_description.css** file contains custom css code for each form
+
+- The **[software|service|document|usecase]_description.js** file contains the Javascript code used to initialize RDFforms with respect to the overall layout specified in the html file.
+
+- The **[software|service|document|usecase]_description_bundle.json** file contains the  JSON structure with the form specification as defined by RDForms. It is loaded from the Javascript initialization code. 
+
+- The **[software|service|document|usecase]_description_rdf.json** file contains the RDF stub used for initializing the RDF to be populated by the form
+
+For conveniently creating new forms, the script "createNewForm.sh" can be used to create a set of files described above with a new name and correct mutual references set accordingly.
+
+### Extensions to classic RDForms
+
+The main functionality of the code is consistent with the RDForms approach. Extensions have been implemented in the context of dynamic SPARQL queries against the Triplestore for retrieving controlled vocabulary for option menus. The extensions comply with the RDForms "plugin" architecture for choosers, see for example "example7" from the original RDForms samples. In the context of the forms implemented here, the extended chooser implementation is in the above mentioned **samples/chooser/ontoChooser.treetest.js** file. The registration of this chooser in the context of the RDForms framework takes place in file **common_comps.js**: "import registerOntoChooser from './chooser/ontoChooser.js';"
+
+The custom chooser features the construction of a dynamic SPARQL query for option menu values based on constraints specified in the RDForms specification (in the **[software|service|document|usecase]_description_bundle.json**) for the respective RDF statement to be generated via the form. The example below, taken from **software_description_bundle.json**, represents a typical specification for such contraints. In principle, constraints are formulated as SPARQL expressions of the form 
+
+**?s \<contraintProperty\> \<constraintObject\>**, 
+
+allowing to query for all entities ?s fulfilling that constraint. Typically, constraint properties represent some form of "subClassOf", "broader" or "type" relation while constraint objects are the respective superclasses, broader terms or types. Both are specified under the dedicated "contraints" key, whose value is a dictionary of key-value pairs. Each key of this dictionary represents a constraintProperty, while the value(s) associated with that key represent the constraintObjects. Per default, multiple constraints expressed that way are interpreted as "intersection", i.e. the specification of a constraint "http://www.w3.org/2000/01/rdf-schema#subClassOf" with two associated values, as given below, would only return those subjects being subclass of both. In many cases, however, the union of constraint is desired instead. This can be achieved via an extended style value "union" as shown in the example below under the list of style options specified via the "styles" key. Additional extended options in the regard include "pathExpr", which results in the SPARQL query to search for transitive constraints of variable lengths (e.g. "?s \<contraintProperty\> ?intermediate . ?intermediate \<contraintProperty\> ?intermediateN . ?intermediateN \<contraintProperty\> \<contraintObject\>") and "tree", which notifies the chooser to represent transitive results in tree form.
+
+> {
+> 
+>          "type": "choice",
+>          
+>          "nodetype": "RESOURCE",
+>          
+>          "property":  "http://www.ebi.ac.uk/swo/SWO_0004005",
+>          
+>          "cardinality": {
+>          
+>            "pref": "1"
+>            
+>         },
+>         
+>          "constraints": {      "http://www.w3.org/2000/01/rdf-schema#subClassOf":  ["http://purl.obolibrary.org/obo/OBI_0200000","http://www.oil-e.net/ontology/oil-base.owl#IV_Action"]},
+>          
+>          "OntologyUrl": "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/",
+>          
+>          "label": {
+>          
+>            "en": "Application Scenario"
+>            
+>          },
+>          
+>          "description": {
+>          
+>            "en": "What process does this software support?"
+>            
+>          },
+>          
+>                  "styles": [
+>                  
+>            "multiline", "pathExpr", "tree", "union"
+>            
+>          ]
+>          
+>        },
+
+
 # RDForms
 
 RDForms ("RDF Forms") is a JavaScript library that provides a way to declarative describe how editors and presentation
