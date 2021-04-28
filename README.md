@@ -21,9 +21,11 @@ The repo for the Envri forms is https://github.com/d0rg0ld/rdforms_envri
 ## Tech info
 
 ### Approach
-The client side is based on the RDForms js Lib - https://rdforms.org/#!index.md
+The client side is based on the RDForms js Lib - https://rdforms.org/#!index.md. User entries and existing data loaded from the Triplestore are stored as RDF in the browser memory.
 
-The server side is based on an Ontowiki installation configured on top of a Triplestore (OpenLink Virtuoso). Writing to the Triplestore is routed via Ontowiki, which provides a basic authentication mechanism. Reading takes place directly via the SPARQL endpoint of the underlying Triplestore.
+The server side is based on an Ontowiki installation (currently available via https://envri-fair.lab.uvalight.net/OntoWiki/index.php) configured on top of a Triplestore (OpenLink Virtuoso, available via https://envri-fair.lab.uvalight.net/sparql). While reading existing data takes place directly via the SPARQL endpoint of the underlying Triplestore, writing is routed via Ontowikis update service, which provides a basic authentication mechanism.
+
+While newly added statements are written to and read from a named graph whose name is stored in the browser variable "window.contentGraphname" as specified in the html file for each form (It should be consistent across all forms), newly added terminology (via the custom chooser described below) is read from and written to a separate named graph stored in "window.userTermGraphName".
 
 New entities require a unique ID. A separate service "identifierservice", whose code resides in the same named folder, provides a simple, uuid.uui4() based hash appended to an arbitrarily passed URI prefix. It is called on each reload of a form and used to initialize the RDF subject for the to-be-created set of triples.
 
