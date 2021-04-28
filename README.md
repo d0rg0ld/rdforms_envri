@@ -29,6 +29,10 @@ While newly added statements are written to and read from a named graph whose na
 
 New entities require a unique ID. A separate service "identifierservice", whose code resides in the same named folder, provides a simple, uuid.uui4() based hash appended to an arbitrarily passed URI prefix. It is called on each reload of a form and used to initialize the RDF subject for the to-be-created set of triples.
 
+### Installation + Startup
+
+The repo should be cloned into a folder on the target server made available via HTTP. An Ontowiki instance must be properly configured on top of a Triplestore (There is an existing adapter for Openlink Virtuoso, https://docs.ontowiki.net/VirtuosoBackend.html), featuring named graphs for descriptions and terminology as discussed above. The Ontowiki installation should als feature pre-existing 
+
 ### Structure of the code
 
 The structure of the code is currently directly based on the checked out rdforms library folder (https://bitbucket.org/metasolutions/rdforms/src), the files for specifying the forms are currently stored in the "samples" folder there.
