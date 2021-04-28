@@ -1,5 +1,7 @@
 ## RDForms data entry service
 
+This set of interactive Web pages is dedicated to providing forms for describing ENVRI related services, software, documents and use cases in form of native RDF. They are currently available via the URLs below. A brief description of the current state of the system is provided in ENVRI-FAIR Deliverable 7.3 (https://envri.eu/wp-content/uploads/2021/04/ENVRI-FAIR-D-7-3.pdf).
+
 https://envri-fair.lab.uvalight.net/rdforms/samples/software_description.html
 
 https://envri-fair.lab.uvalight.net/rdforms/samples/service_description.html
@@ -8,14 +10,15 @@ https://envri-fair.lab.uvalight.net/rdforms/samples/document_description.html
 
 https://envri-fair.lab.uvalight.net/rdforms/samples/usecase_description.html
 
-
-## Tech info
+The four forms cover the entities and their mutual relationships as present in the data model shown in the Figure below. The used properties have mainly been derived from the eInfraCentral EOSC catalogue schema and classification scheme 2.0 available via https://github.com/eInfraCentral/docs as well as from the descriptions of the ENVRIplus service portfolio available via https://confluence.egi.eu/display/EC/ENVRIplus+Service+Portfolios and https://de.slideshare.net/EUDAT/data-for-science-service-portfolio
 
 ![image](https://user-images.githubusercontent.com/2720790/116233554-b9713a00-a75b-11eb-9bcc-a0090b52dc1b.png)
 
 
 ### Repository
 The repo for the Envri forms is https://github.com/d0rg0ld/rdforms_envri
+
+## Tech info
 
 ### Approach
 The client side is based on the RDForms js Lib - https://rdforms.org/#!index.md
