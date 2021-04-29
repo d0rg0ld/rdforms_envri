@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Exported with the Erfurt API - http://aksw.org/Projects/Erfurt -->
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF xml:base="http://90.147.102.53/OntoWiki/index.php/EnvriUserTerminology/"
+  xmlns:rdf="&rdf;"
+  xmlns:owl="&owl;"
+  xmlns:rdfs="&rdfs;">
+
+
+<!-- Ontology specific informations -->
+  <owl:Ontology rdf:about="http://90.147.102.53/OntoWiki/index.php/EnvriUserTerminology/"
+    rdfs:label="Envri User Terminology" />
+
+<!-- Instances and untyped data -->
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#0910215d3ce5459ebfb89299ead37bf1"
+    rdfs:label="OGC SensorML">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#standard" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#0d7fd72802444170b0c7640d1e436bf7"
+    rdfs:label="Environmental sciences">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#Earth%20sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#25eecf0229f142c3a3d1c3332471278e"
+    rdfs:label="EUDAT">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#deploymentenvironment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#2aa6adf123b6481880e4b38fadf60467"
+    rdfs:label="EGI FedCloud">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#deploymentenvironment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#40e8979e434f4652aace7489739e52a2"
+    rdfs:label="ISO 19115&amp;#x2F;19139">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#c09554bc2e3949879adb73dde3557049" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#4539d4ae1b904a94a670ae8c0a8592a3"
+    rdfs:label="Ecological data format">
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/format_2350" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#5039e8c4ff3e4fb88e0e1722faa14223"
+    rdfs:label="Python 3.7">
+    <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000118" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#5c28e7c1ad914675a0d470d6652182ec"
+    rdfs:label="Inspire EF">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#bdd7e19748de43c7a8f422d829ca9bac" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#809064ec87294d58a21ecf671a55eeeb"
+    rdfs:label="Ecological metadata format">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#4539d4ae1b904a94a670ae8c0a8592a3" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#91ff4980b1c84c03ad41d5a490cb3509"
+    rdfs:label="Ecological Metadata Language (EML)">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#809064ec87294d58a21ecf671a55eeeb" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#944788c859bf41c3bae7517d6dc024a3">
+    <rdfs:label rdf:resource="OCCITEST" />
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#occi" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#94ab95efed2c4faeb8c0dbae61227a2a"
+    rdfs:label="Calc">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#a9b0b4acfcf14e87a0a4a5f28e8b0e30" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#a9b0b4acfcf14e87a0a4a5f28e8b0e30"
+    rdfs:label="Open Office">
+    <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#b01d500c8f194efea6ded33734b4f38c"
+    rdfs:label="envrisoft">
+    <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/swo/SWO_0000001" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#bdd7e19748de43c7a8f422d829ca9bac"
+    rdfs:label="INSPIRE">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#standard" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#c09554bc2e3949879adb73dde3557049"
+    rdfs:label="Geographic metadata format">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#c5a598585e684fb595a850aeca8775e4" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#c5a598585e684fb595a850aeca8775e4"
+    rdfs:label="Geographic data format">
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/format_2350" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#e017cfc0cb8946389785c0cb449607a1"
+    rdfs:label="ISO 19115">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#iso" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://envri.eu/ontology/terminology#fd06f0572a6e4aa694ef4d972c69593c"
+    rdfs:label="ISO 19139">
+    <rdfs:subClassOf rdf:resource="http://envri.eu/ontology/terminology#iso" />
+  </rdf:Description>
+
+</rdf:RDF>
