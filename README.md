@@ -33,7 +33,19 @@ New entities require a unique ID. A separate service "identifierservice", whose 
 
 This repo should be cloned into a folder on the target server made available via HTTP, including its subdirectories. 
 
-An Ontowiki instance must be properly configured on top of a Triplestore (There is an existing adapter for Openlink Virtuoso, https://docs.ontowiki.net/VirtuosoBackend.html), featuring named graphs for descriptions and terminology as discussed above. The Ontowiki installation should include the ontologies used to populate the controlled vocabulary for form values, which currently are the SWO (https://github.com/allysonlister/swo) and EDAM (http://edamontology.org/page) ontologies from the OBO domain, as well as the terminology derived from eInfraCentral, made available in this repository in files envri_terminology.rdf and envri_user_terminology.rdf. In order for term labels to become visible in the Ontowiki viewer, these resources should be imported into the knowledge base via owl:imports.
+An Ontowiki instance must be properly configured on top of a Triplestore (There is an existing adapter for Openlink Virtuoso, https://docs.ontowiki.net/VirtuosoBackend.html), featuring named graphs for descriptions and terminology as discussed above. The Ontowiki installation should include the ontologies used to populate the controlled vocabulary for form values as separate knowledge bases. Currently used resources are the SWO (https://github.com/allysonlister/swo) and EDAM (http://edamontology.org/page) ontologies from the OBO domain, as well as the terminology derived from eInfraCentral, made available in this repository in files envri_terminology.rdf and envri_user_terminology.rdf. In order for term labels to become visible in the Ontowiki viewer, the Onwotiki KB IRIs for these resources should be imported into the "content" knowledge base via owl:imports.
+
+In order to filter the imported resources from the class view in the Ontowiki Viewer, Ontowiki's "Navigation Module" extension should be configured with hidden Namespaces:
+
+> config/classes/hiddenNS/0/"http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+> config/classes/hiddenNS/1/"http://www.w3.org/2000/01/rdf-schema#"
+> config/classes/hiddenNS/2/"http://www.w3.org/2002/07/owl#"
+> config/classes/hiddenNS/3/"http://edamontology.org/"
+> config/classes/hiddenNS/4/"http://purl.obolibrary.org/obo/"
+> config/classes/hiddenNS/5/"http://www.geneontology.org/formats/oboInOwl#"
+> config/classes/hiddenNS/6/"http://kt.ijs.si/panovp/OntoDM#"
+> config/classes/hiddenNS/7/"http://www.ebi.ac.uk/swo/"
+
 
 ### Structure of the code
 
