@@ -53,6 +53,7 @@ In order to filter the imported resources from the class view in the Ontowiki Vi
 > 
 > config/classes/hiddenNS/7/"http://www.ebi.ac.uk/swo/"
 
+The ID Service must be started by running the **runit.sh** bash script in the identifierservice folder from a separate terminal.
 
 ### Structure of the code
 
