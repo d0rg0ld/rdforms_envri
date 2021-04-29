@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Exported with the Erfurt API - http://aksw.org/Projects/Erfurt -->
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY dc "http://purl.org/dc/elements/1.1/">
+  <!ENTITY dct "http://purl.org/dc/terms/">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+  <!ENTITY ns8 "http://envri.eu/">
+  <!ENTITY ns0 "http://schema.org/">
+  <!ENTITY ns3 "http://www.ebi.ac.uk/swo/maturity/">
+  <!ENTITY ns1 "http://www.ebi.ac.uk/efo/swo/">
+  <!ENTITY ns2 "http://www.ebi.ac.uk/swo/">
+  <!ENTITY ns4 "http://eosc.eu/">
+  <!ENTITY ns5 "http://purl.obolibrary.org/obo/">
+  <!ENTITY ns6 "http://edamontology.org/">
+  <!ENTITY ns7 "http://www.geneontology.org/formats/oboInOwl#">
+  <!ENTITY ns9 "http://www.ebi.ac.uk/efo/">
+  <!ENTITY ns10 "http://envri.eu/ontology/service#">
+]>
+
+<rdf:RDF xml:base="http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/"
+  xmlns:rdf="&rdf;"
+  xmlns:owl="&owl;"
+  xmlns:rdfs="&rdfs;"
+  xmlns:dc="&dc;"
+  xmlns:dct="&dct;"
+  xmlns:xsd="&xsd;"
+  xmlns:ns8="&ns8;"
+  xmlns:ns0="&ns0;"
+  xmlns:ns3="&ns3;"
+  xmlns:ns1="&ns1;"
+  xmlns:ns2="&ns2;"
+  xmlns:ns4="&ns4;"
+  xmlns:ns5="&ns5;"
+  xmlns:ns6="&ns6;"
+  xmlns:ns7="&ns7;"
+  xmlns:ns9="&ns9;"
+  xmlns:ns10="&ns8;ontology/service#">
+
+
+<!-- Ontology specific informations -->
+  <owl:Ontology rdf:about="http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/">
+    <rdfs:label>Envri Service Portfolio with external Terminology</rdfs:label>
+    <owl:imports rdf:resource="&ns6;EDAM_1.24.owl" />
+    <owl:imports rdf:resource="&ns5;swo.owl" />
+  </owl:Ontology>
+
+<!-- Instances and untyped data -->
+  <ns8:UseCase rdf:about="&ns8;UseCase/2ac2553f8f204c0e95a7f9efbc2b356c"
+    ns8:results="WebTG as a new algorithm of DataMiner"
+    ns0:name="D4Science Applications"
+    rdfs:label="D4Science Applications">
+    <ns8:keycontribution>Added value to the original offline processes</ns8:keycontribution>
+    <ns8:keycontribution>Easy-to-use interface for new analyses</ns8:keycontribution>
+    <ns8:keycontribution>Enhanced automatization of the analyses (possibility to invoke also from the Website)</ns8:keycontribution>
+    <ns8:keycontribution>Integration of the processes (Octave based)</ns8:keycontribution>
+    <ns8:keycontribution>Repeatability-Reusability-Reproducibility</ns8:keycontribution>
+    <ns8:relatedService rdf:resource="&ns8;service/5349ac9146c1489dac3e05a84f31ebc2" />
+    <ns8:researchinfrastructure rdf:resource="&ns8;ontology/terminology#RI_EISCAT" />
+    <ns8:researchinfrastructure rdf:resource="&ns8;ontology/terminology#RI_ICOS" />
+    <ns8:researchinfrastructure rdf:resource="&ns8;ontology/terminology#RI_LIFEWATCH" />
+  </ns8:UseCase>
+
+  <ns8:UseCase rdf:about="&ns8;UseCase/75b56b349d1d432ba8b9299dab68d266"
+    ns8:results="https://data.lter-europe.net/deims/"
+    ns0:name="DEIMS-SDR Catalogue Interoperability"
+    rdfs:label="DEIMS-SDR Catalogue Interoperability">
+    <ns8:deploymentenvironment rdf:resource="&ns8;ontology/terminology#LocalDeployment" />
+    <ns8:keycontribution>CSW for datasets: https://data.lter-europe.net/pycsw/csw.py?service=CSW&amp;version=2.0.2&amp;request=GetCapabilities</ns8:keycontribution>
+    <ns8:keycontribution>Dynamic EF XML generation: e.g. https://data.lter-europe.net/deims/node/8611/emf</ns8:keycontribution>
+    <ns8:keycontribution>Generic documentation of observation and experimentation facilities and linking to resulting datasets</ns8:keycontribution>
+    <ns8:relatedService rdf:resource="&ns8;service/517ef2644a3446e6b517f7ae1f09827f" />
+    <ns8:researchinfrastructure rdf:resource="&ns8;ontology/terminology#RI_ILTER" />
+    <ns8:researchinfrastructure rdf:resource="&ns8;ontology/terminology#RI_LTEREurope" />
+  </ns8:UseCase>
+
+  <ns8:UseCase rdf:about="&ns8;UseCase/aaf684d70057474fb5277790c0e6a22b"
+    ns0:name="ENVRI Knowledge Base"
+    rdfs:label="ENVRI Knowledge Base">
+    <ns8:deploymentenvironment rdf:resource="&ns8;ontology/terminology#JenaFuseki" />
+    <ns8:keycontribution>Data accessible via a public SPARQL endpoint: http://oil-e.vlan400.uvalight.net/rm/sparql?query=…</ns8:keycontribution>
+    <ns8:keycontribution>Encode sample RI data based on ENVRI RM using OIL-E.</ns8:keycontribution>
+    <ns8:relatedService rdf:resource="&ns8;service/e128a32a74fa4ec59b00e1b19fe751a8" />
+    <ns8:researchinfrastructure rdf:resource="&ns8;ontology/terminology#RI_EPOS" />
+    <ns8:researchinfrastructure rdf:resource="&ns8;ontology/terminology#RI_EUROARGO" />
+    <ns8:researchinfrastructure rdf:resource="&ns8;ontology/terminology#RI_LTEREurope" />
+    <ns8:results>Example queries can be tested by visiting http://oil-e.vlan400.uvalight.net/.</ns8:results>
+  </ns8:UseCase>
+
+  <ns8:UseCase rdf:about="&ns8;UseCase/f92604e30cef4060b3eb723fc789740a"
+    ns0:name="Euro-Argo data subscription service"
+    rdfs:label="Euro-Argo data subscription service">
+    <ns8:deploymentenvironment rdf:resource="&ns8;ontology/terminology#25eecf0229f142c3a3d1c3332471278e" />
+    <ns8:deploymentenvironment rdf:resource="&ns8;ontology/terminology#2aa6adf123b6481880e4b38fadf60467" />
+    <ns8:keycontribution>Automating the infrastructure for computing tailored data products subscribed to by users</ns8:keycontribution>
+    <ns8:keycontribution>scheduling subscription tasks based on possible time constraints</ns8:keycontribution>
+    <ns8:relatedService rdf:resource="&ns8;service/9192c377e697432db714bca7b2e881f0" />
+    <ns8:researchinfrastructure rdf:resource="&ns8;ontology/terminology#RI_EUROARGO" />
+    <ns8:results>https://www.youtube.com/watch?v=PKU_JcmSskw</ns8:results>
+  </ns8:UseCase>
+
+  <ns8:Document rdf:about="&ns8;document/2b5fa5ef550a446587216ab30093c5e0">
+    <ns8:relatedService rdf:resource="&ns8;service/e128a32a74fa4ec59b00e1b19fe751a8" />
+    <dct:bibliographicCitation xml:lang="en">IEEE 11th International Conference on e-Science</dct:bibliographicCitation>
+    <dct:creator>Chen Y</dct:creator>
+    <dct:creator>De Laat C</dct:creator>
+    <dct:creator>Grosso P</dct:creator>
+    <dct:creator>Hardisty A</dct:creator>
+    <dct:creator>Jeffery K</dct:creator>
+    <dct:creator>Magagna B</dct:creator>
+    <dct:creator>Martin P</dct:creator>
+    <dct:creator>Schentz H</dct:creator>
+    <dct:creator>Wouter L</dct:creator>
+    <dct:creator>Zhao Z</dct:creator>
+    <dct:date rdf:datatype="&xsd;date">2015-01-01</dct:date>
+    <dct:identifier>http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=7304335</dct:identifier>
+    <dct:title xml:lang="en">Open Information Linking for Environmental Research Infrastructures.</dct:title>
+    <rdfs:label>Open Information Linking for Environmental Research Infrastructures.</rdfs:label>
+  </ns8:Document>
+
+  <ns8:Document rdf:about="&ns8;document/68d9129720ee490eb1b4ec6553fcf69c">
+    <dct:bibliographicCitation xml:lang="en">GIScience &amp; remote sensing, 51(5)</dct:bibliographicCitation>
+    <dct:creator>Coro G</dct:creator>
+    <dct:creator>Ellenbroek A</dct:creator>
+    <dct:creator>Pagano P</dct:creator>
+    <dct:date rdf:datatype="&xsd;date">2014-01-01</dct:date>
+    <dct:title xml:lang="en">Comparing heterogeneous distribution maps for marine species.</dct:title>
+    <rdfs:label>Comparing heterogeneous distribution maps for marine species.</rdfs:label>
+  </ns8:Document>
+
+  <ns8:Document rdf:about="&ns8;document/724aa2ed6a6841a588f069e07c72e185">
+    <dct:bibliographicCitation xml:lang="en">Environmental and ecological statistics, 23(1),</dct:bibliographicCitation>
+    <dct:creator>Coro G</dct:creator>
+    <dct:creator>Ellenbroek A</dct:creator>
+    <dct:creator>Kaschner K</dct:creator>
+    <dct:creator>Magliozzi C</dct:creator>
+    <dct:creator>Pagano P</dct:creator>
+    <dct:date rdf:datatype="&xsd;date">2016-01-01</dct:date>
+    <dct:title xml:lang="en">Automatic classification of climate change effects on marine species distributions in 2050 using the AquaMaps model.</dct:title>
+    <rdfs:label>Automatic classification of climate change effects on marine species distributions in 2050 using the AquaMaps model.</rdfs:label>
+  </ns8:Document>
+
+  <rdf:Description rdf:about="&ns8;document/850671d00c354292b430dbdfe55d9dac">
+    <dct:alternative xml:lang="en">thats a test</dct:alternative>
+    <dct:alternative xml:lang="de">das ist ein test</dct:alternative>
+    <dct:title xml:lang="en">test</dct:title>
+  </rdf:Description>
+
+  <ns8:Document rdf:about="&ns8;document/9c80d0c7d24e45f987b53867768f0b00">
+    <ns8:relatedService rdf:resource="&ns8;service/517ef2644a3446e6b517f7ae1f09827f" />
+    <ns8:relatedUsecase rdf:resource="&ns8;UseCase/75b56b349d1d432ba8b9299dab68d266" />
+    <dct:bibliographicCitation xml:lang="en">Ecological Informatics, 51</dct:bibliographicCitation>
+    <dct:creator>Chrysoulakis N</dct:creator>
+    <dct:creator>Kliment T</dct:creator>
+    <dct:creator>Mirtl M</dct:creator>
+    <dct:creator>Peterseil J</dct:creator>
+    <dct:creator>Poursanidis D</dct:creator>
+    <dct:creator>Wilson M</dct:creator>
+    <dct:creator>Wohner C</dct:creator>
+    <dct:date rdf:datatype="&xsd;date">2019-01-01</dct:date>
+    <dct:identifier>https://doi.org/10.1016/j.ecoinf.2019.01.005</dct:identifier>
+    <dct:title xml:lang="en">DEIMS-SDR - A web portal to document research sites and their associated data.</dct:title>
+    <rdfs:label>DEIMS-SDR - A web portal to document research sites and their associated data.</rdfs:label>
+  </ns8:Document>
+
+  <ns8:Document rdf:about="&ns8;document/a80d9c711f3e4408b1712019bf424129">
+    <ns8:relatedService rdf:resource="&ns8;service/9192c377e697432db714bca7b2e881f0" />
+    <dct:bibliographicCitation xml:lang="en">20th EGU General Assembly</dct:bibliographicCitation>
+    <dct:creator>Carval T</dct:creator>
+    <dct:creator>Chen Y</dct:creator>
+    <dct:creator>Grenier B</dct:creator>
+    <dct:creator>Heikkinen J</dct:creator>
+    <dct:creator>Koulouzis S</dct:creator>
+    <dct:creator>Martin P</dct:creator>
+    <dct:creator>Zhao Z</dct:creator>
+    <dct:date rdf:datatype="&xsd;date">2018-01-01</dct:date>
+    <dct:identifier>http://adsabs.harvard.edu/abs/2018EGUGA..2016012K</dct:identifier>
+    <dct:title xml:lang="en">Dynamic Optimization for Time-critical Data Services: A Case Study in Euro-Argo Research Infrastructure.</dct:title>
+    <rdfs:label>Dynamic Optimization for Time-critical Data Services: A Case Study in Euro-Argo Research Infrastructure.</rdfs:label>
+  </ns8:Document>
+
+  <ns8:Document rdf:about="&ns8;document/a8e4d72268e246279e7f931a8cd8904a">
+    <ns8:relatedService rdf:resource="&ns8;service/c074d7f362dc4bed8642c885ca5b1082" />
+    <ns8:relatedUsecase rdf:resource="&ns8;UseCase/aaf684d70057474fb5277790c0e6a22b" />
+    <dct:bibliographicCitation>Workshop on the first IEEE services workshop on knowledge graph as a service (KGAAS), IEEE Service 2019</dct:bibliographicCitation>
+    <dct:bibliographicCitation xml:lang="en">Workshop on the first IEEE services workshop on knowledge graph as a service (KGAAS), IEEE Service 2019</dct:bibliographicCitation>
+    <dct:creator>Goldfarb D</dct:creator>
+    <dct:creator>Liao X</dct:creator>
+    <dct:creator>Maduro J</dct:creator>
+    <dct:creator>Magagna B</dct:creator>
+    <dct:creator>Martin P</dct:creator>
+    <dct:creator>Schaap D</dct:creator>
+    <dct:creator>Stocker M</dct:creator>
+    <dct:creator>Thijsse P</dct:creator>
+    <dct:creator>Zhao Z</dct:creator>
+    <dct:date>2019-01-01</dct:date>
+    <dct:date rdf:datatype="&xsd;date">2019-01-01</dct:date>
+    <dct:identifier>https://ieeexplore.ieee.org/document/8817236</dct:identifier>
+    <dct:title>Knowledge-as-a-Service: a community knowledge base for research infrastructures in environmental and earth sciences.</dct:title>
+    <dct:title xml:lang="en">Knowledge-as-a-Service: a community knowledge base for research infrastructures in environmental and earth sciences.</dct:title>
+    <rdfs:label>Knowledge-as-a-Service: a community knowledge base for research infrastructures in environmental and earth sciences.</rdfs:label>
+  </ns8:Document>
+
+  <ns8:Document rdf:about="&ns8;document/b13f19438d124ec29e8d5dc17052bdf7"
+    dct:identifier="https://doi.org/10.1002/cpe.4219">
+    <ns8:relatedService rdf:resource="&ns8;service/5349ac9146c1489dac3e05a84f31ebc2" />
+    <dct:bibliographicCitation xml:lang="en">	
+Concurrency Computat: Pract Exper</dct:bibliographicCitation>
+    <dct:creator>Coro G</dct:creator>
+    <dct:creator>Pagano P</dct:creator>
+    <dct:creator>Panichi G</dct:creator>
+    <dct:creator>Scarponi P</dct:creator>
+    <dct:date rdf:datatype="&xsd;date">2017-01-01</dct:date>
+    <dct:title xml:lang="en">Cloud computing in a distributed e-infrastructure using the web processing service standard.</dct:title>
+    <rdfs:label>Cloud computing in a distributed e-infrastructure using the web processing service standard.</rdfs:label>
+  </ns8:Document>
+
+  <ns8:Document rdf:about="&ns8;document/c9418d1887a54355aa1218ea972d8879">
+    <dct:bibliographicCitation xml:lang="en">Bollettino di Geofisica Teorica ed Applicata. 57</dct:bibliographicCitation>
+    <dct:creator>Coro G</dct:creator>
+    <dct:creator>Napolitano U</dct:creator>
+    <dct:creator>Pagano P</dct:creator>
+    <dct:date rdf:datatype="&xsd;date">2016-01-01</dct:date>
+    <dct:title xml:lang="en">Bridging environmental data providers and SeaDataNet DIVA service within a collaborative and distributed e-Infrastructure.</dct:title>
+    <rdfs:label>Bridging environmental data providers and SeaDataNet DIVA service within a collaborative and distributed e-Infrastructure.</rdfs:label>
+  </ns8:Document>
+
+  <rdf:Description rdf:about="&ns8;document/cb4cbf265f754a7ba95af5f7514c74bb">
+    <dct:alternative xml:lang="en">oncemore</dct:alternative>
+    <dct:title xml:lang="en">testme</dct:title>
+  </rdf:Description>
+
+  <ns8:Document rdf:about="&ns8;document/dd559a99186949f194468cbf3d60ecc3"
+    dct:identifier="http://doi.org/10.5281/zenodo.1570919">
+    <ns8:relatedService rdf:resource="&ns8;service/9192c377e697432db714bca7b2e881f0" />
+    <dct:bibliographicCitation xml:lang="en">DataCloud 2017</dct:bibliographicCitation>
+    <dct:creator>Carval T</dct:creator>
+    <dct:creator>De Laat C</dct:creator>
+    <dct:creator>Grenier B</dct:creator>
+    <dct:creator>Heikkinen J</dct:creator>
+    <dct:creator>Hu Y</dct:creator>
+    <dct:creator>Judeau G</dct:creator>
+    <dct:creator>Koulouzis S</dct:creator>
+    <dct:creator>Martin P</dct:creator>
+    <dct:creator>Wang J</dct:creator>
+    <dct:creator>Zhao Z</dct:creator>
+    <dct:creator>Zhou H</dct:creator>
+    <dct:date rdf:datatype="&xsd;date">2017-01-01</dct:date>
+    <dct:title xml:lang="en">Seamless Infrastructure Customisation and Performance Optimisation for Time-critical Services in Data Infrastructures.</dct:title>
+    <rdfs:label>Seamless Infrastructure Customisation and Performance Optimisation for Time-critical Services in Data Infrastructures.</rdfs:label>
+  </ns8:Document>
+
+  <ns8:Service rdf:about="&ns8;service/040c14e228b445708f04ca3c817364d2"
+    ns4:ownername="Cardiff University"
+    ns4:supportname="Abraham Nieva"
+    ns0:softwarerequirements="Web Browser">
+    <ns8:fairtarget rdf:resource="https://w3id.org/fair/principles/terms/I2" />
+    <ns8:fairtarget rdf:resource="https://w3id.org/fair/principles/terms/R1.3" />
+    <ns8:hasfeature>9 Lessons covering the science, information and technology viewpoints</ns8:hasfeature>
+    <ns8:hasfeature>Based on a real life modelling case (DASSH use case)</ns8:hasfeature>
+    <ns8:hasfeature>Provides practical examples of the use of the Reference Model</ns8:hasfeature>
+    <ns8:license rdf:resource="&ns2;license/SWO_1000087" />
+    <ns4:accessmode rdf:resource="&ns8;ontology/terminology#wide%20access" />
+    <ns4:accesstype rdf:resource="&ns8;ontology/terminology#virtual" />
+    <ns4:category rdf:resource="&ns8;ontology/terminology#Education%20%26%20Training%20Online%20Courses%20" />
+    <ns4:ordertype rdf:resource="&ns8;ontology/terminology#open%20access" />
+    <ns4:paymentmodel rdf:resource="&ns8;ontology/terminology#freepayment" />
+    <ns4:sciencedomain rdf:resource="&ns8;ontology/terminology#0d7fd72802444170b0c7640d1e436bf7" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#scorm-1-2" />
+    <ns4:supportemail rdf:resource="NievadelaHidalgaA@cardiff.ac.uk" />
+    <ns4:trl rdf:resource="&ns8;ontology/terminology#TRL7" />
+    <ns0:areaServed rdf:resource="&ns8;ontology/terminology#ww" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#research%20infrastructure%20managers" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#researchsoftwaredeveloper" />
+    <ns0:availableLanguage rdf:resource="&ns8;ontology/terminology#english" />
+    <ns0:description>This training module provides a structured introduction to the main concepts of the ENVRI Reference Model in its 3 logical viewpoints. Nine lessons, starting with a use case description and the research data lifecycle, incrementally introducing more details about the Science, Information and Computational Viewpoints.</ns0:description>
+    <ns0:funder rdf:resource="&ns8;ontology/terminology#inkindfunding" />
+    <ns0:name>RM Training: Practical Introduction to the ENVRI RM</ns0:name>
+    <ns0:url rdf:resource="https://training.envri.eu/course/view.php?id=9" />
+    <rdfs:label>RM Training: Practical Introduction to the ENVRI RM</rdfs:label>
+  </ns8:Service>
+
+  <ns8:Service rdf:about="&ns8;service/180307f4098745dab61729c495b2e302"
+    ns0:name="Architecture Design"
+    rdfs:label="Architecture Design">
+    <ns8:hasfeature>Assumes RI have local e-I capability and access to European e-Is</ns8:hasfeature>
+    <ns8:hasfeature>Derived from D5.1 (requirements and State of the Art)</ns8:hasfeature>
+    <ns8:hasfeature>Recommendations to RIs for reference architecture</ns8:hasfeature>
+    <ns4:category rdf:resource="&ns8;ontology/terminology#Consultancy%20%26%20Support" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#research%20infrastructure%20managers" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#researchers" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#service_resource%20providers" />
+  </ns8:Service>
+
+  <ns8:Service rdf:about="&ns8;service/517ef2644a3446e6b517f7ae1f09827f"
+    ns4:owneremail="johannes.peterseil@umweltbundesamt.at"
+    ns4:ownername="LTER Europe"
+    ns4:supportemail="christoph.wohner@umweltbundesamt.at"
+    ns4:supportname="Christoph Wohner">
+    <ns8:fairtarget rdf:resource="https://w3id.org/fair/principles/terms/F4" />
+    <ns8:hasfeature>Exposition of data through standardised services (CSW, WFS, WMS, …)</ns8:hasfeature>
+    <ns8:hasfeature>Integration with GEOSS</ns8:hasfeature>
+    <ns8:hasfeature>Standardised documentation of research sites, datasets, data products and sensors</ns8:hasfeature>
+    <ns10:softwarecomponent rdf:resource="&ns8;software/63145b412443467abfec1beef8bf6af8" />
+    <ns8:orderuri rdf:resource="deims.org" />
+    <ns8:revenuestream>DEIMS-SDR development institutionalised in LTER-Europe and ILTER Additional funding and person months through projects (currently H2020 project “eLTER” and H2020 project “EUDAT”)</ns8:revenuestream>
+    <ns4:accessmode rdf:resource="&ns8;ontology/terminology#wide%20access" />
+    <ns4:accesstype rdf:resource="&ns8;ontology/terminology#virtual" />
+    <ns4:category rdf:resource="&ns8;ontology/terminology#Data%20Scientific%2FResearch%20data" />
+    <ns4:feedback rdf:resource="https://deims.org/contact" />
+    <ns4:helpdesk rdf:resource="https://deims.org/contact" />
+    <ns4:ordertype rdf:resource="&ns8;ontology/terminology#fully%20open%20access" />
+    <ns4:paymentmodel rdf:resource="&ns8;ontology/terminology#freepayment" />
+    <ns4:sciencedomain rdf:resource="&ns8;ontology/terminology#0d7fd72802444170b0c7640d1e436bf7" />
+    <ns4:traininginformation rdf:resource="https://data.lter-europe.net/deims/tutorial" />
+    <ns4:userValue>Standardised access to a comprehensive database of environmental research sites</ns4:userValue>
+    <dc:subject>Dataset Registry</dc:subject>
+    <dc:subject>Observation Facility</dc:subject>
+    <dc:subject>PID</dc:subject>
+    <dc:subject>Research Site</dc:subject>
+    <dc:subject>Site Registry</dc:subject>
+    <ns0:areaServed rdf:resource="&ns8;ontology/terminology#ww" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#datamanager" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#environmentalscientist" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#research%20communities" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#tooldeveloper" />
+    <ns0:description>Standardised documentation of research sites, datasets, data products and sensors exposing data through standardised Services (CSW, WFS, WMS, ...)</ns0:description>
+    <ns0:documentation rdf:resource="https://data.lter-europe.net/deims/documentation" />
+    <ns0:name>Dynamic ecological Information Management System (DEIMS)</ns0:name>
+    <ns0:provider rdf:resource="&ns8;service/provider/1320fb5e-25ae-4fe6-a34f-114559560045" />
+    <ns0:slogan>Comprehensive database of environmental research sites</ns0:slogan>
+    <ns0:url rdf:resource="deims.org" />
+    <rdfs:label>Dynamic ecological Information Management System (DEIMS)</rdfs:label>
+  </ns8:Service>
+
+  <ns8:Service rdf:about="&ns8;service/5349ac9146c1489dac3e05a84f31ebc2"
+    ns4:owneremail="info@d4science.org"
+    ns4:ownername="D4Science.org"
+    ns4:supportemail="leonardo.candela@isti.cnr.it"
+    ns4:supportname="Leonardo Candela"
+    ns0:name="gCube / D4Science DataMiner"
+    rdfs:label="gCube / D4Science DataMiner">
+    <ns10:softwarecomponent rdf:resource="&ns8;software/72c8991bfaea4d3ab4c32364acf93319" />
+    <ns10:softwarecomponent rdf:resource="&ns8;software/abb2404b91f94c0bbc572bced35d9177" />
+    <ns8:orderuri rdf:resource="d4science.org" />
+    <ns4:accessmode rdf:resource="&ns8;ontology/terminology#policy%20based" />
+    <ns4:accessmode rdf:resource="&ns8;ontology/terminology#wide%20access" />
+    <ns4:accesstype rdf:resource="&ns8;ontology/terminology#virtual" />
+    <ns4:category rdf:resource="&ns8;ontology/terminology#Data%20Analysis%20Workfows" />
+    <ns4:helpdesk rdf:resource="support.d4science.org" />
+    <ns4:ordertype rdf:resource="&ns8;ontology/terminology#open%20access" />
+    <ns4:paymentmodel rdf:resource="&ns8;ontology/terminology#freepayment" />
+    <ns4:sciencedomain rdf:resource="&ns8;ontology/terminology#Electrical%2C%20electronic%20and%20information%20engineering%20" />
+    <ns4:userValue>The analytics platform is conceived to serve the needs of scientists (in particular, those belonging to the so called long-tail of science) by providing them with an easy to use working environment (nothing need to be installed on users’ machine). It is conceived to hide the technicalities related with the execution of tasks by relying on distributed computing infrastructures. Moreover, it is conceived to be exploitable by third-party software/applications, e.g. R-Studio, Q-GIS, or any workflow management system or application capable to interface with a RESTful service. Worth highlighting that the platform is Open Science “compliant” (e.g., every method is “published” and citable, every task leads to a research object) and Virtual Research Environment friendly, i.e. it is conceived to be customizable with respect to the methods to offer in a given application context as well as it is conceived to benefit from a collaborative environment for sharing artefacts and comments. Its characteristics make it particularly suitable to serve typical scientific contexts of the long tail of science.</ns4:userValue>
+    <dc:subject>Data Analytics</dc:subject>
+    <dc:subject>Open Science</dc:subject>
+    <dc:subject>Virtual Research Environment</dc:subject>
+    <dc:subject>Web-based Workbench</dc:subject>
+    <dc:subject>Workflows</dc:subject>
+    <ns0:areaServed rdf:resource="&ns8;ontology/terminology#ww" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#datadrivenresearcher" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#datascientist" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#environmentalscientist" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#research%20communities" />
+    <ns0:description>	
+Show as List
+This service offers a web-based workbench for data analytics compliant with Open Science practices. From the end user perspective, it offers a collaborative-oriented working environment where users: can easily execute and monitor data analytics tasks by relying on a rich and open set of available methods either by using a dynamically generated web-based user- friendly GUI or by using a RESTful protocol based on the OGC WPS Standard; can easily share &amp; publish their analytics methods (e.g. implemented in R, Java, Python, etc.) to the workbench and make them exploitable by an automatically generated web- based GUI and by the OGC WPS protocol; are provided with a “research object” describing every analytics task executed by the workbench enabling for repeatability, computational reproducibility, reuse, citation and provenance. The research object contains every input &amp; output, an executable reference to the method as well as rich metadata including a PROV-O provenance record; The data analytics framework is integrated with a shared workspace where the research objects resulting from the analytics tasks are automatically stored together with rich metadata. Objects in the workspace can be shared with coworkers as well as published by a catalogue with a license governing their uses. Moreover, the framework is conceived to operate in the context of one or more Virtual Research Environments, i.e. it is actually made available by a dedicated working environment offering (besides the framework and the workspace) additional services including those for managing users, creating communities, and supporting communication and collaboration among VRE members. The data analytics framework is conceived to give access to two typologies of resource: • a distributed, open &amp; heterogeneous computing infrastructure for the real execution of the analytics tasks. This distributed computing infrastructure is capable to exploit resources from the EGI infrastructure. • the pool of methods integrated in the platform, i.e. each method integrated in the framework is made available as-a- Service to other users according to the specific policy; More details on this framework is available at https://wiki.gcube-system.org/gcube/DataMiner_Manager</ns0:description>
+    <ns0:documentation rdf:resource="https://wiki.gcube-system.org/gcube/GCube_Documentation" />
+    <ns0:provider rdf:resource="&ns8;service/provider/6c87c422-765f-4481-807e-d26cee05fae9" />
+    <ns0:slogan>Open, user friendly and extensible data analytics platform ready for Open Science and VREs.</ns0:slogan>
+    <ns0:termsOfService rdf:resource="https://services.d4science.org/terms-of-use" />
+    <ns0:url rdf:resource="d4science.org" />
+  </ns8:Service>
+
+  <ns8:Service rdf:about="&ns8;service/701d819c756e42899120146bf429424f">
+    <ns8:hasfeature>Creates dynamic landing pages based on ontology</ns8:hasfeature>
+    <ns8:hasfeature>Machine to machine ingestion of data objects based on simple metadata profile</ns8:hasfeature>
+    <ns8:hasfeature>Minting of ePIC PIDs, DOIs</ns8:hasfeature>
+    <ns8:hasfeature>Streaming to trusted repository (iRods, B2SAFE)</ns8:hasfeature>
+    <ns8:license rdf:resource="&ns2;license/SWO_1000046" />
+    <ns4:category rdf:resource="&ns8;ontology/terminology#Data" />
+    <ns4:trl rdf:resource="&ns8;ontology/terminology#TRL7" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#research%20infrastructure%20managers" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#researchsoftwaredeveloper" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#service_resource%20providers" />
+    <ns0:documentation rdf:resource="https://github.com/ICOS-Carbon-Portal/meta" />
+    <ns0:name>Linked open data ingestion and metadata service</ns0:name>
+    <rdfs:label>Linked open data ingestion and metadata service</rdfs:label>
+  </ns8:Service>
+
+  <ns8:Service rdf:about="&ns8;service/9192c377e697432db714bca7b2e881f0"
+    ns4:owneremail="Z.Zhao@uva.nl"
+    ns4:ownername="UvA (University of Amsterdam)"
+    ns4:supportname="Spiros Koulouzis">
+    <ns8:hasfeature>Application programmable/controllable interfaces (wrapped from infrastructures).</ns8:hasfeature>
+    <ns8:hasfeature>Automated deployment for Dockers with time critical scheduling.</ns8:hasfeature>
+    <ns8:hasfeature>Automated parallel provisioning for large virtual infrastructures with transparent network configuration.</ns8:hasfeature>
+    <ns8:hasfeature>Customize networked virtual machines for applications based on QoS of data services or applications.</ns8:hasfeature>
+    <ns8:license rdf:resource="&ns2;license/SWO_1000005" />
+    <ns10:softwarecomponent rdf:resource="&ns8;software/88679fe59db54f2498e563d0a33464c9" />
+    <ns8:orderuri rdf:resource="https://github.com/QCAPI-DRIP/DRIP-integration" />
+    <ns8:revenuestream>Project funding (H2020 SWITCH, ENVRIplus, VRE4EIC)</ns8:revenuestream>
+    <ns4:accessmode rdf:resource="&ns8;ontology/terminology#policy%20based" />
+    <ns4:accesstype rdf:resource="&ns8;ontology/terminology#virtual" />
+    <ns4:category rdf:resource="&ns8;ontology/terminology#Operations%20%26%20Infrastructure%20Management%20Services%20Utilities" />
+    <ns4:ordertype rdf:resource="&ns8;ontology/terminology#fully%20open%20access" />
+    <ns4:paymentmodel rdf:resource="&ns8;ontology/terminology#freepayment" />
+    <ns4:sciencedomain rdf:resource="&ns8;ontology/terminology#Electrical%2C%20electronic%20and%20information%20engineering%20" />
+    <ns4:supportemail rdf:resource="S.Koulouzis@uva.nl" />
+    <ns4:supportemail>S.Koulouzis@uva.nl</ns4:supportemail>
+    <ns4:userValue>Automated selection of optimal VMs and VM topology for an application workflow with deadline constraints; automatic provisioning of VMs according to the planned topology; automatic installation of application containers onto provisioned VMs from remote repositories.</ns4:userValue>
+    <dc:subject>Optimization</dc:subject>
+    <dc:subject>Time-Critical Applications</dc:subject>
+    <dc:subject>VM Infrastructure</dc:subject>
+    <dc:subject>Virtual Infrastructure</dc:subject>
+    <dc:subject>Virtual Research Environment</dc:subject>
+    <dc:subject>e-Infrastructure</dc:subject>
+    <ns0:areaServed rdf:resource="&ns8;ontology/terminology#ww" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#businesses" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#researchers" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#service_resource%20providers" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#tooldeveloper" />
+    <ns0:description>The Dynamic Real-time infrastructure planner (DRIP) allows application developers to plan a customized virtual infrastructure based on application level deadline constraints and resource budgets, provisioning the virtual infrastructure using standardized interfaces (TOSCA and OCCI), deploy application components onto the virtual infrastructure, and start execution on demand.</ns0:description>
+    <ns0:documentation rdf:resource="https://github.com/QCAPI-DRIP/DRIP-integration/wiki" />
+    <ns0:name>Dynamic real-time infrastructure planner (DRIP)</ns0:name>
+    <ns0:provider rdf:resource="&ns8;service/provider/93c7101f-6deb-42c5-af6f-1b7ac8937810" />
+    <ns0:slogan>Optimised infrastructure planning and provisioning for time-critical applications.</ns0:slogan>
+    <ns0:url rdf:resource="https://staff.fnwi.uva.nl/z.zhao/software/drip/" />
+    <rdfs:label>Dynamic real-time infrastructure planner (DRIP)</rdfs:label>
+  </ns8:Service>
+
+  <ns8:Service rdf:about="&ns8;service/c074d7f362dc4bed8642c885ca5b1082"
+    ns4:owneremail="z.zhao@uva.nl"
+    ns4:ownername="Zhiming Zhao"
+    ns4:supportemail="p.w.martin@uva.nl"
+    ns4:supportname="Paul Martin"
+    ns0:name="ENVRI Knowledge Base"
+    rdfs:label="ENVRI Knowledge Base">
+    <ns8:fairtarget rdf:resource="https://w3id.org/fair/principles/terms/I1" />
+    <ns8:hasfeature>Captures information about research infrastructure characteristics and design (“RI design wisdom”), structured according to ENVRI RM.</ns8:hasfeature>
+    <ns8:hasfeature>Captures information about technologies and standards used by RIs for key services.</ns8:hasfeature>
+    <ns8:hasfeature>Permits analysis and comparison of RI characteristics.</ns8:hasfeature>
+    <ns8:hasfeature>Provided as an (RDF) knowledge graph, accessible via SPARQL requests over HTTP.</ns8:hasfeature>
+    <ns8:hasfeature>Uses Open Information Linking for environmental science research infrastructures (OIL-E).</ns8:hasfeature>
+    <ns10:softwarecomponent rdf:resource="&ns8;software/2e3df8af8cdd47ae9d8310c05567cdf1" />
+    <ns10:softwarecomponent rdf:resource="&ns8;software/701aa5f0f867482e99fd02a04e7ed67e" />
+    <ns8:orderuri rdf:resource="oil-e.vlan400.uvalight.net" />
+    <ns8:revenuestream>The ENVRI Knowledge Base should be maintained as part of the ENVRI community portal. At end of project, the usefulness of aggregating design wisdom and technology landscape for RI should be evaluated and, if positively received, a recipe for provisioning new knowledge bases for similar cluster initiatives should be compiled and published.</ns8:revenuestream>
+    <ns4:accessmode rdf:resource="&ns8;ontology/terminology#wide%20access" />
+    <ns4:accesstype rdf:resource="&ns8;ontology/terminology#virtual" />
+    <ns4:category rdf:resource="&ns8;ontology/terminology#Data%20Scientific%2FResearch%20data" />
+    <ns4:helpdesk rdf:resource="oil-e.vlan400.uvalight.net" />
+    <ns4:ordertype rdf:resource="&ns8;ontology/terminology#fully%20open%20access" />
+    <ns4:paymentmodel rdf:resource="&ns8;ontology/terminology#freepayment" />
+    <ns4:sciencedomain rdf:resource="&ns8;ontology/terminology#0d7fd72802444170b0c7640d1e436bf7" />
+    <ns4:traininginformation rdf:resource="oil-e.vlan400.uvalight.net" />
+    <dct:requires rdf:resource="&ns8;service/e128a32a74fa4ec59b00e1b19fe751a8" />
+    <ns0:areaServed rdf:resource="&ns8;ontology/terminology#ww" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#research%20infrastructure%20managers" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#researchsoftwarearchitect" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#researchsoftwaredeveloper" />
+    <ns0:documentation rdf:resource="oil-e.vlan400.uvalight.net" />
+    <ns0:provider rdf:resource="&ns8;service/provider/93c7101f-6deb-42c5-af6f-1b7ac8937810" />
+    <ns0:url rdf:resource="http://oil-e.vlan400.uvalight.net/" />
+  </ns8:Service>
+
+  <ns8:Service rdf:about="&ns8;service/e128a32a74fa4ec59b00e1b19fe751a8">
+    <ns8:fairtarget rdf:resource="https://w3id.org/fair/principles/terms/I1" />
+    <ns8:hasfeature>Captures ENVRI RM as a multi-viewpoint OWL ontology for RI architecture.</ns8:hasfeature>
+    <ns8:hasfeature>Permits analysis and comparison of RI characteristics as the foundation for an ENVRI Knowledge Base.</ns8:hasfeature>
+    <ns8:hasfeature>Provides a linking framework for describing the different metadata schemes and technologies used by RIs as well as to identify any semantic mappings available to convert between schemes.</ns8:hasfeature>
+    <ns4:accessmode rdf:resource="&ns8;ontology/terminology#wide%20access" />
+    <ns4:accesstype rdf:resource="&ns8;ontology/terminology#virtual" />
+    <ns4:category rdf:resource="&ns8;ontology/terminology#Data%20Scientific%2FResearch%20data" />
+    <ns4:ordertype rdf:resource="&ns8;ontology/terminology#fully%20open%20access" />
+    <ns4:paymentmodel rdf:resource="&ns8;ontology/terminology#freepayment" />
+    <ns4:sciencedomain rdf:resource="&ns8;ontology/terminology#Earth%20sciences" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#owl" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#rdf" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#shacl" />
+    <ns4:trl rdf:resource="&ns8;ontology/terminology#TRL4" />
+    <ns4:userValue>OIL-E is intended to provide technical and methodological guidance for the linking of different controlled vocabularies in order to help the construction of cross-cutting services.</ns4:userValue>
+    <ns0:areaServed rdf:resource="&ns8;ontology/terminology#ww" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#datadrivenresearcher" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#researchsoftwarearchitect" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#semanticmodeller" />
+    <ns0:audience rdf:resource="&ns8;ontology/terminology#tooldeveloper" />
+    <ns0:description>OIL-E is a developing framework for addressing the semantic linking requirements of environmental science e-RIs. Specifically, it is intended to provide a machine-readable bridge between the ENVRI Reference Model and other concept models related to research infrastructure, architecture and scientific (meta)data.</ns0:description>
+    <ns0:name>Open Information Linking for Environmental science research infrastructures (OIL-E)</ns0:name>
+    <ns0:provider rdf:resource="&ns8;service/provider/93c7101f-6deb-42c5-af6f-1b7ac8937810" />
+    <ns0:slogan>Open linking between environmental science RI reference modelling and controlled vocabularies.</ns0:slogan>
+    <ns0:url rdf:resource="http://www.oil-e.net/" />
+    <rdfs:label>Open Information Linking for Environmental science research infrastructures (OIL-E)</rdfs:label>
+  </ns8:Service>
+
+  <ns8:Software rdf:about="&ns8;software/2e3df8af8cdd47ae9d8310c05567cdf1"
+    ns0:description="http://oil-e.vlan400.uvalight.net">
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#owl" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#rdf" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#sparql" />
+    <ns4:trl rdf:resource="&ns8;ontology/terminology#TRL6" />
+    <ns0:name>ENVRI Knowledge Base Notebook (example queries)</ns0:name>
+    <ns3:SWO_9000067 rdf:resource="&ns3;SWO_9000063" />
+    <rdfs:label>ENVRI Knowledge Base Notebook (example queries)</rdfs:label>
+  </ns8:Software>
+
+  <ns8:Software rdf:about="&ns8;software/4e96b03bebea432f95f899a0887e2439"
+    ns0:description="Just a demonstration"
+    ns0:name="Yet another test"
+    rdfs:label="Yet another test">
+    <ns1:SWO_0000741 rdf:resource="&ns8;ontology/terminology#5039e8c4ff3e4fb88e0e1722faa14223" />
+    <ns2:SWO_0000082 rdf:resource="&ns2;SWO_0000027" />
+    <ns2:SWO_0000086 rdf:resource="&ns6;format_3262" />
+    <ns2:SWO_0000087 rdf:resource="&ns6;format_3252" />
+    <ns2:has_license rdf:resource="&ns2;license/SWO_1000046" />
+  </ns8:Software>
+
+  <ns8:Software rdf:about="&ns8;software/63145b412443467abfec1beef8bf6af8"
+    ns0:name="DEIMS-SDR"
+    ns0:url="https://deims.org/"
+    ns2:SWO_0004000="v.3.0.2"
+    rdfs:label="DEIMS-SDR">
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#0910215d3ce5459ebfb89299ead37bf1" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#5c28e7c1ad914675a0d470d6652182ec" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#e017cfc0cb8946389785c0cb449607a1" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#fd06f0572a6e4aa694ef4d972c69593c" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#oai-pmh" />
+    <ns4:trl rdf:resource="&ns8;ontology/terminology#TRL8" />
+    <ns0:description>DEIMS-SDR (Dynamic Ecological Information Management System - Site and dataset registry) is an information management system that allows you to discover long-term ecosystem research sites around the globe, along with the data gathered at those sites and the people and networks associated with them. DEIMS-SDR describes a wide range of sites, providing a wealth of information, including each site’s location, ecosystems, facilities, parameters measured and research themes. It is also possible to access a growing number of datasets and data products associated with the sites.</ns0:description>
+    <ns1:SWO_0000394>Umweltbundesamt GmbH
+Environment Agency Austria</ns1:SWO_0000394>
+    <ns1:SWO_0000741 rdf:resource="&ns2;SWO_0000116" />
+    <ns2:SWO_0000087 rdf:resource="&ns8;ontology/terminology#40e8979e434f4652aace7489739e52a2" />
+    <ns2:SWO_0000087 rdf:resource="&ns8;ontology/terminology#91ff4980b1c84c03ad41d5a490cb3509" />
+    <ns2:SWO_0004001 rdf:resource="&ns2;interface/SWO_5000006" />
+    <ns2:SWO_0004001 rdf:resource="&ns2;interface/SWO_9000051" />
+    <ns2:SWO_0004001 rdf:resource="&ns2;interface/SWO_9000052" />
+    <ns2:SWO_0004001 rdf:resource="&ns2;interface/SWO_9000054" />
+    <ns2:has_license rdf:resource="&ns2;license/SWO_1000080" />
+    <ns3:SWO_9000067 rdf:resource="&ns3;SWO_9000065" />
+    <ns3:SWO_9000068>2020-08-11</ns3:SWO_9000068>
+    <ns3:SWO_9000068 rdf:datatype="&xsd;date">2020-08-11</ns3:SWO_9000068>
+  </ns8:Software>
+
+  <ns8:Software rdf:about="&ns8;software/701aa5f0f867482e99fd02a04e7ed67e"
+    ns0:name="ENVRI Knowledge Base SPARQL end-point"
+    rdfs:label="ENVRI Knowledge Base SPARQL end-point">
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#owl" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#rdf" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#sparql" />
+    <ns4:trl rdf:resource="&ns8;ontology/terminology#TRL6" />
+    <ns0:description>http://oil-e.vlan400.uvalight.net/rm/sparql?format=&lt;format&gt;&amp;query=&lt;query&gt;</ns0:description>
+    <ns3:SWO_9000067 rdf:resource="&ns3;SWO_9000063" />
+  </ns8:Software>
+
+  <ns8:Software rdf:about="&ns8;software/72c8991bfaea4d3ab4c32364acf93319"
+    ns0:name="DataMiner SmartExecutor"
+    rdfs:label="DataMiner SmartExecutor">
+    <ns4:trl rdf:resource="&ns8;ontology/terminology#TRL8" />
+    <ns0:description>The DataMiner SmartExecutor executes tasks, i.e. functionally unconstrained pieces of code that lack a network interface but can be deployed into the service and executed through its interface. Example of tasks are R scripts and Java programs. An instance of SmartExecutor publishes descriptive information about the running environment. It can either execute tasks upon request or schedule the execution at configurable intervals on behalf of clients. Clients may interact with the Executor service through a Java library of high-level facilities that subsumes standard service stubs to simplify the discovery of available tasks in those instances. Each client can request to execute a Task or gathering information about the state of their execution. The client library simplifies the following activities: a) discover service instances that can execute the target task; b) launch the execution of the task with one the discovered instances; c) monitor the execution of the running task.</ns0:description>
+    <ns3:SWO_9000067 rdf:resource="&ns3;SWO_9000065" />
+  </ns8:Software>
+
+  <ns8:Software rdf:about="&ns8;software/88679fe59db54f2498e563d0a33464c9">
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#occi" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#tosca" />
+    <ns4:trl rdf:resource="&ns8;ontology/terminology#TRL7" />
+    <ns0:name>Dynamic Real-time Infrastructure Planner (DRIP)</ns0:name>
+    <ns3:SWO_9000067 rdf:resource="&ns3;SWO_9000063" />
+    <rdfs:label>Dynamic Real-time Infrastructure Planner (DRIP)</rdfs:label>
+  </ns8:Software>
+
+  <ns8:Software rdf:about="&ns8;software/abb2404b91f94c0bbc572bced35d9177"
+    ns0:name="DataMiner Manager"
+    rdfs:label="DataMiner Manager">
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#ogc-wps" />
+    <ns4:standards rdf:resource="&ns8;ontology/terminology#w3c-prov" />
+    <ns4:trl rdf:resource="&ns8;ontology/terminology#TRL8" />
+    <ns0:description>DataMiner is a Web Service running in a Tomcat container equipped with gCube SmartGear. The Web Service exposes an interface compliant with the Web Processing Service (WPS) standard. DataMiner is able to exploit the heterogeneous resources offered by the D4Science e-Infrastructure to both retrieve and store data. The service allows users to execute community developed algorithms, written in several programming languages (e.g. Fortran, R, Java). Through the WPS standard, DataMiner provides three main access servlets:
+
+• GetCapabilities: Allows a client to request and receive service metadata (Capabilities), which describe the algorithms supplied by the service. Such operation provides the name and the general description of each process;
+
+• DescribeProcess: Allows a client to request and receive detailed information about the processes that can run on the service instances. Information includes the input and the expected output.</ns0:description>
+    <ns3:SWO_9000067 rdf:resource="&ns3;SWO_9000065" />
+  </ns8:Software>
+
+  <ns8:Software rdf:about="&ns8;software/c703c11096644365b209b2bf2e868cf1"
+    ns0:description="test ontowiki/virtuoso/rdforms combo"
+    ns0:name="test mig"
+    rdfs:label="test mig">
+    <ns1:SWO_0000740 rdf:resource="&ns2;SWO_0000148" />
+    <ns1:SWO_0000741 rdf:resource="&ns2;SWO_0000108" />
+    <ns1:SWO_0000741 rdf:resource="&ns2;SWO_0000116" />
+  </ns8:Software>
+
+</rdf:RDF>
