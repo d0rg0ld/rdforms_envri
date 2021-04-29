@@ -38,12 +38,19 @@ An Ontowiki instance must be properly configured on top of a Triplestore (There 
 In order to filter the imported resources from the class view in the Ontowiki Viewer, Ontowiki's "Navigation Module" extension should be configured with hidden Namespaces:
 
 > config/classes/hiddenNS/0/"http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+> 
 > config/classes/hiddenNS/1/"http://www.w3.org/2000/01/rdf-schema#"
+> 
 > config/classes/hiddenNS/2/"http://www.w3.org/2002/07/owl#"
+> 
 > config/classes/hiddenNS/3/"http://edamontology.org/"
+> 
 > config/classes/hiddenNS/4/"http://purl.obolibrary.org/obo/"
+> 
 > config/classes/hiddenNS/5/"http://www.geneontology.org/formats/oboInOwl#"
+> 
 > config/classes/hiddenNS/6/"http://kt.ijs.si/panovp/OntoDM#"
+> 
 > config/classes/hiddenNS/7/"http://www.ebi.ac.uk/swo/"
 
 
