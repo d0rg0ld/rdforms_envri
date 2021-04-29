@@ -1,5 +1,11 @@
 ## RDForms data entry service
 
+> Created by Doron Goldfarb, Environment Agency Austria, 2020
+>
+> This code has been created in the context of the ENVRI-FAIR project.
+>
+> ENVRI-FAIR received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 824068.
+
 This set of interactive Web pages is dedicated to providing forms for describing ENVRI related services, software, documents and use cases in form of native RDF. They are currently available via the URLs below. A brief description of the current state of the system is provided in ENVRI-FAIR Deliverable 7.3 (https://envri.eu/wp-content/uploads/2021/04/ENVRI-FAIR-D-7-3.pdf).
 
 https://envri-fair.lab.uvalight.net/rdforms/samples/software_description.html

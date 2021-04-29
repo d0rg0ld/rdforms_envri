@@ -1,3 +1,6 @@
+// Created by Doron Goldfarb, Environment Agency Austria, 2020
+// This code has been created in the context of the ENVRI-FAIR project.
+// ENVRI-FAIR received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 824068.
 import registerOntoChooser from './chooser/ontoChooser.js';
 var jQuery = require('jquery');
 
