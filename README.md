@@ -27,11 +27,11 @@ The server side is based on an Ontowiki installation (currently available via ht
 
 While newly added statements are written to and read from a named graph whose name is stored in the browser variable "window.contentGraphname" as specified in the html file for each form (It should be consistent across all forms), newly added terminology (via the custom chooser described below) is read from and written to a separate named graph stored in "window.userTermGraphName".
 
-New entities require a unique ID. A separate service "identifierservice", whose code resides in the same named folder, provides a simple, uuid.uui4() based hash appended to an arbitrarily passed URI prefix. It is called on each reload of a form and used to initialize the RDF subject for the to-be-created set of triples.
+New entities require a unique ID. A separate service "identifierservice", whose code resides in the folder of similar name, provides a simple, uuid.uui4() based hash appended to an arbitrarily passed URI prefix. It is called on each reload of a form and used to initialize the RDF subject for the to-be-created set of triples.
 
 ### Installation + Startup
 
-The repo should be cloned into a folder on the target server made available via HTTP. An Ontowiki instance must be properly configured on top of a Triplestore (There is an existing adapter for Openlink Virtuoso, https://docs.ontowiki.net/VirtuosoBackend.html), featuring named graphs for descriptions and terminology as discussed above. The Ontowiki installation should als feature pre-existing 
+The repo should be cloned into a folder on the target server made available via HTTP. An Ontowiki instance must be properly configured on top of a Triplestore (There is an existing adapter for Openlink Virtuoso, https://docs.ontowiki.net/VirtuosoBackend.html), featuring named graphs for descriptions and terminology as discussed above. The Ontowiki installation should also include the the ontologies used to populate the controlled vocabulary for form values, which currently are the SWO and EDAM ontologies
 
 ### Structure of the code
 
