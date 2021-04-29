@@ -1,0 +1,3897 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Exported with the Erfurt API - http://aksw.org/Projects/Erfurt -->
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+  <!ENTITY ns1 "http://envri.eu/ontology/terminology#">
+  <!ENTITY ns3 "http://envri.eu/ontology/">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF xml:base="&ns3;terminology"
+  xmlns:rdf="&rdf;"
+  xmlns:owl="&owl;"
+  xmlns:rdfs="&rdfs;"
+  xmlns:skos="&skos;"
+  xmlns:ns1="#"
+  xmlns:ns3="&ns3;">
+
+
+<!-- Ontology specific informations -->
+  <owl:Ontology rdf:about="&ns3;terminology"
+    rdfs:label="Envri Terminology" />
+
+<!-- Instances and untyped data -->
+  <rdf:Description rdf:about="#Access%20physical%20%26%20e-Infrastructures"
+    rdfs:label="Access physical &amp; e-Infrastructures">
+    <rdfs:subClassOf rdf:resource="#Service" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Aerospace%20engineering"
+    rdfs:label="Aerospace engineering">
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Aggregators%20%26%20Integrators"
+    rdfs:label="Aggregators &amp; Integrators">
+    <rdfs:subClassOf rdf:resource="#Service" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Agricultural%20Sciences"
+    rdfs:label="Agricultural Sciences">
+    <rdfs:subClassOf rdf:resource="#science" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Agricultural%20biotechnology"
+    rdfs:label="Agricultural biotechnology">
+    <rdfs:subClassOf rdf:resource="#Agricultural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Agriculture%2C%20forestry%2C%20and%20fisheries"
+    rdfs:label="Agriculture, forestry, and fisheries">
+    <rdfs:subClassOf rdf:resource="#Agricultural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Animal%20and%20dairy%20sciences"
+    rdfs:label="Animal and dairy sciences">
+    <rdfs:subClassOf rdf:resource="#Agricultural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications"
+    rdfs:label="Applications">
+    <rdfs:subClassOf rdf:resource="#Sharing%20%26%20Discovery" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications%20%26%20Data"
+    rdfs:label="Applications &amp; Data">
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications%20%26%20Software"
+    rdfs:label="Applications &amp; Software">
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications%20Applications%20Repository"
+    rdfs:label="Applications Repository">
+    <rdfs:subClassOf rdf:resource="#Applications" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications%20Business"
+    rdfs:label="Business">
+    <rdfs:subClassOf rdf:resource="#Applications" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications%20Collaboration"
+    rdfs:label="Collaboration">
+    <rdfs:subClassOf rdf:resource="#Applications" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications%20Communication"
+    rdfs:label="Communication">
+    <rdfs:subClassOf rdf:resource="#Applications" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications%20Education"
+    rdfs:label="Education">
+    <rdfs:subClassOf rdf:resource="#Applications" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications%20Productivity"
+    rdfs:label="Productivity">
+    <rdfs:subClassOf rdf:resource="#Applications" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications%20Social%2FNetworking"
+    rdfs:label="Social/Networking">
+    <rdfs:subClassOf rdf:resource="#Applications" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Applications%20Utilities"
+    rdfs:label="Utilities">
+    <rdfs:subClassOf rdf:resource="#Applications" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Arts"
+    rdfs:label="Arts">
+    <rdfs:subClassOf rdf:resource="#Humanities" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Basic%20medicine"
+    rdfs:label="Basic medicine">
+    <rdfs:subClassOf rdf:resource="#Medical%20%26%20Health%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Bioengineering%20and%20Biomedical%20engineering%20">
+    <rdfs:label>Bioengineering and Biomedical engineering </rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Biological%20sciences"
+    rdfs:label="Biological sciences">
+    <rdfs:subClassOf rdf:resource="#Natural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Chemical%20engineering"
+    rdfs:label="Chemical engineering">
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Chemical%20sciences"
+    rdfs:label="Chemical sciences">
+    <rdfs:subClassOf rdf:resource="#Natural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Civil%20engineering%20"
+    rdfs:label="Civil engineering ">
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Clinical%20medicine"
+    rdfs:label="Clinical medicine">
+    <rdfs:subClassOf rdf:resource="#Medical%20%26%20Health%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Compute"
+    rdfs:label="Compute">
+    <rdfs:subClassOf rdf:resource="#Access%20physical%20%26%20e-Infrastructures" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Compute%20Container%20Management"
+    rdfs:label="Container Management">
+    <rdfs:subClassOf rdf:resource="#Compute" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Compute%20Job%20Execution"
+    rdfs:label="Job Execution">
+    <rdfs:subClassOf rdf:resource="#Compute" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Compute%20Orchestration"
+    rdfs:label="Orchestration">
+    <rdfs:subClassOf rdf:resource="#Compute" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Compute%20Serverless%20Applications%20Repository"
+    rdfs:label="Serverless Applications Repository">
+    <rdfs:subClassOf rdf:resource="#Compute" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Compute%20Virtual%20Machine%20Management"
+    rdfs:label="Virtual Machine Management">
+    <rdfs:subClassOf rdf:resource="#Compute" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Compute%20Workload%20Management"
+    rdfs:label="Workload Management">
+    <rdfs:subClassOf rdf:resource="#Compute" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Computer%20sciences"
+    rdfs:label="Computer sciences">
+    <rdfs:subClassOf rdf:resource="#Natural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support"
+    rdfs:label="Consultancy &amp; Support">
+    <rdfs:subClassOf rdf:resource="#Training%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Application%20Optimisation"
+    rdfs:label="Application Optimisation">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Application%20Porting"
+    rdfs:label="Application Porting">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Application%20Scaling"
+    rdfs:label="Application Scaling">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Audit%20and%20Assessment"
+    rdfs:label="Audit and Assessment">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Benchmarking"
+    rdfs:label="Benchmarking">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Calibration"
+    rdfs:label="Calibration">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Certification%20"
+    rdfs:label="Certification ">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Consulting"
+    rdfs:label="Consulting">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Methodology%20Development"
+    rdfs:label="Methodology Development">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Modeling%20and%20Simulation"
+    rdfs:label="Modeling and Simulation">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Prototype%20Development"
+    rdfs:label="Prototype Development">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Software%20Development"
+    rdfs:label="Software Development">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Software%20Improvement"
+    rdfs:label="Software Improvement">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Technology%20Transfer"
+    rdfs:label="Technology Transfer">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Consultancy%20%26%20Support%20Testing"
+    rdfs:label="Testing">
+    <rdfs:subClassOf rdf:resource="#Consultancy%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data"
+    rdfs:label="Data">
+    <rdfs:subClassOf rdf:resource="#Sharing%20%26%20Discovery" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Analysis"
+    rdfs:label="Data Analysis">
+    <rdfs:subClassOf rdf:resource="#Processing%20%26%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Analysis%202D%2F3D%20Digitisation"
+    rdfs:label="2D/3D Digitisation">
+    <rdfs:subClassOf rdf:resource="#Data%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Analysis%20Artificial%20Intelligence"
+    rdfs:label="Artificial Intelligence">
+    <rdfs:subClassOf rdf:resource="#Data%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Analysis%20Data%20extrapolation"
+    rdfs:label="Data extrapolation">
+    <rdfs:subClassOf rdf:resource="#Data%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Analysis%20Forecast"
+    rdfs:label="Forecast">
+    <rdfs:subClassOf rdf:resource="#Data%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Analysis%20Image%2Fdata%20analysis"
+    rdfs:label="Image/data analysis">
+    <rdfs:subClassOf rdf:resource="#Data%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Analysis%20Machine%20Learning"
+    rdfs:label="Machine Learning">
+    <rdfs:subClassOf rdf:resource="#Data%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Analysis%20Visualization"
+    rdfs:label="Visualization">
+    <rdfs:subClassOf rdf:resource="#Data%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Analysis%20Workfows"
+    rdfs:label="Workfows">
+    <rdfs:subClassOf rdf:resource="#Data%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Clinical%20trial%20data"
+    rdfs:label="Clinical trial data">
+    <rdfs:subClassOf rdf:resource="#Data" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Data%20archives"
+    rdfs:label="Data archives">
+    <rdfs:subClassOf rdf:resource="#Data" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Epidemiological%20data"
+    rdfs:label="Epidemiological data">
+    <rdfs:subClassOf rdf:resource="#Data" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Government%20and%20agency%20data"
+    rdfs:label="Government and agency data">
+    <rdfs:subClassOf rdf:resource="#Data" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management"
+    rdfs:label="Data Management">
+    <rdfs:subClassOf rdf:resource="#Processing%20%26%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Access"
+    rdfs:label="Access">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Annotation"
+    rdfs:label="Annotation">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Anonymisation"
+    rdfs:label="Anonymisation">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Brokering"
+    rdfs:label="Brokering">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Digitisation"
+    rdfs:label="Digitisation">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Discovery"
+    rdfs:label="Discovery">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Embargo"
+    rdfs:label="Embargo">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Interlinking"
+    rdfs:label="Interlinking">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Maintenance"
+    rdfs:label="Maintenance">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Mining"
+    rdfs:label="Mining">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Persistent%20Identifier"
+    rdfs:label="Persistent Identifier">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Preservation"
+    rdfs:label="Preservation">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Publishing"
+    rdfs:label="Publishing">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Registration"
+    rdfs:label="Registration">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20TBC"
+    rdfs:label="TBC">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Transfer"
+    rdfs:label="Transfer">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Management%20Validation"
+    rdfs:label="Validation">
+    <rdfs:subClassOf rdf:resource="#Data%20Management" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Online%20service%20data"
+    rdfs:label="Online service data">
+    <rdfs:subClassOf rdf:resource="#Data" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Scientific%2FResearch%20data"
+    rdfs:label="Scientific/Research data">
+    <rdfs:subClassOf rdf:resource="#Data" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Statistical%20data"
+    rdfs:label="Statistical data">
+    <rdfs:subClassOf rdf:resource="#Data" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage"
+    rdfs:label="Data Storage">
+    <rdfs:subClassOf rdf:resource="#Access%20physical%20%26%20e-Infrastructures" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20Archive"
+    rdfs:label="Archive">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20Backup"
+    rdfs:label="Backup">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20Data"
+    rdfs:label="Data">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20Digital%20preservation"
+    rdfs:label="Digital preservation">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20Disk"
+    rdfs:label="Disk">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20File"
+    rdfs:label="File">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20Online"
+    rdfs:label="Online">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20Queue"
+    rdfs:label="Queue">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20Recovery"
+    rdfs:label="Recovery">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20Replicated"
+    rdfs:label="Replicated">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20Synchronised"
+    rdfs:label="Synchronised">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Data%20Storage%20TBC"
+    rdfs:label="TBC">
+    <rdfs:subClassOf rdf:resource="#Data%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Development%20Resources"
+    rdfs:label="Development Resources">
+    <rdfs:subClassOf rdf:resource="#Sharing%20%26%20Discovery" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Development%20Resources%20APIs%20Repository%2FGateway"
+    rdfs:label="APIs Repository/Gateway">
+    <rdfs:subClassOf rdf:resource="#Development%20Resources" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Development%20Resources%20Developer%20Tools"
+    rdfs:label="Developer Tools">
+    <rdfs:subClassOf rdf:resource="#Development%20Resources" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Development%20Resources%20Software%20Development%20Kits"
+    rdfs:label="Software Development Kits">
+    <rdfs:subClassOf rdf:resource="#Development%20Resources" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Development%20Resources%20Software%20Libraries"
+    rdfs:label="Software Libraries">
+    <rdfs:subClassOf rdf:resource="#Development%20Resources" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#EGI"
+    rdfs:label="EGI" />
+
+  <rdf:Description rdf:about="#EGIFedcloud">
+    <rdfs:subClassOf rdf:resource="#deploymentenvironment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#EOSC"
+    rdfs:label="EOSC">
+    <rdfs:subClassOf rdf:resource="#deploymentenvironment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#EUDAT">
+    <rdfs:subClassOf rdf:resource="#deploymentenvironment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Earth%20sciences"
+    rdfs:label="Earth sciences">
+    <rdfs:subClassOf rdf:resource="#Natural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Economics%2C%20finance%20and%20business"
+    rdfs:label="Economics, finance and business">
+    <rdfs:subClassOf rdf:resource="#Social%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Education%20%26%20Training"
+    rdfs:label="Education &amp; Training">
+    <rdfs:subClassOf rdf:resource="#Training%20%26%20Support" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Education%20%26%20Training%20In-house%20Courses"
+    rdfs:label="In-house Courses">
+    <rdfs:subClassOf rdf:resource="#Education%20%26%20Training" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Education%20%26%20Training%20Online%20Courses%20"
+    rdfs:label="Online Courses ">
+    <rdfs:subClassOf rdf:resource="#Education%20%26%20Training" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Education%20%26%20Training%20Open%20Registration%20Courses"
+    rdfs:label="Open Registration Courses">
+    <rdfs:subClassOf rdf:resource="#Education%20%26%20Training" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Education%20%26%20Training%20Training%20Platform"
+    rdfs:label="Training Platform">
+    <rdfs:subClassOf rdf:resource="#Education%20%26%20Training" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Education%20%26%20Training%20Training%20Tool"
+    rdfs:label="Training Tool">
+    <rdfs:subClassOf rdf:resource="#Education%20%26%20Training" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Educational%20sciences"
+    rdfs:label="Educational sciences">
+    <rdfs:subClassOf rdf:resource="#Social%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Electrical%2C%20electronic%20and%20information%20engineering%20">
+    <rdfs:label>Electrical, electronic and information engineering </rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Engineering%20%26%20Technology"
+    rdfs:label="Engineering &amp; Technology">
+    <rdfs:subClassOf rdf:resource="#science" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Environmental%20biotechnology"
+    rdfs:label="Environmental biotechnology">
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Environmental%20engineering"
+    rdfs:label="Environmental engineering">
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Health%20sciences"
+    rdfs:label="Health sciences">
+    <rdfs:subClassOf rdf:resource="#Medical%20%26%20Health%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#History%20and%20Archaeology"
+    rdfs:label="History and Archaeology">
+    <rdfs:subClassOf rdf:resource="#Humanities" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Humanities"
+    rdfs:label="Humanities">
+    <rdfs:subClassOf rdf:resource="#science" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Industrial%20biotechnology"
+    rdfs:label="Industrial biotechnology">
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Information%20sciences"
+    rdfs:label="Information sciences">
+    <rdfs:subClassOf rdf:resource="#Natural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment"
+    rdfs:label="Instrument &amp; Equipment">
+    <rdfs:subClassOf rdf:resource="#Access%20physical%20%26%20e-Infrastructures" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20Chromatographer"
+    rdfs:label="Chromatographer">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20Cytometer"
+    rdfs:label="Cytometer">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20Digitisation%20equipment"
+    rdfs:label="Digitisation equipment">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20Geophysical"
+    rdfs:label="Geophysical">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20Laser"
+    rdfs:label="Laser">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20Microscopy"
+    rdfs:label="Microscopy">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20Monument%20maintenance%20equipment"
+    rdfs:label="Monument maintenance equipment">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20Radiation"
+    rdfs:label="Radiation">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20Spectrometer"
+    rdfs:label="Spectrometer">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20Spectrophotometer"
+    rdfs:label="Spectrophotometer">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Instrument%20%26%20Equipment%20TBC"
+    rdfs:label="TBC">
+    <rdfs:subClassOf rdf:resource="#Instrument%20%26%20Equipment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Interdisciplinary%20Science"
+    rdfs:label="Interdisciplinary Science">
+    <rdfs:subClassOf rdf:resource="#science" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#JenaFuseki"
+    rdfs:label="Jena Fuseki">
+    <rdfs:subClassOf rdf:resource="#deploymentenvironment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Languages%20and%20literature"
+    rdfs:label="Languages and literature">
+    <rdfs:subClassOf rdf:resource="#Humanities" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Law"
+    rdfs:label="Law">
+    <rdfs:subClassOf rdf:resource="#Social%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#LocalDeployment"
+    rdfs:label="Local Deployment">
+    <rdfs:subClassOf rdf:resource="#deploymentenvironment" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage"
+    rdfs:label="Material Storage">
+    <rdfs:subClassOf rdf:resource="#Access%20physical%20%26%20e-Infrastructures" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Archiving"
+    rdfs:label="Archiving">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Assembly"
+    rdfs:label="Assembly">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Disposal"
+    rdfs:label="Disposal">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Fulfilment"
+    rdfs:label="Fulfilment">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Packaging"
+    rdfs:label="Packaging">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Preservation"
+    rdfs:label="Preservation">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Quality%20inspecting"
+    rdfs:label="Quality inspecting">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Re-working"
+    rdfs:label="Re-working">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Repository"
+    rdfs:label="Repository">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Sorting"
+    rdfs:label="Sorting">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Material%20Storage%20Warehousing"
+    rdfs:label="Warehousing">
+    <rdfs:subClassOf rdf:resource="#Material%20Storage" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Materials%20engineering"
+    rdfs:label="Materials engineering">
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Mathematics"
+    rdfs:label="Mathematics">
+    <rdfs:subClassOf rdf:resource="#Natural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Measurement%20%26%20Materials%20Analysis"
+    rdfs:label="Measurement &amp; Materials Analysis">
+    <rdfs:subClassOf rdf:resource="#Processing%20%26%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Measurement%20%26%20Materials%20Analysis%20Analysis"
+    rdfs:label="Analysis">
+    <rdfs:subClassOf rdf:resource="#Measurement%20%26%20Materials%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Measurement%20%26%20Materials%20Analysis%20Characterisation"
+    rdfs:label="Characterisation">
+    <rdfs:subClassOf rdf:resource="#Measurement%20%26%20Materials%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Measurement%20%26%20Materials%20Analysis%20Maintenance%20and%20Modification"
+    rdfs:label="Maintenance and Modification">
+    <rdfs:subClassOf rdf:resource="#Measurement%20%26%20Materials%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Measurement%20%26%20Materials%20Analysis%20Production"
+    rdfs:label="Production">
+    <rdfs:subClassOf rdf:resource="#Measurement%20%26%20Materials%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Measurement%20%26%20Materials%20Analysis%20TBC"
+    rdfs:label="TBC">
+    <rdfs:subClassOf rdf:resource="#Measurement%20%26%20Materials%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Measurement%20%26%20Materials%20Analysis%20Testing%20and%20Validation"
+    rdfs:label="Testing and Validation">
+    <rdfs:subClassOf rdf:resource="#Measurement%20%26%20Materials%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Measurement%20%26%20Materials%20Analysis%20Validation"
+    rdfs:label="Validation">
+    <rdfs:subClassOf rdf:resource="#Measurement%20%26%20Materials%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Measurement%20%26%20Materials%20Analysis%20Workflows"
+    rdfs:label="Workflows">
+    <rdfs:subClassOf rdf:resource="#Measurement%20%26%20Materials%20Analysis" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Mechanical%20engineering"
+    rdfs:label="Mechanical engineering">
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Media%20and%20communications"
+    rdfs:label="Media and communications">
+    <rdfs:subClassOf rdf:resource="#Social%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Medical%20%26%20Health%20Sciences"
+    rdfs:label="Medical &amp; Health Sciences">
+    <rdfs:subClassOf rdf:resource="#science" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Medical%20biotechnology"
+    rdfs:label="Medical biotechnology">
+    <rdfs:subClassOf rdf:resource="#Medical%20%26%20Health%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Micro%20and%20Nanotechnology%20"
+    rdfs:label="Micro and Nanotechnology ">
+    <rdfs:subClassOf rdf:resource="#Engineering%20%26%20Technology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Natural%20Sciences"
+    rdfs:label="Natural Sciences">
+    <rdfs:subClassOf rdf:resource="#science" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Network"
+    rdfs:label="Network">
+    <rdfs:subClassOf rdf:resource="#Access%20physical%20%26%20e-Infrastructures" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Network%20Content%20Delivery%20Network"
+    rdfs:label="Content Delivery Network">
+    <rdfs:subClassOf rdf:resource="#Network" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Network%20Direct%20Connect"
+    rdfs:label="Direct Connect">
+    <rdfs:subClassOf rdf:resource="#Network" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Network%20Exchange"
+    rdfs:label="Exchange">
+    <rdfs:subClassOf rdf:resource="#Network" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Network%20Load%20Balancer"
+    rdfs:label="Load Balancer">
+    <rdfs:subClassOf rdf:resource="#Network" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Network%20Traffic%20Manager"
+    rdfs:label="Traffic Manager">
+    <rdfs:subClassOf rdf:resource="#Network" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Network%20VPN%20Gateway"
+    rdfs:label="VPN Gateway">
+    <rdfs:subClassOf rdf:resource="#Network" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Network%20Virtual%20Network"
+    rdfs:label="Virtual Network">
+    <rdfs:subClassOf rdf:resource="#Network" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services">
+    <rdfs:label>Operations &amp; Infrastructure Management Services</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Operations" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services%20Accounting"
+    rdfs:label="Accounting">
+    <rdfs:subClassOf rdf:resource="#Operations%20%26%20Infrastructure%20Management%20Services" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services%20Analysis"
+    rdfs:label="Analysis">
+    <rdfs:subClassOf rdf:resource="#Operations%20%26%20Infrastructure%20Management%20Services" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services%20Billing"
+    rdfs:label="Billing">
+    <rdfs:subClassOf rdf:resource="#Operations%20%26%20Infrastructure%20Management%20Services" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services%20Configuration"
+    rdfs:label="Configuration">
+    <rdfs:subClassOf rdf:resource="#Operations%20%26%20Infrastructure%20Management%20Services" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services%20Coordination"
+    rdfs:label="Coordination">
+    <rdfs:subClassOf rdf:resource="#Operations%20%26%20Infrastructure%20Management%20Services" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services%20Helpdesk"
+    rdfs:label="Helpdesk">
+    <rdfs:subClassOf rdf:resource="#Operations%20%26%20Infrastructure%20Management%20Services" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services%20Monitoring"
+    rdfs:label="Monitoring">
+    <rdfs:subClassOf rdf:resource="#Operations%20%26%20Infrastructure%20Management%20Services" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services%20Order%20Management"
+    rdfs:label="Order Management">
+    <rdfs:subClassOf rdf:resource="#Operations%20%26%20Infrastructure%20Management%20Services" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services%20Transportation"
+    rdfs:label="Transportation">
+    <rdfs:subClassOf rdf:resource="#Operations%20%26%20Infrastructure%20Management%20Services" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Operations%20%26%20Infrastructure%20Management%20Services%20Utilities"
+    rdfs:label="Utilities">
+    <rdfs:subClassOf rdf:resource="#Operations%20%26%20Infrastructure%20Management%20Services" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Other"
+    rdfs:label="Other">
+    <rdfs:subClassOf rdf:resource="#Service" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Other%20Science"
+    rdfs:label="Other Science">
+    <rdfs:subClassOf rdf:resource="#science" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Philosophy%2C%20ethics%20and%20religion"
+    rdfs:label="Philosophy, ethics and religion">
+    <rdfs:subClassOf rdf:resource="#Humanities" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Physical%20sciences"
+    rdfs:label="Physical sciences">
+    <rdfs:subClassOf rdf:resource="#Natural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Political%20sciences"
+    rdfs:label="Political sciences">
+    <rdfs:subClassOf rdf:resource="#Social%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Processing%20%26%20Analysis"
+    rdfs:label="Processing &amp; Analysis">
+    <rdfs:subClassOf rdf:resource="#Service" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Psychology"
+    rdfs:label="Psychology">
+    <rdfs:subClassOf rdf:resource="#Social%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#RI_ANAEE"
+    rdfs:label="ANAEE">
+    <rdfs:subClassOf rdf:resource="#researchinfrastructure" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#RI_EISCAT"
+    rdfs:label="EISCAT">
+    <rdfs:subClassOf rdf:resource="#researchinfrastructure" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#RI_EPOS"
+    rdfs:label="EPOS">
+    <rdfs:subClassOf rdf:resource="#researchinfrastructure" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#RI_EUROARGO"
+    rdfs:label="EURO-ARGO">
+    <rdfs:subClassOf rdf:resource="#researchinfrastructure" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#RI_ICOS"
+    rdfs:label="ICOS">
+    <rdfs:subClassOf rdf:resource="#researchinfrastructure" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#RI_ILTER"
+    rdfs:label="ILTER">
+    <rdfs:subClassOf rdf:resource="#researchinfrastructure" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#RI_LIFEWATCH"
+    rdfs:label="LIFEWATCH">
+    <rdfs:subClassOf rdf:resource="#researchinfrastructure" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#RI_LTEREurope"
+    rdfs:label="LTER-Europe">
+    <rdfs:subClassOf rdf:resource="#researchinfrastructure" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Samples"
+    rdfs:label="Samples">
+    <rdfs:subClassOf rdf:resource="#Sharing%20%26%20Discovery" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Samples%20Biological%20samples"
+    rdfs:label="Biological samples">
+    <rdfs:subClassOf rdf:resource="#Samples" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Samples%20Characterisation"
+    rdfs:label="Characterisation">
+    <rdfs:subClassOf rdf:resource="#Samples" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Samples%20Chemical%20compounds%20library"
+    rdfs:label="Chemical compounds library">
+    <rdfs:subClassOf rdf:resource="#Samples" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Samples%20Preparation"
+    rdfs:label="Preparation">
+    <rdfs:subClassOf rdf:resource="#Samples" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Samples%20TBD"
+    rdfs:label="TBD">
+    <rdfs:subClassOf rdf:resource="#Samples" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Scholarly%20Communication"
+    rdfs:label="Scholarly Communication">
+    <rdfs:subClassOf rdf:resource="#Sharing%20%26%20Discovery" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Scholarly%20Communication%20Analysis"
+    rdfs:label="Analysis">
+    <rdfs:subClassOf rdf:resource="#Scholarly%20Communication" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Scholarly%20Communication%20Assessment"
+    rdfs:label="Assessment">
+    <rdfs:subClassOf rdf:resource="#Scholarly%20Communication" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Scholarly%20Communication%20Discovery"
+    rdfs:label="Discovery">
+    <rdfs:subClassOf rdf:resource="#Scholarly%20Communication" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Scholarly%20Communication%20Outreach"
+    rdfs:label="Outreach">
+    <rdfs:subClassOf rdf:resource="#Scholarly%20Communication" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Scholarly%20Communication%20Preparation"
+    rdfs:label="Preparation">
+    <rdfs:subClassOf rdf:resource="#Scholarly%20Communication" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Scholarly%20Communication%20Publication"
+    rdfs:label="Publication">
+    <rdfs:subClassOf rdf:resource="#Scholarly%20Communication" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Scholarly%20Communication%20Writing"
+    rdfs:label="Writing">
+    <rdfs:subClassOf rdf:resource="#Scholarly%20Communication" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Identity%20"
+    rdfs:label="Security &amp; Identity ">
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Operations" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Identity%20%20Certification%20authority"
+    rdfs:label="Certification authority">
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Identity%20" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Identity%20%20Coordination"
+    rdfs:label="Coordination">
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Identity%20" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Identity%20%20Firewall"
+    rdfs:label="Firewall">
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Identity%20" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Identity%20%20Group%20Management"
+    rdfs:label="Group Management">
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Identity%20" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Identity%20%20Identity%20and%20access%20management"
+    rdfs:label="Identity and access management">
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Identity%20" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Identity%20%20Single%20Sign-On%20"
+    rdfs:label="Single Sign-On ">
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Identity%20" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Identity%20%20Threat%20protection"
+    rdfs:label="Threat protection">
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Identity%20" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Identity%20%20Tools"
+    rdfs:label="Tools">
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Identity%20" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Identity%20%20User%20authentication"
+    rdfs:label="User authentication">
+    <rdfs:subClassOf rdf:resource="#Security%20%26%20Identity%20" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Security%20%26%20Operations"
+    rdfs:label="Security &amp; Operations">
+    <rdfs:subClassOf rdf:resource="#Service" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Service"
+    rdfs:label="Service" />
+
+  <rdf:Description rdf:about="#Services"
+    rdfs:label="Services">
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Services%20%26%20Applications"
+    rdfs:label="Services &amp; Applications">
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Services%20%26%20Applications%20%26%20Data"
+    rdfs:label="Services &amp; Applications &amp; Data">
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Services%20%26%20Applications%20%26%20Software"
+    rdfs:label="Services &amp; Applications &amp; Software">
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Services%20%26%20Applications%20%26%20Software%20%26%20Data">
+    <rdfs:label>Services &amp; Applications &amp; Software &amp; Data</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Services%20%26%20Data"
+    rdfs:label="Services &amp; Data">
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Services%20%26%20Software"
+    rdfs:label="Services &amp; Software">
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Services%20%26%20Software%20%26%20Data"
+    rdfs:label="Services &amp; Software &amp; Data">
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Sharing%20%26%20Discovery"
+    rdfs:label="Sharing &amp; Discovery">
+    <rdfs:subClassOf rdf:resource="#Service" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Social%20Sciences"
+    rdfs:label="Social Sciences">
+    <rdfs:subClassOf rdf:resource="#science" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Social%20and%20economic%20geography"
+    rdfs:label="Social and economic geography">
+    <rdfs:subClassOf rdf:resource="#Social%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Sociology"
+    rdfs:label="Sociology">
+    <rdfs:subClassOf rdf:resource="#Social%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Software"
+    rdfs:label="Software">
+    <rdfs:subClassOf rdf:resource="#Sharing%20%26%20Discovery" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Software%20%26%20Data"
+    rdfs:label="Software &amp; Data">
+    <rdfs:subClassOf rdf:resource="#Aggregators%20%26%20Integrators" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Software%20Libraries"
+    rdfs:label="Libraries">
+    <rdfs:subClassOf rdf:resource="#Software" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Software%20Platform"
+    rdfs:label="Platform">
+    <rdfs:subClassOf rdf:resource="#Software" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Software%20Software%20Package"
+    rdfs:label="Software Package">
+    <rdfs:subClassOf rdf:resource="#Software" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Software%20Software%20Repository"
+    rdfs:label="Software Repository">
+    <rdfs:subClassOf rdf:resource="#Software" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#TRL"
+    rdfs:label="TRL">
+    <rdfs:subClassOf rdf:resource="#topic" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#TRL1"
+    rdfs:label="TRL1">
+    <rdfs:subClassOf rdf:resource="#TRL" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#TRL2"
+    rdfs:label="TRL2">
+    <rdfs:subClassOf rdf:resource="#TRL" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#TRL3"
+    rdfs:label="TRL3">
+    <rdfs:subClassOf rdf:resource="#TRL" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#TRL4"
+    rdfs:label="TRL4">
+    <rdfs:subClassOf rdf:resource="#TRL" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#TRL5"
+    rdfs:label="TRL5">
+    <rdfs:subClassOf rdf:resource="#TRL" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#TRL6"
+    rdfs:label="TRL6">
+    <rdfs:subClassOf rdf:resource="#TRL" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#TRL7"
+    rdfs:label="TRL7">
+    <rdfs:subClassOf rdf:resource="#TRL" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#TRL8"
+    rdfs:label="TRL8">
+    <rdfs:subClassOf rdf:resource="#TRL" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Training%20%26%20Support"
+    rdfs:label="Training &amp; Support">
+    <rdfs:subClassOf rdf:resource="#Service" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Veterinary%20sciences"
+    rdfs:label="Veterinary sciences">
+    <rdfs:subClassOf rdf:resource="#Agricultural%20Sciences" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#abkhaz"
+    rdfs:label="Abkhaz">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#accessmode"
+    rdfs:label="Access Mode" />
+
+  <rdf:Description rdf:about="#accesstype"
+    rdfs:label="Access Type" />
+
+  <rdf:Description rdf:about="#ad"
+    rdfs:label="Andorra">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ae"
+    rdfs:label="United Arab Emirates">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#af"
+    rdfs:label="Afghanistan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#afar"
+    rdfs:label="Afar">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#afrikaans"
+    rdfs:label="Afrikaans">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ag"
+    rdfs:label="Antigua and Barbuda">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ai"
+    rdfs:label="Anguilla">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#akan"
+    rdfs:label="Akan">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#al"
+    rdfs:label="Albania">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#albanian"
+    rdfs:label="Albanian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#am"
+    rdfs:label="Armenia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#amharic"
+    rdfs:label="Amharic">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ao"
+    rdfs:label="Angola">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#aq"
+    rdfs:label="Antarctica">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ar"
+    rdfs:label="Argentina">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#arabic"
+    rdfs:label="Arabic">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#aragonese"
+    rdfs:label="Aragonese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#armenian"
+    rdfs:label="Armenian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#as"
+    rdfs:label="American Samoa">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#assamese"
+    rdfs:label="Assamese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#at"
+    rdfs:label="Austria">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#au"
+    rdfs:label="Australia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#avaric"
+    rdfs:label="Avaric">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#avestan"
+    rdfs:label="Avestan">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#aw"
+    rdfs:label="Aruba">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ax"
+    rdfs:label="Åland Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#aymara"
+    rdfs:label="Aymara">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#az"
+    rdfs:label="Azerbaijan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#azerbaijani"
+    rdfs:label="Azerbaijani">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ba"
+    rdfs:label="Bosnia and Herzegovina">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bambara"
+    rdfs:label="Bambara">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bashkir"
+    rdfs:label="Bashkir">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#basque"
+    rdfs:label="Basque">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bb"
+    rdfs:label="Barbados">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bd"
+    rdfs:label="Bangladesh">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#be"
+    rdfs:label="Belgium">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#belarusian"
+    rdfs:label="Belarusian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bengali"
+    rdfs:label="Bengali">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bf"
+    rdfs:label="Burkina Faso">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bg"
+    rdfs:label="Bulgaria">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bh"
+    rdfs:label="Bahrain">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bi"
+    rdfs:label="Burundi">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bihari"
+    rdfs:label="Bihari">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bislama"
+    rdfs:label="Bislama">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bj"
+    rdfs:label="Benin">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bl"
+    rdfs:label="Saint Barthélemy">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bm"
+    rdfs:label="Bermuda">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bn"
+    rdfs:label="Brunei Darussalam">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bo"
+    rdfs:label="Bolivia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bosnian"
+    rdfs:label="Bosnian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bq"
+    rdfs:label="Bonaire">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#br"
+    rdfs:label="Brazil">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#breton"
+    rdfs:label="Breton">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bs"
+    rdfs:label="Bahamas">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bt"
+    rdfs:label="Bhutan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bulgarian"
+    rdfs:label="Bulgarian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#burmese"
+    rdfs:label="Burmese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#businesses"
+    rdfs:label="Businesses">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bv"
+    rdfs:label="Bouvet Island">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bw"
+    rdfs:label="Botswana">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#by"
+    rdfs:label="Belarus">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#bz"
+    rdfs:label="Belize">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ca"
+    rdfs:label="Canada">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#catalan"
+    rdfs:label="Catalan">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cc"
+    rdfs:label="Cocos (Keeling) Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cd"
+    rdfs:label="Congo">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cf"
+    rdfs:label="Central African Republic">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cg"
+    rdfs:label="Congo">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ch"
+    rdfs:label="Switzerland">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#chamorro"
+    rdfs:label="Chamorro">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#chechen"
+    rdfs:label="Chechen">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#chichewa"
+    rdfs:label="Chichewa">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#chinese"
+    rdfs:label="Chinese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#chuvash"
+    rdfs:label="Chuvash">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ci"
+    rdfs:label="Côte d&apos;Ivoire">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ck"
+    rdfs:label="Cook Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cl"
+    rdfs:label="Chile">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cm"
+    rdfs:label="Cameroon">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cn"
+    rdfs:label="China">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#co"
+    rdfs:label="Colombia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#commercialcustomer"
+    rdfs:label="Commercial Customer">
+    <rdfs:subClassOf rdf:resource="#customer" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cornish"
+    rdfs:label="Cornish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#corsican"
+    rdfs:label="Corsican">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cr"
+    rdfs:label="Costa Rica">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cree"
+    rdfs:label="Cree">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#croatian"
+    rdfs:label="Croatian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cu"
+    rdfs:label="Cuba">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#customer"
+    rdfs:label="Customer" />
+
+  <rdf:Description rdf:about="#cv"
+    rdfs:label="Cape Verde">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cw"
+    rdfs:label="Curaçao">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cx"
+    rdfs:label="Christmas Island">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cy"
+    rdfs:label="Cyprus">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#cz"
+    rdfs:label="Czech Republic">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#czech"
+    rdfs:label="Czech">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#danish"
+    rdfs:label="Danish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#datacite"
+    rdfs:label="DataCite">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#datadrivenresearcher"
+    rdfs:label="Data-driven Researcher">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#datamanager"
+    rdfs:label="Data Manager">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#datapublisher"
+    rdfs:label="Data Publisher">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#datascientist"
+    rdfs:label="Data Scientist">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#de"
+    rdfs:label="Germany">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#deploymentenvironment"
+    rdfs:label="Deployment Environment" />
+
+  <rdf:Description rdf:about="#divehi"
+    rdfs:label="Divehi">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#dj"
+    rdfs:label="Djibouti">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#dk"
+    rdfs:label="Denmark">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#dm"
+    rdfs:label="Dominica">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#do"
+    rdfs:label="Dominican Republic">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#dutch"
+    rdfs:label="Dutch">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#dz"
+    rdfs:label="Algeria">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#dzongkha"
+    rdfs:label="Dzongkha">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ec"
+    rdfs:label="Ecuador">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ee"
+    rdfs:label="Estonia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#eg"
+    rdfs:label="Egypt">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#eh"
+    rdfs:label="Western Sahara">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#english"
+    rdfs:label="English">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#environmentalscientist"
+    rdfs:label="Environmental Scientist">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#er"
+    rdfs:label="Eritrea">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#es"
+    rdfs:label="Spain">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#esperanto"
+    rdfs:label="Esperanto">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#estonian"
+    rdfs:label="Estonian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#et"
+    rdfs:label="Ethiopia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#eu"
+    rdfs:label="Europe">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ewe"
+    rdfs:label="Ewe">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#excellence%20driven"
+    rdfs:label="Excellence Driven">
+    <rdfs:subClassOf rdf:resource="#accessmode" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#faroese"
+    rdfs:label="Faroese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#fi"
+    rdfs:label="Finland">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#fijian"
+    rdfs:label="Fijian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#finnish"
+    rdfs:label="Finnish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#fj"
+    rdfs:label="Fiji">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#fk"
+    rdfs:label="Falkland Islands (Malvinas)">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#fm"
+    rdfs:label="Micronesia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#fo"
+    rdfs:label="Faroe Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#fr"
+    rdfs:label="France">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#freepayment"
+    rdfs:label="Free Payment">
+    <rdfs:subClassOf rdf:resource="#paymentmodel" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#french"
+    rdfs:label="French">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#fula"
+    rdfs:label="Fula">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#fully%20open%20access"
+    rdfs:label="Fully Open Access">
+    <rdfs:subClassOf rdf:resource="#ordertype" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#funders"
+    rdfs:label="Funders">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#fundingmode"
+    rdfs:label="Funding Mode" />
+
+  <rdf:Description rdf:about="#ga"
+    rdfs:label="Gabon">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gaelic"
+    rdfs:label="Gaelic">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#galician"
+    rdfs:label="Galician">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ganda"
+    rdfs:label="Ganda">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gb"
+    rdfs:label="United Kingdom">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gd"
+    rdfs:label="Grenada">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ge"
+    rdfs:label="Georgia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#georgian"
+    rdfs:label="Georgian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#german"
+    rdfs:label="German">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gf"
+    rdfs:label="French Guiana">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gg"
+    rdfs:label="Guernsey">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gh"
+    rdfs:label="Ghana">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gi"
+    rdfs:label="Gibraltar">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gl"
+    rdfs:label="Greenland">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gm"
+    rdfs:label="Gambia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gn"
+    rdfs:label="Guinea">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gp"
+    rdfs:label="Guadeloupe">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gq"
+    rdfs:label="Equatorial Guinea">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gr"
+    rdfs:label="Greece">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#greek"
+    rdfs:label="Greek">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gs">
+    <rdfs:label>South Georgia and the South Sandwich Islands</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gt"
+    rdfs:label="Guatemala">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gu"
+    rdfs:label="Guam">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#guaran%C3%AD"
+    rdfs:label="Guaraní">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gujarati"
+    rdfs:label="Gujarati">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gw"
+    rdfs:label="Guinea-Bissau">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#gy"
+    rdfs:label="Guyana">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#haitian"
+    rdfs:label="Haitian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hausa"
+    rdfs:label="Hausa">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hebrew"
+    rdfs:label="Hebrew">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#herero"
+    rdfs:label="Herero">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hindi"
+    rdfs:label="Hindi">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hiri%20motu"
+    rdfs:label="Hiri Motu">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hk"
+    rdfs:label="Hong Kong">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hm"
+    rdfs:label="Heard Island and McDonald Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hn"
+    rdfs:label="Honduras">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hr"
+    rdfs:label="Croatia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ht"
+    rdfs:label="Haiti">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hu"
+    rdfs:label="Hungary">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#hungarian"
+    rdfs:label="Hungarian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#icelandic"
+    rdfs:label="Icelandic">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#id"
+    rdfs:label="Indonesia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ido"
+    rdfs:label="Ido">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ie"
+    rdfs:label="Ireland">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#igbo"
+    rdfs:label="Igbo">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#il"
+    rdfs:label="Israel">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#im"
+    rdfs:label="Isle of Man">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#in"
+    rdfs:label="India">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#indonesian"
+    rdfs:label="Indonesian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#inkindfunding"
+    rdfs:label="In-Kind Contribution">
+    <rdfs:subClassOf rdf:resource="#fundingmode" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#innovators"
+    rdfs:label="Innovators">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#interlingua"
+    rdfs:label="Interlingua">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#interlingue"
+    rdfs:label="Interlingue">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#inuktitut"
+    rdfs:label="Inuktitut">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#inupiaq"
+    rdfs:label="Inupiaq">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#io"
+    rdfs:label="British Indian Ocean Territory">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#iq"
+    rdfs:label="Iraq">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ir"
+    rdfs:label="Iran">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#irish"
+    rdfs:label="Irish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#is"
+    rdfs:label="Iceland">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#iso"
+    rdfs:label="ISO">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#it"
+    rdfs:label="Italy">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#italian"
+    rdfs:label="Italian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#japanese"
+    rdfs:label="Japanese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#javanese"
+    rdfs:label="Javanese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#je"
+    rdfs:label="Jersey">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#jm"
+    rdfs:label="Jamaica">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#jo"
+    rdfs:label="Jordan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#jp"
+    rdfs:label="Japan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#json-api"
+    rdfs:label="JSON-API">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kalaallisut"
+    rdfs:label="Kalaallisut">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kannada"
+    rdfs:label="Kannada">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kanuri"
+    rdfs:label="Kanuri">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kashmiri"
+    rdfs:label="Kashmiri">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kazakh"
+    rdfs:label="Kazakh">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ke"
+    rdfs:label="Kenya">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kg"
+    rdfs:label="Kyrgyzstan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kh"
+    rdfs:label="Cambodia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#khmer"
+    rdfs:label="Khmer">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ki"
+    rdfs:label="Kiribati">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kikuyu"
+    rdfs:label="Kikuyu">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kinyarwanda"
+    rdfs:label="Kinyarwanda">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kirundi"
+    rdfs:label="Kirundi">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#km"
+    rdfs:label="Comoros">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kn"
+    rdfs:label="Saint Kitts and Nevis">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#komi"
+    rdfs:label="Komi">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#korean"
+    rdfs:label="Korean">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kp"
+    rdfs:label="Democratic People&apos;s Republic of Korea">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kr"
+    rdfs:label="Republic of Korea">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kurdish"
+    rdfs:label="Kurdish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kw"
+    rdfs:label="Kuwait">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kwanyama"
+    rdfs:label="Kwanyama">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ky"
+    rdfs:label="Cayman Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kyrgyz"
+    rdfs:label="Kyrgyz">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#kz"
+    rdfs:label="Kazakhstan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#la"
+    rdfs:label="Lao People&apos;s Democratic Republic">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#language"
+    rdfs:label="Language" />
+
+  <rdf:Description rdf:about="#lao"
+    rdfs:label="Lao">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#latin"
+    rdfs:label="Latin">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#latvian"
+    rdfs:label="Latvian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#lb"
+    rdfs:label="Lebanon">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#lc"
+    rdfs:label="Saint Lucia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#li"
+    rdfs:label="Liechtenstein">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#limburgish"
+    rdfs:label="Limburgish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#lingala"
+    rdfs:label="Lingala">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#lithuanian"
+    rdfs:label="Lithuanian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#lk"
+    rdfs:label="Sri Lanka">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#lr"
+    rdfs:label="Liberia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ls"
+    rdfs:label="Lesotho">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#lt"
+    rdfs:label="Lithuania">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#lu"
+    rdfs:label="Luxembourg">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#luba-katanga"
+    rdfs:label="Luba-Katanga">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#luxembourgish"
+    rdfs:label="Luxembourgish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#lv"
+    rdfs:label="Latvia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ly"
+    rdfs:label="Libya">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#m%C4%81ori"
+    rdfs:label="Māori">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ma"
+    rdfs:label="Morocco">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#macedonian"
+    rdfs:label="Macedonian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mail-in"
+    rdfs:label="Mail-in">
+    <rdfs:subClassOf rdf:resource="#accesstype" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#malagasy"
+    rdfs:label="Malagasy">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#malay"
+    rdfs:label="Malay">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#malayalam"
+    rdfs:label="Malayalam">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#maltese"
+    rdfs:label="Maltese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#manx"
+    rdfs:label="Manx">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#marathi"
+    rdfs:label="Marathi">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#market%20driven"
+    rdfs:label="Market Driven">
+    <rdfs:subClassOf rdf:resource="#accessmode" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#marshallese"
+    rdfs:label="Marshallese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mc"
+    rdfs:label="Monaco">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#md"
+    rdfs:label="Moldova">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#me"
+    rdfs:label="Montenegro">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#membershippayment"
+    rdfs:label="Membership Payment">
+    <rdfs:subClassOf rdf:resource="#paymentmodel" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mf"
+    rdfs:label="Saint Martin (French part)">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mg"
+    rdfs:label="Madagascar">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mh"
+    rdfs:label="Marshall Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mk"
+    rdfs:label="Former Yugoslav Republic of Macedonia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ml"
+    rdfs:label="Mali">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mm"
+    rdfs:label="Myanmar">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mn"
+    rdfs:label="Mongolia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mo"
+    rdfs:label="Macao">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mongolian"
+    rdfs:label="Mongolian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mp"
+    rdfs:label="Northern Mariana Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mq"
+    rdfs:label="Martinique">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mr"
+    rdfs:label="Mauritania">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ms"
+    rdfs:label="Montserrat">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mt"
+    rdfs:label="Malta">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mu"
+    rdfs:label="Mauritius">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mv"
+    rdfs:label="Maldives">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mw"
+    rdfs:label="Malawi">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mx"
+    rdfs:label="Mexico">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#my"
+    rdfs:label="Malaysia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#mz"
+    rdfs:label="Mozambique">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#na"
+    rdfs:label="Namibia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#nauru"
+    rdfs:label="Nauru">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#navajo"
+    rdfs:label="Navajo">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#nc"
+    rdfs:label="New Caledonia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ndonga"
+    rdfs:label="Ndonga">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ne"
+    rdfs:label="Niger">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#nepali"
+    rdfs:label="Nepali">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#nf"
+    rdfs:label="Norfolk Island">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ng"
+    rdfs:label="Nigeria">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ni"
+    rdfs:label="Nicaragua">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#nl"
+    rdfs:label="Netherlands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#no"
+    rdfs:label="Norway">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#northern%20ndebele"
+    rdfs:label="Northern Ndebele">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#northern%20sami"
+    rdfs:label="Northern Sami">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#norwegian"
+    rdfs:label="Norwegian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#norwegian%20bokm%C3%A5l"
+    rdfs:label="Norwegian Bokmål">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#norwegian%20nynorsk"
+    rdfs:label="Norwegian Nynorsk">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#np"
+    rdfs:label="Nepal">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#nr"
+    rdfs:label="Nauru">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#nu"
+    rdfs:label="Niue">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#nuosu"
+    rdfs:label="Nuosu">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#nz"
+    rdfs:label="New Zealand">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#oai-pmh"
+    rdfs:label="OAI-PMH">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#occi"
+    rdfs:label="OCCI">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#occitan"
+    rdfs:label="Occitan">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ogc-csw"
+    rdfs:label="OGC CSW">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ogc-wps"
+    rdfs:label="OGC WPS">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ojibwe"
+    rdfs:label="Ojibwe">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#old%20church%20slavonic"
+    rdfs:label="Old Church Slavonic">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#om"
+    rdfs:label="Oman">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#open%20access"
+    rdfs:label="Open Access">
+    <rdfs:subClassOf rdf:resource="#ordertype" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#openapi-v2-v3"
+    rdfs:label="OpenAPI v2/3">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#order%20required"
+    rdfs:label="Order Required">
+    <rdfs:subClassOf rdf:resource="#ordertype" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ordertype"
+    rdfs:label="Order Type" />
+
+  <rdf:Description rdf:about="#oriya"
+    rdfs:label="Oriya">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#oromo"
+    rdfs:label="Oromo">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ossetian"
+    rdfs:label="Ossetian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#other%20access%20mode"
+    rdfs:label="Other Access Mode">
+    <rdfs:subClassOf rdf:resource="#accessmode" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#other%20access%20type"
+    rdfs:label="Other Access Type">
+    <rdfs:subClassOf rdf:resource="#accesstype" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#other%20order%20type"
+    rdfs:label="Other Order Type">
+    <rdfs:subClassOf rdf:resource="#ordertype" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&ns1;other%20target%20user/customer"
+    rdfs:label="Other Target User/Customer">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#otherfunding"
+    rdfs:label="Other Funding">
+    <rdfs:subClassOf rdf:resource="#fundingmode" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#owl"
+    rdfs:label="OWL">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#p%C4%81li"
+    rdfs:label="Pāli">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#pa"
+    rdfs:label="Panama">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#panjabi"
+    rdfs:label="Panjabi">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#pashto"
+    rdfs:label="Pashto">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#payasyougopayment"
+    rdfs:label="Pay-as-you-go Payment">
+    <rdfs:subClassOf rdf:resource="#paymentmodel" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#paymentmodel"
+    rdfs:label="Payment Model" />
+
+  <rdf:Description rdf:about="#pe"
+    rdfs:label="Peru">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#persian"
+    rdfs:label="Persian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#pf"
+    rdfs:label="French Polynesia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#pg"
+    rdfs:label="Papua New Guinea">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ph"
+    rdfs:label="Philippines">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#physical"
+    rdfs:label="Physical">
+    <rdfs:subClassOf rdf:resource="#accesstype" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#pk"
+    rdfs:label="Pakistan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#pl"
+    rdfs:label="Poland">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#place"
+    rdfs:label="Place" />
+
+  <rdf:Description rdf:about="#pm"
+    rdfs:label="Saint Pierre and Miquelon">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#pn"
+    rdfs:label="Pitcairn">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#policy%20based"
+    rdfs:label="Policy Based">
+    <rdfs:subClassOf rdf:resource="#accessmode" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#policy%20makers"
+    rdfs:label="Policy Makers">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#polish"
+    rdfs:label="Polish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#portuguese"
+    rdfs:label="Portuguese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#pr"
+    rdfs:label="Puerto Rico">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#projectfunding"
+    rdfs:label="Project Funding">
+    <rdfs:subClassOf rdf:resource="#fundingmode" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ps"
+    rdfs:label="Palestine">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#pt"
+    rdfs:label="Portugal">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#pw"
+    rdfs:label="Palau">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#py"
+    rdfs:label="Paraguay">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#qa"
+    rdfs:label="Qatar">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#quechua"
+    rdfs:label="Quechua">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#rdf"
+    rdfs:label="RDF">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#re"
+    rdfs:label="Réunion">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#remote"
+    rdfs:label="Remote">
+    <rdfs:subClassOf rdf:resource="#accesstype" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#research%20communities"
+    rdfs:label="Research communities">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#research%20groups"
+    rdfs:label="Research groups">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#research%20infrastructure%20managers"
+    rdfs:label="Research Infrastructure Managers">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#research%20managers"
+    rdfs:label="Research managers">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#research%20networks"
+    rdfs:label="Research networks">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#research%20organisations"
+    rdfs:label="Research organisations">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#research%20projects"
+    rdfs:label="Research projects">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#researchcustomer"
+    rdfs:label="Research Customer">
+    <rdfs:subClassOf rdf:resource="#customer" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#researchers"
+    rdfs:label="Researchers">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#researchinfrastructure"
+    rdfs:label="Research Infrastructure" />
+
+  <rdf:Description rdf:about="#researchsoftwarearchitect"
+    rdfs:label="Research Software Architect">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#researchsoftwaredeveloper"
+    rdfs:label="Research Software Developer">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#researchsupportpersonnel"
+    rdfs:label="Research Support Personnel">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ro"
+    rdfs:label="Romania">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#romanian"
+    rdfs:label="Romanian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#romansh"
+    rdfs:label="Romansh">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#rs"
+    rdfs:label="Serbia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ru"
+    rdfs:label="Russian Federation">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#rw"
+    rdfs:label="Rwanda">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sa"
+    rdfs:label="Saudi Arabia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#samoan"
+    rdfs:label="Samoan">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sango"
+    rdfs:label="Sango">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sanskrit"
+    rdfs:label="Sanskrit">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sardinian"
+    rdfs:label="Sardinian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sb"
+    rdfs:label="Solomon Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sc"
+    rdfs:label="Seychelles">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#science"
+    rdfs:label="Science" />
+
+  <rdf:Description rdf:about="#scorm-1-2"
+    rdfs:label="SCORM 1.2">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sd"
+    rdfs:label="Sudan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#se"
+    rdfs:label="Sweden">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#semanticmodeller"
+    rdfs:label="Semantic Modeller">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#serbian"
+    rdfs:label="Serbian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#service_resource%20managers"
+    rdfs:label="Service/Resource Managers">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#service_resource%20provider%20managers"
+    rdfs:label="Service/Resource Provider Managers">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#service_resource%20providers"
+    rdfs:label="Service/Resource Providers">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sg"
+    rdfs:label="Singapore">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sh"
+    rdfs:label="Saint Helena">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#shacl"
+    rdfs:label="SHACL">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#shona"
+    rdfs:label="Shona">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#si"
+    rdfs:label="Slovenia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sindhi"
+    rdfs:label="Sindhi">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sinhala"
+    rdfs:label="Sinhala">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sj"
+    rdfs:label="Svalbard and Jan Mayen">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sk"
+    rdfs:label="Slovakia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sl"
+    rdfs:label="Sierra Leone">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#slovak"
+    rdfs:label="Slovak">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#slovene"
+    rdfs:label="Slovene">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sm"
+    rdfs:label="San Marino">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sn"
+    rdfs:label="Senegal">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#so"
+    rdfs:label="Somalia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#somali"
+    rdfs:label="Somali">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#southern%20ndebele"
+    rdfs:label="Southern Ndebele">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#southern%20sotho"
+    rdfs:label="Southern Sotho">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#spanish"
+    rdfs:label="Spanish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sparql"
+    rdfs:label="SPARQL">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sr"
+    rdfs:label="Suriname">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ss"
+    rdfs:label="South Sudan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#st"
+    rdfs:label="Sao Tome and Principe">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#standard"
+    rdfs:label="Standard">
+    <rdfs:subClassOf rdf:resource="#topic" />
+    <skos:broader rdf:resource="#topic" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <skos:Collection rdf:about="#standards"
+    rdfs:label="Standards" />
+
+  <rdf:Description rdf:about="#subscriptionpayment"
+    rdfs:label="Subscription Payment">
+    <rdfs:subClassOf rdf:resource="#paymentmodel" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sundanese"
+    rdfs:label="Sundanese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sv"
+    rdfs:label="El Salvador">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#swahili"
+    rdfs:label="Swahili">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#swati"
+    rdfs:label="Swati">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#swedish"
+    rdfs:label="Swedish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sx"
+    rdfs:label="Sint Maarten (Dutch part)">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sy"
+    rdfs:label="Syrian Arab Republic">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#sz"
+    rdfs:label="Swaziland">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tagalog"
+    rdfs:label="Tagalog">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tahitian"
+    rdfs:label="Tahitian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tajik"
+    rdfs:label="Tajik">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tamil"
+    rdfs:label="Tamil">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#targetuser"
+    rdfs:label="Target User" />
+
+  <rdf:Description rdf:about="#tatar"
+    rdfs:label="Tatar">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tc"
+    rdfs:label="Turks and Caicos Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#td"
+    rdfs:label="Chad">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#telugu"
+    rdfs:label="Telugu">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tf"
+    rdfs:label="French Southern Territories">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tg"
+    rdfs:label="Togo">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#th"
+    rdfs:label="Thailand">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#thai"
+    rdfs:label="Thai">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tibetan%20standard"
+    rdfs:label="Tibetan Standard">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tigrinya"
+    rdfs:label="Tigrinya">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tj"
+    rdfs:label="Tajikistan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tk"
+    rdfs:label="Tokelau">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tl"
+    rdfs:label="Timor-Leste">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tm"
+    rdfs:label="Turkmenistan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tn"
+    rdfs:label="Tunisia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#to"
+    rdfs:label="Tonga">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tonga"
+    rdfs:label="Tonga">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tooldeveloper"
+    rdfs:label="Tool Developer">
+    <rdfs:subClassOf rdf:resource="#targetuser" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#topic"
+    rdfs:label="Topic">
+    <skos:member rdf:resource="&ns3;terminology" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tosca"
+    rdfs:label="TOSCA">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tosca_v12"
+    rdfs:label="tosca_v12">
+    <rdfs:subClassOf rdf:resource="#tosca" />
+    <skos:broader rdf:resource="#tosca" />
+    <skos:member rdf:resource="#tosca" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tr"
+    rdfs:label="Turkey">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tsonga"
+    rdfs:label="Tsonga">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tswana"
+    rdfs:label="Tswana">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tt"
+    rdfs:label="Trinidad and Tobago">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#turkish"
+    rdfs:label="Turkish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#turkmen"
+    rdfs:label="Turkmen">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tv"
+    rdfs:label="Tuvalu">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tw"
+    rdfs:label="Taiwan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#twi"
+    rdfs:label="Twi">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#tz"
+    rdfs:label="Tanzania">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ua"
+    rdfs:label="Ukraine">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ug"
+    rdfs:label="Uganda">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ukrainian"
+    rdfs:label="Ukrainian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#um"
+    rdfs:label="United States Minor Outlying Islands">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#urdu"
+    rdfs:label="Urdu">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#us"
+    rdfs:label="United States">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#uy"
+    rdfs:label="Uruguay">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#uyghur"
+    rdfs:label="Uyghur">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#uz"
+    rdfs:label="Uzbekistan">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#uzbek"
+    rdfs:label="Uzbek">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#va"
+    rdfs:label="Holy See (Vatican City State)">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#vc"
+    rdfs:label="Saint Vincent and the Grenadines">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ve"
+    rdfs:label="Venezuela">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#venda"
+    rdfs:label="Venda">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#vg"
+    rdfs:label="Virgin Islands, British">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#vi"
+    rdfs:label="Virgin Islands,U.S.">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#vietnamese"
+    rdfs:label="Vietnamese">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#virtual"
+    rdfs:label="Virtual">
+    <rdfs:subClassOf rdf:resource="#accesstype" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#vn"
+    rdfs:label="Viet Nam">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#volap%C3%BCk"
+    rdfs:label="Volapük">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#vu"
+    rdfs:label="Vanuatu">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#w3c-prov"
+    rdfs:label="W3C PROV">
+    <rdfs:subClassOf rdf:resource="#standard" />
+    <skos:broader rdf:resource="#standard" />
+    <skos:member rdf:resource="#standards" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#walloon"
+    rdfs:label="Walloon">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#welsh"
+    rdfs:label="Welsh">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#western%20frisian"
+    rdfs:label="Western Frisian">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#wf"
+    rdfs:label="Wallis and Futuna">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#wide%20access"
+    rdfs:label="Wide Access">
+    <rdfs:subClassOf rdf:resource="#accessmode" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#wolof"
+    rdfs:label="Wolof">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ws"
+    rdfs:label="Samoa">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ww">
+    <rdfs:label>World</rdfs:label>
+    <rdfs:label>Worldwide</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#xhosa"
+    rdfs:label="Xhosa">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#ye"
+    rdfs:label="Yemen">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#yiddish"
+    rdfs:label="Yiddish">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#yoruba"
+    rdfs:label="Yoruba">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#yt"
+    rdfs:label="Mayotte">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#za"
+    rdfs:label="South Africa">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#zhuang"
+    rdfs:label="Zhuang">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#zm"
+    rdfs:label="Zambia">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#zulu"
+    rdfs:label="Zulu">
+    <rdfs:subClassOf rdf:resource="#language" />
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#zw"
+    rdfs:label="Zimbabwe">
+    <rdfs:subClassOf rdf:resource="#place" />
+  </rdf:Description>
+
+</rdf:RDF>
