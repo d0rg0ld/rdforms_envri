@@ -31,7 +31,7 @@ New entities require a unique ID. A separate service "identifierservice", whose 
 
 ### Installation + Startup
 
-This repo should be cloned into a folder on the target server made available via HTTP, including its subdirectories. 
+This repo should be cloned into a folder on the target server made available via HTTP, including its subdirectories. The forms are in the samples directory and can be loaded via the respective html files there.
 
 An Ontowiki instance must be properly configured on top of a Triplestore (There is an existing adapter for Openlink Virtuoso, https://docs.ontowiki.net/VirtuosoBackend.html). It should contain two empty (or imported) Knowledge Bases, one for the "content" and one for user provided terminology. As described above, the resource IRIs of these two KBs shoould be passed to the "window.contentGraphname" and "window.userTermGraphName" variables in each form's html code. The current state of these two KBs is stored in this repo as files envri_service_portfolio.rdf and envri_user_terminology.rdf. Futhermore, the Ontowiki installation should include the ontologies used to populate the controlled vocabulary for form values as separate knowledge bases. Currently used resources are the SWO (https://github.com/allysonlister/swo) and EDAM (http://edamontology.org/page) ontologies from the OBO domain, as well as the terminology derived from eInfraCentral, made available in this repository in files envri_terminology.rdf. In order for term labels to become visible in the Ontowiki viewer, the Onwotiki KB IRIs for these resources should be imported into the "content" knowledge base via owl:imports.
 
@@ -54,6 +54,8 @@ In order to filter the imported resources from the class view in the Ontowiki Vi
 > config/classes/hiddenNS/7/"http://www.ebi.ac.uk/swo/"
 
 The ID Service must be started by running the **runit.sh** bash script in the identifierservice folder from a separate terminal.
+
+Besides the graph names in window.contentGraphname and window.userTermGraphName, each form's html file contains additional variables that must be set accordingly. The URL of the ID Service must be provided via window.idSrvURI, the URL of Ontowiki in window.ontoWikiURI and of the Triplestore's SPARQL service via window.SPARQLURI.
 
 ### Structure of the code
 
