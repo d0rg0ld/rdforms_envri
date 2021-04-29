@@ -39,7 +39,7 @@ function submitRdf() {
         //formdata.append("named-graph-uri", "http://90.147.102.53/OntoWiki/index.php/EnvriServicePortfoliowithexternalTerminology/");
         formdata.append("insert", out);
 
-        Httpreq.open("POST","https://envri-fair.lab.uvalight.net/OntoWiki/index.php/service/update/",false);
+        Httpreq.open("POST",window.ontoWikiURI + "/index.php/service/update/",false);
         /**Httpreq.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );**/
         Httpreq.send(formdata);
 
@@ -52,7 +52,7 @@ function submitRdf() {
         //formdata2.append("named-graph-uri", "http://90.147.102.53/OntoWiki/index.php/EnvriUserTerminology/");
         formdata2.append("insert", term_out);
 
-        Httpreq2.open("POST","https://envri-fair.lab.uvalight.net/OntoWiki/index.php/service/update/",false);
+        Httpreq2.open("POST",window.ontoWikiURI + "/index.php/service/update/",false);
         /**Httpreq.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );**/
         Httpreq2.send(formdata2);
 	alert("Successfully submitted resource " + title[0].getSubject());

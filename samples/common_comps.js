@@ -9,7 +9,7 @@ export function Get(yourUrl){
                 }
 
 function loadOptions(graph, type) {
-	var options=JSON.parse(Get("https://envri-fair.lab.uvalight.net/sparql?default-graph-uri=" + graph + "&query=construct+%7B+%3Fs+rdfs%3Alabel+++%3Fl+%7D+where+%7B+%3Fs+rdf%3Atype+%3C" + type + "%3E+.+%3Fs+rdfs%3Alabel+%3Fl+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"));
+	var options=JSON.parse(Get( window.SPARQLURI+"?default-graph-uri=" + graph + "&query=construct+%7B+%3Fs+rdfs%3Alabel+++%3Fl+%7D+where+%7B+%3Fs+rdf%3Atype+%3C" + type + "%3E+.+%3Fs+rdfs%3Alabel+%3Fl+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"));
 	var keys=options["results"]["bindings"];
 	var selEle=document.getElementById('uri');
 	selEle.size=1;
@@ -41,7 +41,7 @@ export function initGraph(rdfGraph) {
         //get current key name
         let keyname=Object.keys(graph._graph)[0];
 
-        let newk=Get("https://envri-fair.lab.uvalight.net/uuid_create/create?prefix="+keyname);
+        let newk=Get(window.idSrvURI+"/create?prefix="+keyname);
 
         graph._graph[newk] = graph._graph[keyname];
 
@@ -79,7 +79,7 @@ var jstext=Get(window.rdfSkele);
 window.rdfGraph=JSON.parse(jstext);
 
 if ("uri" in window.params) {
-        var query = "https://envri-fair.lab.uvalight.net/sparql?default-graph-uri=&query=select+%3Fs+%3Fp+%3Fo+where+%7B+%7B+%3C" + window.params["uri"] + "%3E+%3Fp+%3Fo+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28%3Fs+%3D+%3C" + window.params["uri"] + "%3E+%29%7D+%0D%0AUNION+%7B+%3C" + window.params["uri"] + "%3E+%3Fp1+%3Fs+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28isBlank%28%3Fs%29%29+%7D+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"
+        var query = window.SPARQLURI + "?default-graph-uri=&query=select+%3Fs+%3Fp+%3Fo+where+%7B+%7B+%3C" + window.params["uri"] + "%3E+%3Fp+%3Fo+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28%3Fs+%3D+%3C" + window.params["uri"] + "%3E+%29%7D+%0D%0AUNION+%7B+%3C" + window.params["uri"] + "%3E+%3Fp1+%3Fs+.+%3Fs+%3Fp+%3Fo+.+FILTER+%28isBlank%28%3Fs%29%29+%7D+%7D&format=application%2Fsparql-results%2Bjson&timeout=0&debug=on&run=+Run+Query+"
         var rdfdata_raw=JSON.parse(Get(query));
         var res=rdfdata_raw["results"]["bindings"];
         if (res.length > 0) {
