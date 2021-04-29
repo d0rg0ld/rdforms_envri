@@ -31,7 +31,9 @@ New entities require a unique ID. A separate service "identifierservice", whose 
 
 ### Installation + Startup
 
-The repo should be cloned into a folder on the target server made available via HTTP. An Ontowiki instance must be properly configured on top of a Triplestore (There is an existing adapter for Openlink Virtuoso, https://docs.ontowiki.net/VirtuosoBackend.html), featuring named graphs for descriptions and terminology as discussed above. The Ontowiki installation should also include the the ontologies used to populate the controlled vocabulary for form values, which currently are the SWO and EDAM ontologies
+This repo should be cloned into a folder on the target server made available via HTTP, including its subdirectories. 
+
+An Ontowiki instance must be properly configured on top of a Triplestore (There is an existing adapter for Openlink Virtuoso, https://docs.ontowiki.net/VirtuosoBackend.html), featuring named graphs for descriptions and terminology as discussed above. The Ontowiki installation should include the ontologies used to populate the controlled vocabulary for form values, which currently are the SWO (https://github.com/allysonlister/swo) and EDAM (http://edamontology.org/page) ontologies from the OBO domain, as well as the terminology derived from eInfraCentral, made available in this repository in files envri_terminology.rdf and envri_user_terminology.rdf. In order for term labels to become visible in the Ontowiki viewer, these resources should be imported into the knowledge base via owl:imports.
 
 ### Structure of the code
 
