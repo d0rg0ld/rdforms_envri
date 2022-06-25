@@ -24,7 +24,7 @@
     "jquery.fancytree": "https://github.com/mar10/fancytree.git",
     "lodash-es": "^4.17.15",
     "moment": "^2.24.0",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.7",
     "popper.js": "^1.12.9",
     "rdfjson": "git+https://bitbucket.org/metasolutions/rdfjson.git#2.2.1",
     "regenerator-runtime": "^0.13.2",
